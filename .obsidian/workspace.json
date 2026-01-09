@@ -1,0 +1,206 @@
+{
+  "main": {
+    "id": "c9137a683f484567",
+    "type": "split",
+    "children": [
+      {
+        "id": "185596329a851ce2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7e260212d92d5eae",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "5e58cf67fddd8a92",
+    "type": "split",
+    "children": [
+      {
+        "id": "30f00e2b8d29bd24",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "142744d19f5e275c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "de4d6faf56a5e20d",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "843fa86452e6753a",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "14f920295801108c",
+    "type": "split",
+    "children": [
+      {
+        "id": "a21f8abf99dc4be6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9a13438c2b281126",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "AWS Solution Architect/2 - IAM and AWS CLI.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for 2 - IAM and AWS CLI"
+            }
+          },
+          {
+            "id": "38c6dcb37c45baec",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "AWS Solution Architect/2 - IAM and AWS CLI.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from 2 - IAM and AWS CLI"
+            }
+          },
+          {
+            "id": "d6845b773d4afc0c",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "a9c62faf9d13c9fc",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "93844f5b212aca38",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "AWS Solution Architect/2 - IAM and AWS CLI.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of 2 - IAM and AWS CLI"
+            }
+          },
+          {
+            "id": "5f2a6c79e79119dd",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          }
+        ],
+        "currentTab": 5
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "7e260212d92d5eae",
+  "lastOpenFiles": [
+    "LICENSE",
+    "AWS Solution Architect/2 - IAM and AWS CLI.md",
+    "DevOps/AWS Solution Architect/2 - IAM and AWS CLI.md",
+    "DevOps/AWS Solution Architect/1 - Getting Started with AWS.md",
+    "DevOps/AWS Solution Architect",
+    "AWS Solution Architect/1 - Getting Started with AWS.md",
+    "DevOps/Learning GitHub Actions.md",
+    "AWS Solution Architect/getting started/AWS Cloud Overview - Regions and Availability Zone.md",
+    "AWS Solution Architect/getting started",
+    "AWS Solution Architect"
+  ]
+}
