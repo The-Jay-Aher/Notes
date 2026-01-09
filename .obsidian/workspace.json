@@ -8,16 +8,35 @@
         "type": "tabs",
         "children": [
           {
+            "id": "8a23ab52be35a956",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "aws_saa_trading_bot_plan_checklist.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "aws_saa_trading_bot_plan_checklist"
+            }
+          },
+          {
             "id": "7e260212d92d5eae",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Terraform.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Terraform"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -192,9 +211,11 @@
   },
   "active": "7e260212d92d5eae",
   "lastOpenFiles": [
+    "DevOps/AWS Solution Architect/2 - IAM and AWS CLI.md",
+    "Terraform.md",
+    "aws_saa_trading_bot_plan_checklist.md",
     "LICENSE",
     "AWS Solution Architect/2 - IAM and AWS CLI.md",
-    "DevOps/AWS Solution Architect/2 - IAM and AWS CLI.md",
     "DevOps/AWS Solution Architect/1 - Getting Started with AWS.md",
     "DevOps/AWS Solution Architect",
     "AWS Solution Architect/1 - Getting Started with AWS.md",

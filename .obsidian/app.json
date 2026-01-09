@@ -4,5 +4,6 @@
   "vimMode": false,
   "alwaysUpdateLinks": true,
   "showUnsupportedFiles": false,
-  "uriCallbacks": true
+  "uriCallbacks": true,
+  "readableLineLength": false
 }

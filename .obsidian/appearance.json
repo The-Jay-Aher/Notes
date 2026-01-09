@@ -1,7 +1,7 @@
 {
-  "cssTheme": "Obsidianite",
+  "cssTheme": "",
   "interfaceFontFamily": "Inter",
-  "textFontFamily": "Menlo",
+  "textFontFamily": "Cousine",
   "monospaceFontFamily": "IBM Plex Mono",
   "baseFontSizeAction": false
 }
