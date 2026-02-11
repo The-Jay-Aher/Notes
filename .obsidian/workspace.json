@@ -1,56 +1,37 @@
 {
   "main": {
-    "id": "c9137a683f484567",
+    "id": "645b833365b8155f",
     "type": "split",
     "children": [
       {
-        "id": "185596329a851ce2",
+        "id": "f862b54732f03234",
         "type": "tabs",
         "children": [
           {
-            "id": "8a23ab52be35a956",
+            "id": "77bfc68051238fb6",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "aws_saa_trading_bot_plan_checklist.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "aws_saa_trading_bot_plan_checklist"
-            }
-          },
-          {
-            "id": "7e260212d92d5eae",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Terraform.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Terraform"
+              "title": "New tab"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "5e58cf67fddd8a92",
+    "id": "69bdee9a7197d74a",
     "type": "split",
     "children": [
       {
-        "id": "30f00e2b8d29bd24",
+        "id": "7f0a8d12cd8ab27e",
         "type": "tabs",
         "children": [
           {
-            "id": "142744d19f5e275c",
+            "id": "fd89b16ea9f8290d",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -63,7 +44,7 @@
             }
           },
           {
-            "id": "de4d6faf56a5e20d",
+            "id": "bad158de28e1bf18",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -80,7 +61,7 @@
             }
           },
           {
-            "id": "843fa86452e6753a",
+            "id": "59e66476cc9d0745",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -96,20 +77,19 @@
     "width": 300
   },
   "right": {
-    "id": "14f920295801108c",
+    "id": "8e3f2afb8e951d71",
     "type": "split",
     "children": [
       {
-        "id": "a21f8abf99dc4be6",
+        "id": "13b5cfca889f4b6b",
         "type": "tabs",
         "children": [
           {
-            "id": "9a13438c2b281126",
+            "id": "abfb32c6538ed69c",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "AWS Solution Architect/2 - IAM and AWS CLI.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,25 +99,24 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 2 - IAM and AWS CLI"
+              "title": "Backlinks"
             }
           },
           {
-            "id": "38c6dcb37c45baec",
+            "id": "973c44319e8dafac",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "AWS Solution Architect/2 - IAM and AWS CLI.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from 2 - IAM and AWS CLI"
+              "title": "Outgoing links"
             }
           },
           {
-            "id": "d6845b773d4afc0c",
+            "id": "a722ac717343f82b",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -152,7 +131,7 @@
             }
           },
           {
-            "id": "a9c62faf9d13c9fc",
+            "id": "d762d1d52c732ba2",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -166,36 +145,25 @@
             }
           },
           {
-            "id": "93844f5b212aca38",
+            "id": "8e51a4c159830f9f",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "AWS Solution Architect/2 - IAM and AWS CLI.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 2 - IAM and AWS CLI"
-            }
-          },
-          {
-            "id": "5f2a6c79e79119dd",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
+              "title": "Outline"
             }
           }
-        ],
-        "currentTab": 5
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -205,23 +173,9 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false,
-      "obsidian-git:Open Git source control": false
+      "bases:Create new base": false
     }
   },
-  "active": "7e260212d92d5eae",
-  "lastOpenFiles": [
-    "DevOps/AWS Solution Architect/2 - IAM and AWS CLI.md",
-    "Terraform.md",
-    "aws_saa_trading_bot_plan_checklist.md",
-    "LICENSE",
-    "AWS Solution Architect/2 - IAM and AWS CLI.md",
-    "DevOps/AWS Solution Architect/1 - Getting Started with AWS.md",
-    "DevOps/AWS Solution Architect",
-    "AWS Solution Architect/1 - Getting Started with AWS.md",
-    "DevOps/Learning GitHub Actions.md",
-    "AWS Solution Architect/getting started/AWS Cloud Overview - Regions and Availability Zone.md",
-    "AWS Solution Architect/getting started",
-    "AWS Solution Architect"
-  ]
+  "active": "77bfc68051238fb6",
+  "lastOpenFiles": []
 }

@@ -1,9 +1,1 @@
-{
-  "strictLineBreaks": true,
-  "showLineNumber": false,
-  "vimMode": false,
-  "alwaysUpdateLinks": true,
-  "showUnsupportedFiles": false,
-  "uriCallbacks": true,
-  "readableLineLength": false
-}
+{}
