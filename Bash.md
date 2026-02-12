@@ -2,115 +2,134 @@
 
 ## Chapter 01 - Basics
 
-## Basic File Manipulation
-
-### Create, Move, and Remove Files
+### Basic File Manipulation
 
 - `touch file.txt`
-  - Creates `file.txt` if it does not exist.
-  - If the file already exists, it updates the file timestamp (modification/access time) instead of changing content.
+    - Creates `file.txt` if it does not exist.
+    - If it exists, updates file timestamps.
 
 - `mv <source> <destination>`
-  - Moves a file or directory to a new location.
-  - Also renames items when source and destination are in the same folder (example: `mv old.txt new.txt`).
-  - If destination exists, it can be overwritten depending on shell settings/options.
+    - Moves files/directories.
+    - Also renames files (for example, `mv old.txt new.txt`).
 
 - `rm -i lesson*`
-  - Deletes files that match `lesson*` (for example, `lesson1`, `lesson_notes.txt`).
-  - `-i` enables interactive mode, so Bash prompts for confirmation before each removal.
-  - Useful when wildcards are involved and you want to reduce accidental deletion risk.
+    - Removes files matching `lesson*` with interactive confirmation.
+    - Safer when using wildcards.
 
-### Safe `rm` Alias
+### Safer `rm` with Alias
 
 - `alias rm='rm -i'`
-  - Makes `rm` run in interactive mode by default for the current shell session.
-  - This adds a safety prompt to normal `rm` usage.
-  - To keep it permanently, add it to your shell startup file (like `~/.bashrc`).
+    - Makes `rm` interactive for the current shell session.
 
 - `alias rm`
-  - Prints the current alias for `rm` if one exists.
-  - Use this to verify whether your safe alias is active.
+    - Displays the current alias for `rm`.
 
-## Directory Navigation
+- To persist aliases, add them to `~/.bashrc` and reload:
+
+```bash
+source ~/.bashrc
+```
+
+### Directory Navigation
 
 - `cd .`
-  - Changes directory to the current directory (`.` means "here").
-  - Functionally no movement; mostly used in scripts where a path variable may resolve to `.`.
+    - Stay in current directory (`.` means current path).
 
 - `cd ..`
-  - Moves from the current directory to its parent directory.
-  - Example: from `/home/jay/projects/app` to `/home/jay/projects`.
+    - Move to parent directory.
 
-## Searching in Files (`grep`)
+### Searching in Files (`grep`)
 
 - `grep 'jay' /usr/share/dict/words`
-  - Prints every line in `/usr/share/dict/words` that contains the text `jay`.
-  - Match is case-sensitive by default.
+    - Finds lines containing `jay` (case-sensitive).
 
 - `grep '^jay' file.txt`
-  - `^` anchors the match to the start of the line.
-  - This finds lines beginning with `jay` only.
+    - Finds lines that start with `jay`.
 
 - `grep 'jay$' file.txt`
-  - `$` anchors the match to the end of the line.
-  - This finds lines that end with `jay` only.
+    - Finds lines that end with `jay`.
 
 - `grep -i 'jay' file.txt`
-  - Performs a case-insensitive search (`jay`, `Jay`, `JAY`, etc.).
-  - Helpful when text case is inconsistent.
+    - Case-insensitive search.
 
-### Context Around Matches
+#### Match Context
 
 - `grep -A1 'jay' file.txt`
-  - Shows each matching line plus `1` line After it.
-  - Good for quickly viewing nearby output context.
+    - Match + 1 line after.
 
 - `grep -B2 'jay' file.txt`
-  - Shows each matching line plus `2` lines Before it.
-  - Useful for checking what led up to a match.
+    - Match + 2 lines before.
 
 - `grep -C1 'jay' file.txt`
-  - Shows each matching line plus `1` line of Context on both sides.
-  - Equivalent to combining `-B1` and `-A1`.
+    - Match + 1 line before and after.
 
-### Print Only Matched Text
+#### Print Only Matches
 
 - `grep -o '^j.' file.txt`
-  - `-o` prints only the part that matches, not the full line.
-  - Pattern `^j.` returns the first two characters of lines that start with `j` (for example, `ja`, `jo`).
+    - Prints only matched text.
+    - Example pattern: first two characters for lines starting with `j`.
 
 - `grep -oi '^j.' file.txt`
-  - Same as above, but `-i` makes matching case-insensitive.
-  - So lines starting with `j` or `J` are both included.
+    - Same as above, case-insensitive.
 
-## Redirection and Appending
+### Redirection
 
 - `echo hello > file.txt`
-  - Writes `hello` to `file.txt`.
-  - `>` overwrites the file if it exists, or creates it if missing.
-  - Use carefully to avoid replacing existing content by mistake.
+    - Overwrites `file.txt` with `hello`.
 
 - `echo a >> file.txt`
-  - Appends `a` to the end of `file.txt`.
-  - `>>` preserves current content and adds new output on a new line.
-  - Creates the file if it does not exist.
+    - Appends `a` to `file.txt`.
+    - Creates file if it does not exist.
 
-## Pipes
+### Pipes
 
 - `cat file.txt | grep 'jay'`
-  - Sends output of `cat file.txt` to `grep` through a pipe (`|`).
-  - In this case, it is equivalent to `grep 'jay' file.txt`.
-  - Direct form is shorter, but piping is useful when chaining multiple commands.
+    - Sends `cat` output into `grep`.
+    - Equivalent here: `grep 'jay' file.txt`.
 
-## Paging Files
-
-Useful for viewing large files one screen at a time:
+### Paging Files
 
 - `less file.txt`
-  - Opens an interactive viewer for large files.
-  - Supports forward/backward navigation, `/pattern` search, and quit with `q`.
-  - Preferred over `more` for flexibility.
+    - Interactive pager with search/navigation.
+    - Quit with `q`.
 
 - `more file.txt`
-  - Opens a basic pager for reading output page by page.
-  - Simpler than `less`, with limited backward movement on many systems.
+    - Simpler pager with limited navigation.
+
+---
+
+## Chapter 02 - Commands and Help System
+
+### Command Documentation
+
+- `man <command>`
+    - Opens manual page for a command.
+
+- `help <builtin>`
+    - Shows help for Bash built-in commands.
+
+- `type <command>`
+    - Shows whether command is alias, built-in, function, or executable.
+
+- `type -a <command>`
+    - Shows all command resolutions in search order.
+
+- `compgen -b`
+    - Lists Bash built-in commands.
+
+### Programs and Utilities
+
+- `file <filename>`
+    - Detects file type based on content/signatures.
+    - More reliable than extension alone.
+    - But can be spoffed
+
+- `tr ':' '\n'`
+    - Translates characters from first set to second set.
+    - Example above converts `:` into newlines.
+
+## Quick Tips
+
+1. Prefer direct commands over unnecessary pipes when possible.
+2. Use `-i` options and aliases carefully for safer deletions.
+3. Learn `man`, `help`, and `type` early for faster troubleshooting.
