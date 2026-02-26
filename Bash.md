@@ -131,5 +131,12 @@ source ~/.bashrc
 ## Quick Tips
 
 1. Prefer direct commands over unnecessary pipes when possible.
-2. Use `-i` options and aliases carefully for safer deletions.
+2. Use `-i` options and aliases carefully for safer deletions.  
 3. Learn `man`, `help`, and `type` early for faster troubleshooting.
+
+## Chapter 03 - Scripting
+
+- `echo $?`
+    - Gives the exit code of the previous command
+    - 0 is success
+    - Anything non-zero is a fail
