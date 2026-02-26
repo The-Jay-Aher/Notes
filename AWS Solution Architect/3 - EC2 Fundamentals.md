@@ -166,7 +166,7 @@ Not ideal for:
 - Critical jobs
 - Stateful databases
 
-![[AWS Solution Architect/Images/Screenshot 2026-02-26 at 22-40-24 Course Ultimate AWS Certified Solutions Architect Associate 2026 Udemy.png]]
+![Spot Instance Termination](Images/spot-instance-termination.png)
 
 ### Spot Fleets
 
