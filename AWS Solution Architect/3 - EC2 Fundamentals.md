@@ -64,7 +64,7 @@ Newer generations usually improve price/performance and efficiency.
 ### Quick Summary
 
 - **On-Demand:** No commitment; best for short, variable, or unpredictable workloads.
-- **Reserved Instances (RIs):** 1-year or 3-year commitment for steady workloads.
+- **Reserved Instances (RI's):** 1-year or 3-year commitment for steady workloads.
   - `Standard RI`: Highest discount, less flexibility.
   - `Convertible RI`: More flexibility, lower discount.
 - **Savings Plans:** Commit to a consistent amount of usage (`$/hour`) for 1 or 3 years.
@@ -81,9 +81,9 @@ Newer generations usually improve price/performance and efficiency.
 - Linux/Windows billing is per second (after the first minute).
 - Other operating systems may be billed per hour.
 - Highest cost model, but no upfront payment and no long-term commitment.
-- Best for short-term and uninterrupted workloads with unpredictable behavior.
+- Best for short-term and uninterrupted workloads with unpredictable behaviour.
 
-#### Reserved Instances (RIs)
+#### Reserved Instances (RI's)
 
 - Up to 72% discount compared to On-Demand (depending on term/payment class).
 - Commit to specific attributes (instance type, region, tenancy, OS).
@@ -91,7 +91,7 @@ Newer generations usually improve price/performance and efficiency.
 - Payment options: No upfront (`+`), partial upfront (`++`), all upfront (`+++`).
 - Scope: Regional or Zonal (Zonal also reserves capacity in an AZ).
 - Good fit for steady-state workloads (for example, databases).
-- You can buy/sell eligible RIs in the RI Marketplace.
+- You can buy/sell eligible RI's in the RI Marketplace.
 
 `Convertible RI` lets you change instance family/type, region, scope, tenancy, and OS with more flexibility than `Standard RI`.
 

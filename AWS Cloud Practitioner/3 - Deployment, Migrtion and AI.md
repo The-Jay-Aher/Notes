@@ -49,7 +49,7 @@ Benefits:
 ### AWS X-Ray
 
 - Distributed tracing service.
-- Helps troubleshoot latency and errors across microservices.
+- Helps troubleshoot latency and errors across micro services.
 
 ### Decoupling with Messaging Services
 
