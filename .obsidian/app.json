@@ -1,3 +1,7 @@
 {
-  "readableLineLength": true
+  "readableLineLength": true,
+  "alwaysUpdateLinks": true,
+  "uriCallbacks": true,
+  "defaultViewMode": "preview",
+  "trashOption": "local"
 }
