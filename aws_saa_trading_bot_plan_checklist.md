@@ -20,7 +20,7 @@
 ### AWS (2h)
 - [x] Read the AWS SAA exam guide + domains
 - [x] Review AWS global infra: Regions / AZs / Edge
-- [ ] IAM basics: users, groups, roles, policies
+- [x] IAM basics: users, groups, roles, policies
 ### Trading Bot (1–2h)
 - [ ] Decide bot scope (market, timeframe, strategy type)
 - [ ] Choose API + paper trading (e.g., Alpaca for stocks / broker sandbox)

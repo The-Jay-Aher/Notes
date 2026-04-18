@@ -1,10 +1,11 @@
-Learn AWS SAA
-Learn Networking
-Improve program
-Buy gpt pro timing
-Cut nails
-Watch adhd module
-Add pullback code
-Test strategy on a bigger timeline
-Research a swing based strategy
-Improve the current rsi strategy
+- [ ] Learn AWS SAA
+- [ ] Learn Networking
+- [ ] Improve program
+	- [ ] Test strategy on a bigger timeline 
+		- [ ] Data is not fetched properly 
+	- [ ] Research a swing based strategy 
+	- [ ] Improve the current RSI strategy
+		- [ ] Add pullback code and backtest the strategy more
+- [ ] Check gpt pro timing purchase 
+- [ ] Cut nails
+- [ ] Watch adhd module
