@@ -41,6 +41,34 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "AWS Solution Architect/6 - High Availabilty and Scalability ELB & ASG.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "6 - High Availabilty and Scalability ELB & ASG"
+            }
+          },
+          {
+            "id": "39f064f01b18fc3c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Todo's.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Todo's"
+            }
+          },
+          {
+            "id": "9dde3b7bcac5ec74",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "Todo's.md",
                 "mode": "source",
                 "source": false
@@ -50,7 +78,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -208,17 +236,23 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "79dbdf2fc1694ceb",
+  "active": "9dde3b7bcac5ec74",
   "lastOpenFiles": [
+    "Buy.md",
+    "Untitled.md",
+    "Todo's.md",
+    "Mentor Meet.md",
+    "AWS Solution Architect/6 - High Availabilty and Scalability ELB & ASG.md",
+    "AWS Solution Architect/5 - EC2 Instance Storage.md",
+    "Jenkins/2 - Jenkins Installtion.md",
+    "Learning GitHub Actions.md",
+    "Markdown Cheatsheet.md",
+    "Networking Fundamentals/1 - Fundamentals of Networking.md",
+    "Networking Fundamentals/2 - Internet Protocol(IP).md",
     "AWS Solution Architect/3 - EC2 Fundamentals.md",
     "Jenkins/1 - CICD Pilelines and theur Practices.md",
     "aws_saa_trading_bot_plan_checklist.md",
     "AGENTS.md",
-    "Todo's.md",
-    "AWS Solution Architect/5 - EC2 Instance Storage.md",
-    "AWS Solution Architect/6 - High Availabilty and Scalability ELB & ASG.md",
-    "Networking Fundamentals/2 - Internet Protocol(IP).md",
-    "Networking Fundamentals/1 - Fundamentals of Networking.md",
     "/Networking Fundamentals/2 - Internet Protocol(IP).md",
     "/Networking Fundamentals/1 - Fundamentals of Networking.md",
     "/AWS Solution Architect/Images/EBS Volume.png",
@@ -229,7 +263,6 @@
     "/AWS Solution Architect",
     "Networking Fundamentals",
     "/Networking Fundamentals",
-    "AWS Solution Architect/4 - EC2 Solutions Architect Associate Level.md",
-    "Markdown Cheatsheet.md"
+    "AWS Solution Architect/4 - EC2 Solutions Architect Associate Level.md"
   ]
 }

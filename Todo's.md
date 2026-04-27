@@ -1,11 +1,15 @@
-- [ ] Learn AWS SAA
+- [ ] Learn AWS SAA [[aws_saa_trading_bot_plan_checklist]] checklist
 - [ ] Learn Networking
 - [ ] Improve program
 	- [ ] Test strategy on a bigger timeline 
 		- [ ] Data is not fetched properly 
+		- [ ] removed the max allocation ratio
 	- [ ] Research a swing based strategy 
 	- [ ] Improve the current RSI strategy
 		- [ ] Add pullback code and backtest the strategy more
-- [ ] Check gpt pro timing purchase 
-- [ ] Cut nails
+		- [ ] Add OI and Volume support
+		- [ ] EMA 20 as stop loss
+	- [ ] Add a selling only mode which, can sell the options for me, I will do the buy
+- [ ] Check gpt pro timing purchase
+- [ ] Read Kubernetes docs
 - [ ] Watch adhd module

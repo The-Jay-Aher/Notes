@@ -1,0 +1,10 @@
+{
+  "things-style@@mobile-black-background": true,
+  "things-style@@fancy-highlight": true,
+  "things-style@@default-font-color": true,
+  "things-style@@progress-color": true,
+  "anuppuccin-theme-settings@@anuppuccin-theme-dark": "ctp-macchiato",
+  "anuppuccin-theme-settings@@anuppuccin-theme-accents": "ctp-accent-flamingo",
+  "anuppuccin-theme-settings@@anp-active-line": "anp-current-line",
+  "anuppuccin-theme-settings@@anp-toggle-preview": true
+}
