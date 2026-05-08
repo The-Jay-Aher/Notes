@@ -1,15 +1,16 @@
-- [ ] Learn AWS SAA [[aws_saa_trading_bot_plan_checklist]] checklist
+- [ ] Learn AWS Solutions Architect Associate [[aws_saa_trading_bot_plan_checklist]] checklist
 - [ ] Learn Networking
 - [ ] Improve program
-	- [ ] Test strategy on a bigger timeline 
-		- [ ] Data is not fetched properly 
-		- [ ] removed the max allocation ratio
+	- [x] Test strategy on a bigger timeline 
+		- [x] Data is not fetched properly 
+		- [x] removed the max allocation ratio
 	- [ ] Research a swing based strategy 
-	- [ ] Improve the current RSI strategy
-		- [ ] Add pullback code and backtest the strategy more
-		- [ ] Add OI and Volume support
-		- [ ] EMA 20 as stop loss
+	- [ ] Use OI, Volume, Support and Resistance in our program to the use case
 	- [ ] Add a selling only mode which, can sell the options for me, I will do the buy
-- [ ] Check gpt pro timing purchase
+	- [ ] New Strategy - 
+		- [ ] ADX if above 20 and increasing
+		- [ ] dma should  be above 20 and increasing
+		- [ ] stop loss is below vwap candle should close below vwap
+	- [ ] Research ADX positive, mid, negative and filter the RSI message through them
 - [ ] Read Kubernetes docs
-- [ ] Watch adhd module
+- [ ] Watch ADHD module

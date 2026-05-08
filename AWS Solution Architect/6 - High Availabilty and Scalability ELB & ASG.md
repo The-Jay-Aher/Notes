@@ -148,3 +148,26 @@ fixed hostname (xxx.region.elb.amazonaws.com)
 the application servers don't see the ip of the client dorectly,
 the true ip of the client is inserted in the header X-Forwarded-For
 we can also get port (X-Forward-Port) and proto (X-Forward-Proto)
+
+## Network Load Balancer (NLB)
+
+### Network Load Balancer (V2)
+
+network load balancer (leyer 4) allows to:
+
+- forward tcp & udp traffic to instances
+- handle millions of request per second
+- ultra-low latency
+
+NLB has one static IP per AZ, and supports assigning Elastic IP (helpful when whitelisitng specific IP)
+
+### network load balancer - target groups
+
+Ec2 Instances
+IP addresses - must be private IPs
+Application Load Balancer (In this case the NLB is in front of the ALB)
+health checks support the TCP, HTTP and HTTPS Protocols
+
+## gateway load balancer
+
+deploy, scale, and manage a fleet of 3rd Party network virtual appliances in AWS
