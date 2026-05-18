@@ -1,65 +1,229 @@
 # 6 - Automating Jenkins with Groovy
 
-## Groovy Fundamentals for Jenkins
+## Quick Summary
 
-Groovy is a JVM language with optional typing and concise syntax.
+Jenkins uses Groovy in Pipelines, the Script Console, init hooks, shared libraries, and some automation plugins. Groovy automation is powerful, but it can also change Jenkins globally, expose secrets, or break jobs if used carelessly.
 
-Key points:
+Use Groovy carefully and prefer reviewed, version-controlled automation over one-off manual scripts.
 
-- Works well for Jenkins automation scripts.
-- Can use explicit types or `def`.
-- Good for administrative automation and Jenkins internals scripting.
+## Where Groovy Appears In Jenkins
 
-## Jenkins + Groovy Execution Contexts
+| Location | Use |
+| --- | --- |
+| Jenkinsfile | Pipeline logic. |
+| Script Console | Admin scripts executed inside Jenkins runtime. |
+| `init.groovy.d` | Startup automation. |
+| Shared Libraries | Reusable Pipeline code. |
+| Job DSL plugin | Define jobs as code. |
 
-### Script Console / System Groovy
+## Pipeline Groovy vs System Groovy
 
-- Runs with very high privileges.
-- Executes inside Jenkins controller JVM.
-- Powerful but high risk if misused.
+| Type | Scope | Risk |
+| --- | --- | --- |
+| Pipeline Groovy | Runs as part of a job, often sandboxed. | Can affect build behavior and leak credentials if careless. |
+| Script Console/System Groovy | Runs inside Jenkins controller runtime with admin power. | Can modify/delete jobs, credentials, users, and Jenkins config. |
 
-### Pipeline Groovy
+Treat Script Console like root access to Jenkins.
 
-- Runs in pipeline context with sandbox/security controls depending on configuration.
-- Better for build workflow logic.
+## Script Console
 
-## Startup Automation (`init.groovy.d`)
+The Script Console lets admins run Groovy directly in Jenkins.
 
-Jenkins can execute startup scripts from `init.groovy.d`.
+Use cases:
 
-Useful for:
+- Inspect Jenkins state.
+- Bulk-update job configuration.
+- Diagnose plugin/config issues.
+- Run controlled admin maintenance.
 
-- Bootstrapping configuration
-- Enforcing baseline settings
-- Automating initial setup tasks
+Avoid:
 
-Recommendation:
+- Running copied scripts without understanding them.
+- Printing secrets.
+- Making untested bulk changes.
+- Using it as a permanent automation strategy.
 
-- Use deterministic script names (for example `01-setup.groovy`, `02-security.groovy`).
+Example read-only script:
 
-## Exception Handling and Reliability
+```groovy
+Jenkins.instance.items.each { item ->
+    println(item.fullName)
+}
+```
 
-- Handle expected failure paths cleanly.
-- Avoid swallowing critical errors silently.
-- Startup scripts should fail safely and log actionable details.
+## init.groovy.d Startup Hooks
 
-## Using External Libraries
+Jenkins can run Groovy scripts at startup from:
 
-Groovy supports dependency resolution patterns (for example Grape in generic Groovy environments), but in Jenkins production usage:
+```text
+$JENKINS_HOME/init.groovy.d/
+```
 
-- Prefer controlled dependencies.
-- Avoid ad-hoc downloads in sensitive environments.
-- Maintain reproducibility and auditability.
+In the official Docker image, seed scripts are commonly placed in:
+
+```text
+/usr/share/jenkins/ref/init.groovy.d/
+```
+
+Use startup hooks for:
+
+- Initial admin setup in controlled environments.
+- Default configuration.
+- Bootstrapping seed jobs.
+
+Be careful:
+
+- Scripts run with high privilege.
+- Bad scripts can break startup.
+- Keep scripts version-controlled.
+
+## Shared Libraries
+
+Shared libraries move repeated Pipeline logic out of Jenkinsfiles.
+
+Typical structure:
+
+```text
+(shared-library repo)
+vars/
+  buildJava.groovy
+src/
+  org/example/Deploy.groovy
+resources/
+```
+
+Example `vars/buildJava.groovy`:
+
+```groovy
+def call() {
+    sh 'mvn test'
+}
+```
+
+Use in Jenkinsfile:
+
+```groovy
+@Library('company-shared') _
+
+pipeline {
+    agent any
+    stages {
+        stage('Test') {
+            steps {
+                buildJava()
+            }
+        }
+    }
+}
+```
+
+Use shared libraries when many repositories repeat the same pipeline logic.
+
+## Job DSL
+
+Job DSL lets you define Jenkins jobs using Groovy.
+
+Example concept:
+
+```groovy
+pipelineJob('example-app') {
+    definition {
+        cpsScm {
+            scm {
+                git('https://github.com/example/app.git')
+            }
+            scriptPath('Jenkinsfile')
+        }
+    }
+}
+```
+
+Use cases:
+
+- Seed jobs.
+- Reproducible job creation.
+- Managing many similar jobs.
+
+## Exception Handling
+
+Pipeline example:
+
+```groovy
+try {
+    sh './deploy.sh'
+} catch (err) {
+    currentBuild.result = 'FAILURE'
+    echo "Deployment failed: ${err}"
+    throw err
+}
+```
+
+Prefer clear stage/post behavior over hiding failures.
 
 ## Security Best Practices
 
-- Restrict Script Console access.
-- Review/approve scripts before execution.
-- Use least privilege and RBAC.
-- Keep audit trails of administrative script usage.
+- Restrict Script Console access to trusted admins only.
+- Keep Groovy automation in version control.
+- Review scripts before running.
+- Test in non-production Jenkins first.
+- Avoid printing credentials or environment dumps.
+- Prefer Configuration as Code or declarative config where possible.
+- Use shared libraries for repeated Pipeline logic instead of copy-paste Jenkinsfiles.
 
-## Quick Summary
+## Benefits
 
-1. Groovy is central to Jenkins automation.
-2. System scripts are powerful and must be tightly controlled.
-3. Reliable and secure scripting practices are essential for stable Jenkins operations.
+- Can automate repetitive admin tasks.
+- Reduces duplicate Pipeline logic.
+- Supports jobs/configuration as code.
+- Enables powerful Jenkins customization.
+
+## Drawbacks / Limitations
+
+- High risk when run with admin privileges.
+- Plugin/internal APIs may change.
+- Groovy errors can break startup or jobs.
+- Hard-to-review one-off scripts can create hidden state.
+- Pipeline Groovy can become too complex for normal CI/CD logic.
+
+## Hidden Details / Caveats
+
+- Script Console scripts execute on the controller.
+- Pipeline code may be CPS-transformed, which affects some Groovy patterns.
+- Sandbox approval may be required for some Pipeline scripts.
+- Shared library changes can affect many repositories at once.
+- Startup scripts in Docker seed path are copied only when initializing a new Jenkins home.
+
+## Common Mistakes
+
+| Mistake | Fix |
+| --- | --- |
+| Running random Script Console snippets | Read, test, and version-control scripts. |
+| Putting too much logic in Jenkinsfile | Move reusable logic to shared libraries. |
+| Printing all environment variables | Avoid exposing credentials. |
+| Editing global config manually only | Use documented automation where possible. |
+| No rollback for bulk change | Back up and test before running. |
+
+## Troubleshooting
+
+| Problem | Check |
+| --- | --- |
+| Script Console fails | Imports, Jenkins API changes, permissions, plugin availability. |
+| Startup script breaks Jenkins | Move script out, restart, test in lower environment. |
+| Shared library not found | Library config, branch, SCM credentials, annotation name. |
+| Pipeline sandbox rejection | Admin script approval or safer Pipeline pattern. |
+| Job DSL missing method | Plugin version or DSL syntax support. |
+
+## Interview Notes
+
+- Jenkinsfile uses Groovy-based Pipeline syntax.
+- Script Console is powerful admin-level Groovy execution.
+- `init.groovy.d` runs startup Groovy scripts.
+- Shared libraries reuse Pipeline logic.
+- Job DSL can define jobs as code.
+- Groovy automation should be reviewed, tested, and version-controlled.
+
+## Related Topics
+
+- [Using Declarative Jenkins Pipeline](5%20-%20Using%20Declarative%20Jenkins%20Pipeline.md)
+- [Using and Managing Jenkins](3%20-%20Using%20and%20Managing%20Jenkins.md)
+

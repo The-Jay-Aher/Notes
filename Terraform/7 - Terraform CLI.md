@@ -1,90 +1,219 @@
 # 7 - Terraform CLI
 
-## Code Quality and Validation Commands
+## Quick Summary
 
-### `terraform fmt`
+Terraform CLI is the command-line interface for formatting, validating, planning, applying, importing, inspecting, debugging, and managing state. You should know the daily workflow commands and the dangerous commands that require extra care.
 
-- Formats Terraform code for consistency.
-- Safe to run anytime.
+## Daily Commands
 
-### `terraform validate`
+```bash
+terraform init
+terraform fmt -recursive
+terraform validate
+terraform plan
+terraform apply
+```
 
-- Validates syntax and internal configuration consistency.
-- Useful before `plan` in CI pipelines.
+Common safe CI validation:
+
+```bash
+terraform fmt -check -recursive
+terraform init -backend=false
+terraform validate
+```
+
+## init
+
+```bash
+terraform init
+```
+
+Use when:
+
+- New working directory.
+- Provider changes.
+- Module source changes.
+- Backend changes.
+
+Useful flags:
+
+```bash
+terraform init -upgrade
+terraform init -reconfigure
+terraform init -backend=false
+```
+
+## plan
+
+```bash
+terraform plan
+terraform plan -out=tfplan
+```
+
+Use saved plan:
+
+```bash
+terraform apply tfplan
+```
+
+## apply
+
+```bash
+terraform apply
+```
+
+Controlled automation:
+
+```bash
+terraform apply -auto-approve
+```
+
+Only use auto-approve when review and gating happen elsewhere.
+
+## destroy
+
+```bash
+terraform plan -destroy
+terraform destroy
+```
+
+Never treat destroy as a routine cleanup command in shared environments.
 
 ## Importing Existing Infrastructure
 
-### `terraform import`
+Import attaches an existing resource to Terraform state.
 
-Maps an existing infrastructure object to a Terraform resource address.
+```bash
+terraform import aws_s3_bucket.logs existing-bucket-name
+```
 
-Pattern:
+After import:
 
-- `terraform import <resource_address> <provider_id>`
+1. Write matching resource configuration.
+2. Run plan.
+3. Adjust config until changes are expected.
 
-Important:
-
-- Import does not generate full configuration automatically.
-- After import, configuration must match the real resource to avoid drift.
+Some newer Terraform workflows also support import blocks. Check current docs for the version you use.
 
 ## Replacing Resources
 
-### Recommended: `terraform apply -replace=<address>`
+Preferred modern pattern:
 
-Use `-replace` to force recreation of a resource in a controlled plan/apply flow.
+```bash
+terraform apply -replace=aws_instance.web
+```
 
-Note:
+This tells Terraform to replace a specific resource during apply.
 
-- Older `terraform taint` workflows are largely superseded by `-replace` in modern Terraform usage.
+Avoid older `terraform taint` patterns unless you specifically need them and understand the effect.
 
 ## Terraform Configuration Block
 
-The `terraform` block controls Terraform behavior.
+```hcl
+terraform {
+  required_version = ">= 1.6.0"
 
-Common uses:
-
-- Required Terraform version
-- Required provider constraints
-- Backend configuration
-- Experimental feature flags (when applicable)
-
-## Workspaces (CLI)
-
-CLI workspaces let you keep multiple state snapshots for same configuration directory.
-
-Key points:
-
-- Default workspace is `default`.
-- Useful for isolated environment variants, but not a full replacement for strong environment separation strategies.
-
-Reference variable:
-
-- `terraform.workspace`
-
-## Debugging Terraform
-
-### `TF_LOG`
-
-Environment variable to enable verbose logging.
-
-Common levels:
-
-- `TRACE`, `DEBUG`, `INFO`, `WARN`, `ERROR`
-
-### `TF_LOG_PATH`
-
-- Writes logs to a file for troubleshooting.
-
-Linux example:
-
-```bash
-export TF_LOG=TRACE
-export TF_LOG_PATH=./terraform.log
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 5.0"
+    }
+  }
+}
 ```
 
-## Quick Summary
+Use constraints to avoid accidental incompatible upgrades.
 
-1. `fmt` and `validate` improve quality before execution.
-2. `import` helps adopt unmanaged existing infrastructure.
-3. Prefer `-replace` over legacy taint workflows.
-4. Logging environment variables help diagnose hard failures.
+## Workspaces
+
+CLI workspaces allow multiple state instances for one configuration/backend.
+
+```bash
+terraform workspace list
+terraform workspace new dev
+terraform workspace select prod
+```
+
+Important: Terraform CLI workspaces are different from HCP Terraform workspaces.
+
+Use CLI workspaces carefully. For many production systems, separate directories/root modules per environment are clearer.
+
+## Debugging
+
+Set log level:
+
+```bash
+TF_LOG=INFO terraform plan
+TF_LOG=DEBUG terraform plan
+TF_LOG=TRACE terraform plan
+```
+
+Write logs to a file:
+
+```bash
+TF_LOG=DEBUG TF_LOG_PATH=terraform.log terraform plan
+```
+
+Do not publish debug logs without checking for sensitive data.
+
+## Useful Inspection Commands
+
+```bash
+terraform providers
+terraform output
+terraform output -json
+terraform state list
+terraform state show <address>
+terraform console
+```
+
+`terraform console` is useful for testing expressions.
+
+## Benefits
+
+- Clear lifecycle workflow.
+- Supports validation and formatting.
+- Provides state inspection tools.
+- Supports import and replacement.
+- Works in local and CI/CD environments.
+
+## Drawbacks / Limitations
+
+- CLI commands can be destructive.
+- Workspace misuse can target wrong environment.
+- Debug logs may contain sensitive information.
+- Saved plans can go stale.
+- Local execution depends on local credentials and environment.
+
+## Hidden Details / Caveats
+
+- `terraform validate` does not contact all remote APIs.
+- `terraform plan` may refresh state unless configured otherwise.
+- Saved plan files can contain sensitive data.
+- `terraform force-unlock` should only be used after confirming no active run.
+- Provider lock file affects selected provider versions.
+
+## Common Mistakes
+
+| Mistake | Fix |
+| --- | --- |
+| Applying without checking workspace | Run `terraform workspace show` or use separate env directories. |
+| Ignoring replacements in plan | Review `-/+` carefully. |
+| Running debug logs in shared output | Save locally and redact. |
+| Importing without writing config | Write matching resource config. |
+| Overusing CLI workspaces for all envs | Consider separate root modules. |
+
+## Interview Notes
+
+- `fmt` formats; `validate` checks syntax/config shape.
+- `init` downloads providers/modules and initializes backend.
+- `plan` previews; `apply` changes.
+- `import` attaches existing resources to state.
+- `-replace` forces resource replacement.
+- CLI workspaces are not the same as HCP Terraform workspaces.
+
+## Related Topics
+
+- [Terraform State](4%20-%20Terraform%20State.md)
+- [Terraform Cloud and Enterprise](8%20-%20Terraform%20Cloud%20and%20Enterprise.md)
+
