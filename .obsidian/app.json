@@ -3,6 +3,5 @@
   "alwaysUpdateLinks": true,
   "uriCallbacks": true,
   "defaultViewMode": "preview",
-  "trashOption": "local",
-  "promptDelete": true
+  "trashOption": "local"
 }

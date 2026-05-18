@@ -1,13 +1,5 @@
 # EC2 Instance Storage
 
-## Quick Summary
-
-EC2 storage options include EBS for persistent block storage, instance store for very fast ephemeral local storage, AMIs for reusable instance templates, snapshots for backups, and EFS for shared managed file storage. The main design question is whether the workload needs persistence, sharing, high IOPS, low cost, or temporary scratch performance.
-
-## Why It Matters
-
-SAA questions often compare EBS, EFS, and instance store. The correct answer depends on durability, Availability Zone scope, sharing needs, performance profile, backup method, encryption, and cost.
-
 ## EBS Overview
 
 ### What Is an EBS Volume?
@@ -253,30 +245,3 @@ Note:
 - Can reduce cost using storage tiers and lifecycle policies.
 
 Remember: compare EFS vs EBS vs Instance Store based on durability, performance, and sharing needs.
-
-## Common Mistakes
-
-| Mistake | Better Design |
-| --- | --- |
-| Using instance store for durable data | Use EBS, EFS, S3, or a database depending on access pattern. |
-| Expecting EBS to attach across AZs | Snapshot and restore to another AZ, or design differently. |
-| Using EFS for Windows workloads | EFS is for Linux/NFS; consider FSx for Windows File Server. |
-| Ignoring root volume delete behavior | Check `DeleteOnTermination`. |
-| Choosing EFS only because it is shared | Validate latency, throughput, and cost. |
-
-## Interview Notes
-
-- EBS is persistent block storage and AZ-scoped.
-- EBS snapshots are point-in-time backups stored in S3-backed infrastructure.
-- AMIs are launch templates for EC2 instances.
-- Instance store is ephemeral and high performance.
-- EFS is managed NFS file storage and can be mounted by many Linux instances.
-- EBS encryption covers volume data, snapshots, and data in transit between EC2 and EBS.
-
-## Official References
-
-- [Amazon EBS documentation](https://docs.aws.amazon.com/ebs/)
-- [Amazon EBS volume types](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html)
-- [Amazon EBS snapshots](https://docs.aws.amazon.com/ebs/latest/userguide/EBSSnapshots.html)
-- [Amazon EC2 instance store](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html)
-- [Amazon EFS documentation](https://docs.aws.amazon.com/efs/)

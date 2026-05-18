@@ -1,13 +1,5 @@
 # 1 - Foundations of Cloud Computing and Compute
 
-## Quick Summary
-
-Cloud computing is on-demand access to IT resources such as compute, storage, networking, databases, and managed services through a cloud provider. For AWS Cloud Practitioner, this note covers cloud value, service models, deployment models, AWS global infrastructure, Well-Architected basics, account access, and core compute services such as EC2, containers, and serverless options.
-
-## Why It Matters
-
-These concepts explain why organizations use AWS instead of buying and operating all infrastructure themselves: faster provisioning, elastic capacity, managed services, global reach, and pay-as-you-go pricing. They also establish the vocabulary needed for every later AWS service note.
-
 ## Cloud Computing Basics
 
 Cloud computing is the on-demand delivery of IT resources (compute, storage, networking, databases, and more) over the internet, with pay-as-you-go pricing.

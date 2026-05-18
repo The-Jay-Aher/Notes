@@ -1,182 +1,58 @@
 # 5 - Terraform Modules
 
-## Quick Summary
+## What a Module Is
 
-A Terraform module is a directory of Terraform configuration. Modules let you package reusable infrastructure patterns with inputs and outputs.
+A module is a container for Terraform resources used together.
 
-Every Terraform configuration has a root module. Child modules are called from the root or from other modules.
+- Every Terraform configuration has a **root module**.
+- Reusable child modules help standardize and scale infrastructure patterns.
 
 ## Why Use Modules
 
-Modules help:
-
-- Reduce duplication.
-- Standardize infrastructure patterns.
-- Hide implementation details.
-- Improve review and reuse.
-- Enforce naming/tagging conventions.
-
-Example:
-
-```text
-Use one VPC module for dev, staging, and prod instead of rewriting VPC resources three times.
-```
-
-## Module Structure
-
-Common module layout:
-
-```text
-modules/
-  vpc/
-    main.tf
-    variables.tf
-    outputs.tf
-    README.md
-```
-
-Root module:
-
-```text
-envs/
-  prod/
-    main.tf
-    variables.tf
-    backend.tf
-```
-
-## Calling A Module
-
-```hcl
-module "vpc" {
-  source = "../../modules/vpc"
-
-  name       = "prod"
-  cidr_block = "10.0.0.0/16"
-}
-```
+- Reuse common infrastructure patterns
+- Improve readability by reducing duplication
+- Enforce consistent architecture and guardrails
 
 ## Module Sources
 
-| Source | Example |
-| --- | --- |
-| Local path | `../../modules/vpc` |
-| Terraform Registry | `terraform-aws-modules/vpc/aws` |
-| Git | `git::https://github.com/org/terraform-modules.git//vpc?ref=v1.2.0` |
-| HTTP/archive | Less common; use carefully. |
+Modules can be sourced from:
 
-Pin remote module versions.
+- Terraform Registry
+- Private registry
+- VCS repositories (for example Git)
+- Local filesystem paths
 
-## Inputs
+## Declaring a Module
 
-Child module variable:
+A module is declared with a `module` block and typically includes:
 
-```hcl
-variable "cidr_block" {
-  type        = string
-  description = "VPC CIDR block."
-}
-```
+- `source`
+- input variables
+- optional meta-arguments (`count`, `for_each`, `depends_on`, `providers`)
 
-Caller passes value:
+## Module Inputs and Outputs
 
-```hcl
-module "vpc" {
-  source     = "../../modules/vpc"
-  cidr_block = "10.0.0.0/16"
-}
-```
+### Inputs
 
-## Outputs
+- Values passed into a module.
+- Defined in module via `variable` blocks.
 
-Child module:
+### Outputs
 
-```hcl
-output "vpc_id" {
-  value = aws_vpc.this.id
-}
-```
-
-Caller uses:
-
-```hcl
-module.vpc.vpc_id
-```
-
-## Module Versioning
-
-For registry modules:
-
-```hcl
-module "vpc" {
-  source  = "terraform-aws-modules/vpc/aws"
-  version = "~> 5.0"
-}
-```
-
-For Git modules:
-
-```hcl
-source = "git::https://github.com/org/modules.git//vpc?ref=v1.2.3"
-```
-
-Avoid pointing production modules at a moving branch such as `main` unless your process intentionally handles that risk.
+- Values exposed by a module via `output` blocks.
+- Referenced from root module as:
+  - `module.<module_name>.<output_name>`
 
 ## Module Design Best Practices
 
-- Keep modules focused.
-- Use clear variable names and descriptions.
-- Set useful defaults only when safe.
-- Expose outputs that callers actually need.
-- Avoid hiding too many unrelated resources in one module.
-- Do not put provider credentials inside modules.
-- Document examples.
-- Add validation for constrained inputs.
+- Keep modules focused on a clear purpose.
+- Define explicit variable types.
+- Provide sensible defaults where appropriate.
+- Document expected inputs/outputs.
+- Avoid embedding environment-specific values directly.
 
-## Benefits
+## Quick Summary
 
-- Reuse.
-- Standardization.
-- Cleaner root modules.
-- Easier governance.
-- Faster environment creation.
-
-## Drawbacks / Limitations
-
-- Over-abstracted modules are hard to use.
-- Module changes can affect many environments.
-- Versioning must be managed.
-- Debugging nested modules can be harder.
-- Generic modules can become full of flags and conditionals.
-
-## Hidden Details / Caveats
-
-- A module is just a Terraform directory.
-- Root module is the current working directory.
-- Child module state is still stored in the root module's state.
-- Module `source` changes may require `terraform init`.
-- Outputs are the public interface of a module.
-
-## Common Mistakes
-
-| Mistake | Fix |
-| --- | --- |
-| One module does everything | Split by responsibility. |
-| No version pinning | Pin module versions. |
-| Too many booleans | Consider smaller modules. |
-| Missing outputs | Expose required integration values. |
-| Hard-coded names/tags | Use variables and locals. |
-
-## Interview Notes
-
-- Root module is where Terraform runs.
-- Child modules are called with `module` blocks.
-- Modules use variables as inputs and outputs as outputs.
-- Remote modules should be versioned.
-- Modules improve reuse but can be over-abstracted.
-
-## Related Topics
-
-- [Terraform Fundamentals](3%20-%20Terraform%20Fundamentals.md)
-- [Built-In Functions and Dynamic Blocks](6%20-%20Built-In%20Functions%20and%20Dynamic%20Blocks.md)
-
+1. Modules are Terraform's primary reuse mechanism.
+2. Inputs/outputs create clean module interfaces.
+3. Well-designed modules improve consistency, speed, and maintainability.

@@ -1,9 +1,5 @@
 # Terraform Notes (Basic → Advanced)
 
-## Quick Summary
-
-This is the long-form Terraform reference for the vault. It covers Terraform fundamentals, workflow, project layout, settings, variables, expressions, locals, outputs, data sources, resources, dynamic blocks, modules, state, workspaces, imports, provisioners, security, and Terraform Cloud/Enterprise concepts.
-
 These are personal learning notes for Terraform (HCL), ordered from fundamentals → advanced workflows. Examples use AWS, but the concepts apply to any provider.
 
 ## Table of Contents

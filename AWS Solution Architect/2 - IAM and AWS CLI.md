@@ -164,10 +164,3 @@ Useful for identifying and removing unnecessary permissions.
 4. MFA and strong password policy significantly improve account security.
 5. CLI and SDK access should use secure credential practices.
 6. IAM roles are the preferred way for AWS services/workloads to obtain permissions.
-
-## Official References
-
-- [AWS IAM documentation](https://docs.aws.amazon.com/iam/)
-- [IAM users](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users.html)
-- [IAM roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html)
-- [AWS CLI documentation](https://docs.aws.amazon.com/cli/)

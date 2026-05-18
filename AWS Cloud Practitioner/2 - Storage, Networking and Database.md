@@ -1,13 +1,5 @@
 # 2 - Storage, Networking and Database
 
-## Quick Summary
-
-This note covers the foundational AWS services for data storage, networking, content delivery, and databases. For Cloud Practitioner revision, focus on what each service is, when to use it, basic durability/availability/cost trade-offs, and how the services fit together in a typical cloud architecture.
-
-## Why It Matters
-
-Most AWS solutions are built from these building blocks: S3 for object storage, EBS/EFS/FSx for file and block storage, VPC for networking, CloudFront for content delivery, Route 53 for DNS, and managed databases such as RDS, DynamoDB, Redshift, and Aurora.
-
 ## 1) Storage Technology and Services
 
 ### EC2 Storage Options

@@ -1,9 +1,5 @@
 # 3 - EC2 Fundamentals
 
-## Quick Summary
-
-Amazon EC2 provides resizable virtual machines called instances. For SAA, know how to choose instance families and purchase options, attach storage, place instances in VPC subnets, protect them with security groups and IAM roles, automate bootstrapping with user data, and monitor them with CloudWatch.
-
 ## Amazon EC2 Overview
 
 Amazon EC2 (**Elastic Compute Cloud**) is a core AWS compute service that provides resizable virtual servers called **instances**.
@@ -253,10 +249,3 @@ Spot Fleets help automate Spot requests across pools to improve both cost and av
 - `80` - HTTP
 - `443` - HTTPS
 - `3389` - RDP (remote login to Windows instances)
-
-## Official References
-
-- [Amazon EC2 documentation](https://docs.aws.amazon.com/ec2/)
-- [Amazon EC2 instance types](https://docs.aws.amazon.com/ec2/latest/instancetypes/instance-types.html)
-- [EC2 user data and shell scripts](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html)
-- [Security groups for your VPC](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-security-groups.html)

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Todo's.md",
+                "file": "AWS Solution Architect/4 - EC2 Solutions Architect Associate Level.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Todo's"
+              "title": "4 - EC2 Solutions Architect Associate Level"
             }
           }
         ]
@@ -172,7 +172,6 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "obsidian-git:Open Git source control": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -184,20 +183,9 @@
   },
   "active": "77bfc68051238fb6",
   "lastOpenFiles": [
-    "Markdown Cheatsheet.md",
-    "aws_saa_trading_bot_plan_checklist_v2.md",
-    "Bash.md",
-    "Learning GitHub Actions.md",
-    "UPSC/Polity/Democratic Politics - I.md",
-    "UPSC/Monthly GK/May - 2026.md",
-    "UPSC/Polity/Democratic Politics - I",
-    "UPSC/Polity",
-    "UPSC/Monthly GK",
-    "AWS Solution Architect/6 - High Availabilty and Scalability ELB & ASG.md",
-    "UPSC",
-    "AWS Solution Architect/4 - EC2 Solutions Architect Associate Level.md",
     "AWS Solution Architect/3 - EC2 Fundamentals.md",
     "AWS Solution Architect/2 - IAM and AWS CLI.md",
+    "AWS Solution Architect/4 - EC2 Solutions Architect Associate Level.md",
     "AWS Cloud Practitioner/3 - Deployment, Migrtion and AI.md"
   ]
 }
