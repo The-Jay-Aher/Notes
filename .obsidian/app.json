@@ -4,5 +4,5 @@
   "uriCallbacks": true,
   "defaultViewMode": "preview",
   "trashOption": "local",
-  "promptDelete": false
+  "promptDelete": true
 }
