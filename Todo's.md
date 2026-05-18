@@ -1,16 +1,23 @@
-- [ ] Learn AWS Solutions Architect Associate [[aws_saa_trading_bot_plan_checklist]] checklist
-- [ ] Learn Networking
-- [ ] Improve program
-	- [x] Test strategy on a bigger timeline 
-		- [x] Data is not fetched properly 
-		- [x] removed the max allocation ratio
-	- [ ] Research a swing based strategy 
-	- [ ] Use OI, Volume, Support and Resistance in our program to the use case
-	- [ ] Add a selling only mode which, can sell the options for me, I will do the buy
-	- [ ] New Strategy - 
-		- [ ] ADX if above 20 and increasing
-		- [ ] dma should  be above 20 and increasing
-		- [ ] stop loss is below vwap candle should close below vwap
-	- [ ] Research ADX positive, mid, negative and filter the RSI message through them
-- [ ] Read Kubernetes docs
-- [ ] Watch ADHD module
+# Todo's
+
+## Learning
+
+- [ ] Learn AWS Solutions Architect Associate using the [[aws_saa_trading_bot_plan_checklist]] checklist.
+- [ ] Learn networking fundamentals.
+- [ ] Read Kubernetes documentation.
+- [ ] Watch ADHD module.
+
+## Trading Program Improvements
+
+- [ ] Improve program.
+  - [x] Test strategy on a bigger timeline.
+    - [x] Confirm data was not fetched properly.
+    - [x] Remove the max allocation ratio.
+  - [ ] Research a swing-based strategy.
+  - [ ] Use OI, volume, support, and resistance in the program where they fit the use case.
+  - [ ] Add a selling-only mode that sells options while manual buying remains outside the program.
+  - [ ] Research new strategy idea.
+    - [ ] ADX should be above 20 and increasing.
+    - [ ] DMA should be above 20 and increasing.
+    - [ ] Stop loss should be below VWAP; candle should close below VWAP.
+  - [ ] Research ADX positive/mid/negative filtering and route RSI messages through those filters.
