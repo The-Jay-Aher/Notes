@@ -1,2 +1,11 @@
 
 /Buy.md
+
+# Obsidian local/transient state
+.trash/
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+
+# Editor swap files
+*.swp
+.*.swp
