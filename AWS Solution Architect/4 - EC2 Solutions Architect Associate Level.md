@@ -1,5 +1,13 @@
 # 4 - EC2 Solutions Architect Associate Level
 
+## Quick Summary
+
+This note covers EC2 design details that show up often in Solutions Architect scenarios: private/public IP behavior, Elastic IPs, placement groups, Elastic Network Interfaces, and EC2 hibernation. These topics matter when choosing the right networking, availability, latency, and failover design.
+
+## Why It Matters
+
+SAA questions often test trade-offs: whether to use DNS or EIP, whether a workload needs low-latency cluster placement or failure isolation, whether ENI movement can support failover, and whether hibernation fits long-startup workloads.
+
 ## Private IP vs Public IP vs Elastic IP
 
 EC2 networking commonly uses IPv4 and IPv6:
@@ -130,3 +138,32 @@ Why hibernate:
 - RAM size limit is up to 150 GB.
 - Available with On-Demand, Reserved, and Spot (if the instance type supports hibernation).
 - Recommended maximum hibernation duration: 60 days.
+
+## Common Mistakes
+
+| Mistake | Better Design |
+| --- | --- |
+| Using Elastic IPs as the default front door | Prefer Route 53 and load balancers for most applications. |
+| Expecting auto-assigned public IP to survive stop/start | Use Elastic IP if a fixed public IPv4 is required. |
+| Choosing cluster placement for HA | Cluster placement improves latency, not AZ-level availability. |
+| Ignoring application support for Multi-ENI failover | Test failover behavior and routing. |
+| Using hibernate for unsupported AMI/instance types | Verify hibernation support before design. |
+
+## Interview Notes
+
+- Private IP remains with the ENI.
+- Auto-assigned public IPv4 can change after stop/start.
+- Elastic IP is a static public IPv4 address.
+- Cluster placement group optimizes low latency/high throughput inside one AZ.
+- Spread placement group improves hardware failure isolation.
+- Partition placement group is for large distributed systems.
+- ENI is a virtual network card.
+- Hibernate saves RAM to encrypted root EBS.
+
+## Official References
+
+- [Amazon EC2 documentation](https://docs.aws.amazon.com/ec2/)
+- [Elastic IP addresses](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html)
+- [Placement groups](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html)
+- [Elastic network interfaces](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html)
+- [Hibernate EC2 instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html)
