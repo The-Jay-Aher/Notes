@@ -1,15 +1,16 @@
 - [ ] Learn AWS SAA [[aws_saa_trading_bot_plan_checklist]] checklist
 - [ ] Learn Networking
 - [ ] Improve program
-	- [ ] Test strategy on a bigger timeline 
-		- [ ] Data is not fetched properly 
-		- [ ] removed the max allocation ratio
 	- [ ] Research a swing based strategy 
-	- [ ] Improve the current RSI strategy
-		- [ ] Add pullback code and backtest the strategy more
-		- [ ] Add OI and Volume support
-		- [ ] EMA 20 as stop loss
 	- [ ] Add a selling only mode which, can sell the options for me, I will do the buy
-- [ ] Check gpt pro timing purchase
+	- [ ] Research a support resistance  strategy 
+	- [ ] Learn side by side trading
+	- [ ] Integrate upstox api and its features
+	- [ ] Create a proper python gui
+		- [ ] Refresh holdings
+		- [ ] Stop Button
+		- [ ] Telegram message info
+		- [ ] know what the script is doing right now
+	- [ ] Optimize rest of the 6 strategies
 - [ ] Read Kubernetes docs
-- [ ] Watch adhd module
+- [ ] Watch Meditation module 
