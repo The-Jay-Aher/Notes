@@ -15,7 +15,10 @@
     - [x] Remove the max allocation ratio.
   - [ ] Research a swing-based strategy.
   - [ ] Use OI, volume, support, and resistance in the program where they fit the use case.
-  - [ ] Add a selling-only mode that sells options while manual buying remains outside the program.
+  - [ ] Research defined-risk options execution only after consolidated risk tracking exists.
+    - [ ] Do not build naked option selling.
+    - [ ] Do not allow manual hedges outside the program unless the program can see total exposure.
+    - [ ] Define max loss, margin stress, IV rules, event filters, and kill switch before implementation.
   - [ ] Research new strategy idea.
     - [ ] ADX should be above 20 and increasing.
     - [ ] DMA should be above 20 and increasing.

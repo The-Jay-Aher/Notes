@@ -14,6 +14,28 @@
 - If a day spills over, move items to the next day — **do not skip the weekly checkpoint**
 - Terraform rule: **do the micro-revision even on busy weekdays** (20–40 min)
 
+## Trading safety gate
+
+Use the bot tasks as DevOps practice unless the trading system has a written strategy, simulator, risk engine, paper-trading logs, and review process.
+
+Live execution is blocked until all of these exist:
+
+```text
+Strategy specification
+Data validation
+Backtest or replay report
+Paper fill model
+Risk engine
+Kill switch
+Audit log
+Manual review
+```
+
+Related audit files:
+
+- [Trading Notes Audit Report](trading_notes_audit_report.md)
+- [Action Plan](action_plan.md)
+
 ---
 
 # Terraform cadence (Option A)

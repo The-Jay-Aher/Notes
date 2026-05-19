@@ -92,6 +92,13 @@ Use this index as the first stop when revising. It shows what each folder contai
 | [Mentor Meet](Mentor%20Meet.md) | DevOps career planning, progress, learning sequence, doubts, and short-term tasks. |
 | [Todo's](Todo%27s.md) | Personal task list. |
 | [Fundamental Analysis](Fundamental%20Analysis.md) | Long-form framework for stock or index fundamental analysis. |
+| [Financial Jargon Glossary](Financial%20Jargon%20Glossary.md) | Beginner-friendly glossary for stock market, futures, options, commodities, macro, valuation, and trading terms. |
+| [Positional Trader](Positional%20Trader.md) | Detailed framework for positional stock, futures, and options trading with risk management. |
+| [Probabilistic Trading Guide](Probabilistic%20Trading%20Guide.md) | Probability-first trading guide covering expectancy, R-multiples, setup scoring, manual decision trees, and review systems. |
+| [Trading Notes Audit Report](trading_notes_audit_report.md) | Blunt audit of the finance notes, strategy-readiness gaps, risk issues, and improvement plan. |
+| [Misunderstanding Register](misunderstanding_register.md) | Register of weak, vague, incomplete, or dangerous trading ideas to fix before live risk. |
+| [Professional Trading Workbook Template](pro_trading_workbook_template.md) | Ready-to-use templates for strategy research, trade plans, journals, reviews, and live-readiness checks. |
+| [Trading Action Plan](action_plan.md) | Practical 7-day, 30-day, 60-day, and 90-day plan for turning notes into testable process. |
 | [UPSC Monthly GK](UPSC/Monthly%20GK/May%20-%202026.md) | May 2026 current-affairs capture template with explicit source-verification markers. |
 | [UPSC Polity](UPSC/Polity/Democratic%20Politics%20-%20I.md) | Democracy fundamentals for polity revision. |
 
