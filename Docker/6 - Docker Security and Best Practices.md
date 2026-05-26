@@ -4,6 +4,36 @@
 
 Docker security is about reducing image risk, runtime privilege, secret exposure, host access, and supply-chain problems. Docker makes packaging easier, but a container can still be insecure if the image, Dockerfile, runtime user, mounted paths, or credentials are poorly handled.
 
+## First-Principles Explanation
+
+Docker reduces some risks by isolating processes and packaging dependencies, but it also creates new risk surfaces: images from registries, build contexts, image layers, runtime users, Linux capabilities, mounted host paths, network exposure, secrets, and daemon access.
+
+Cause: containers share the host kernel and often integrate tightly with host filesystems, networks, and CI systems.
+
+Mechanism: reduce what enters the image, reduce what the process can do, reduce what host paths it can touch, and reduce who can publish or run production images.
+
+Immediate result: compromise has fewer paths to become host or supply-chain compromise.
+
+Long-term impact: container platforms can enforce consistent security policy.
+
+Next connected topic: rootless Docker, Kubernetes security contexts, admission control, image signing, and SBOMs.
+
+## Security Layers Diagram
+
+```mermaid
+flowchart TB
+    Source[Source and dependencies] --> Build[Build context / Dockerfile]
+    Build --> Image[Image layers]
+    Image --> Registry[Registry and tags]
+    Registry --> Runtime[Container runtime]
+    Runtime --> User[Non-root user]
+    Runtime --> Caps[Capabilities]
+    Runtime --> Mounts[Mount policy]
+    Runtime --> Net[Port exposure]
+    Runtime --> Secrets[Runtime secrets]
+    Runtime --> Host[Host kernel / daemon boundary]
+```
+
 ## Image Best Practices
 
 - Use trusted base images.
@@ -146,7 +176,7 @@ Why this is better:
 - Pinning versions requires update discipline.
 - Some legacy apps assume root or writable filesystems.
 
-## Hidden Details / Caveats
+## Small Details That Matter Later
 
 - Deleting secrets in a later Dockerfile layer may not remove them from image history.
 - `USER` affects runtime permissions but not earlier build steps.
@@ -184,6 +214,22 @@ Why this is better:
 - Do not bake secrets into images.
 - Scan images and rebuild regularly.
 
+## Questions to Test Understanding
+
+1. Why is running as non-root useful but not sufficient?
+2. Why is the Docker socket a sensitive mount?
+3. Why can image scanning be noisy but still necessary?
+4. Why is rootless Docker different from `USER appuser` in a Dockerfile?
+5. Why are bind mounts security-sensitive?
+
+## Answers and Reasoning
+
+1. It reduces app privileges, but host mounts, capabilities, privileged mode, secrets, and kernel risks still matter.
+2. The socket exposes the Docker daemon API, which can create privileged containers or mount host paths.
+3. Scanners find known vulnerabilities and policy issues, but teams must assess reachability, updates, and operational impact.
+4. Rootless Docker runs daemon and containers without root privileges on the host side; `USER` changes the process user inside the container.
+5. Writable bind mounts let container processes modify host files and can expose sensitive paths.
+
 ## Related Topics
 
 - [Dockerfiles and Image Builds](3%20-%20Dockerfiles%20and%20Image%20Builds.md)
@@ -194,4 +240,4 @@ Why this is better:
 
 - [Docker security](https://docs.docker.com/engine/security/)
 - [Docker rootless mode](https://docs.docker.com/engine/security/rootless/)
-- [Dockerfile best practices](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/)
+- [Dockerfile best practices](https://docs.docker.com/build/building/best-practices/)

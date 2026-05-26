@@ -10,6 +10,35 @@ Beginner mental model:
 Dockerfile + build context -> image layers -> runnable image
 ```
 
+## First-Principles Explanation
+
+A Dockerfile turns environment setup into code. Instead of telling every machine how to install dependencies manually, the Dockerfile records the build steps that produce a repeatable image.
+
+Cause: manual runtime setup creates drift.
+
+Mechanism: build instructions create filesystem changes and metadata in image layers.
+
+Immediate result: the same image can be rebuilt, tagged, scanned, and pushed.
+
+Long-term impact: CI/CD can promote artifacts instead of reassembling servers.
+
+Next connected topic: layer cache, registries, and Kubernetes image pulls.
+
+## Build Flow Diagram
+
+```mermaid
+flowchart LR
+    Source[Source tree] --> Ignore[.dockerignore filters context]
+    Ignore --> Context[Build context]
+    Dockerfile[Dockerfile] --> Builder[docker build / BuildKit]
+    Context --> Builder
+    Builder --> Layers[Image layers]
+    Layers --> Image[Tagged image]
+    Image --> Registry[Registry push/pull]
+```
+
+The build context is part of the security boundary. If a secret enters the context and the Dockerfile copies it, it can enter the image.
+
 ## Basic Dockerfile
 
 ```dockerfile
@@ -188,7 +217,7 @@ Production systems should use immutable version tags or image digests.
 - Secrets can leak into image layers.
 - `latest` can make deployments unpredictable.
 
-## Hidden Details / Caveats
+## Small Details That Matter Later
 
 - Files copied in one layer may remain in history even if deleted in a later layer.
 - Build arguments are not secret storage.
@@ -227,6 +256,22 @@ Production systems should use immutable version tags or image digests.
 - Multi-stage builds reduce final image size.
 - `EXPOSE` does not publish ports by itself.
 
+## Questions to Test Understanding
+
+1. Why does Dockerfile instruction order affect build speed?
+2. Why is `.dockerignore` a security feature as well as a performance feature?
+3. Why can deleting a secret in a later layer still be unsafe?
+4. Why do multi-stage builds reduce attack surface?
+5. Why is `EXPOSE` not enough to reach an app from the host?
+
+## Answers and Reasoning
+
+1. Docker can reuse unchanged layers. If frequently changing files are copied before dependency install, the expensive dependency layer is invalidated often.
+2. It keeps unnecessary or sensitive files out of the build context, reducing transfer size and accidental copying.
+3. The secret may still exist in an earlier image layer or build history. Rotate the secret and rebuild correctly.
+4. Build tools and caches can stay in builder stages while the final image contains only runtime artifacts.
+5. `EXPOSE` documents container ports. Host access needs runtime publishing with `-p` or Compose `ports`.
+
 ## Related Topics
 
 - [Containers and Images](1%20-%20Containers%20and%20Images.md)
@@ -234,6 +279,6 @@ Production systems should use immutable version tags or image digests.
 
 ## Official References
 
-- [Dockerfile reference](https://docs.docker.com/reference/builder)
+- [Dockerfile reference](https://docs.docker.com/reference/builder/)
 - [Docker build reference](https://docs.docker.com/reference/cli/docker/buildx/build/)
-- [Dockerfile best practices](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/)
+- [Dockerfile best practices](https://docs.docker.com/build/building/best-practices/)

@@ -25,6 +25,34 @@ docker rm <container>
 docker rmi <image>
 ```
 
+## First-Principles Explanation
+
+The Docker CLI is a client for asking the Docker daemon to create, start, stop, inspect, and remove Docker objects. Most CLI confusion comes from not separating image operations from container operations.
+
+Cause: a container has a lifecycle separate from the image it came from.
+
+Mechanism: Docker stores container metadata, runtime configuration, logs, exit state, network attachments, mounts, and a writable layer.
+
+Immediate result: a stopped container can still be inspected or restarted.
+
+Long-term impact: operators can debug post-failure state instead of losing it immediately.
+
+Next connected topic: logs, inspect output, and reproducible configuration.
+
+## Lifecycle Diagram
+
+```mermaid
+stateDiagram-v2
+    [*] --> Created: docker create / docker run setup
+    Created --> Running: docker start
+    Running --> Stopped: process exits / docker stop
+    Stopped --> Running: docker start
+    Stopped --> Removed: docker rm
+    Running --> Removed: docker rm -f
+```
+
+`docker run` is a shortcut that creates and starts. `docker start` works only with a container that already exists.
+
 ## Running Containers
 
 Run interactively:
@@ -190,7 +218,7 @@ Warning: prune commands delete unused resources. Be careful with volumes because
 - Debug changes inside containers are not persistent.
 - Prune commands can delete useful local state.
 
-## Hidden Details / Caveats
+## Small Details That Matter Later
 
 - `docker run` creates a new container each time.
 - `docker start` starts an existing stopped container.
@@ -227,6 +255,22 @@ Warning: prune commands delete unused resources. Be careful with volumes because
 - `-p host:container` publishes a port.
 - `--rm` removes the container after exit.
 - `docker inspect` shows detailed JSON metadata.
+
+## Questions to Test Understanding
+
+1. Why does `docker run` repeatedly create many stopped containers?
+2. Why might you avoid `--rm` while debugging?
+3. Why does `docker exec` fail on an exited container?
+4. Why is `docker inspect` more authoritative than memory of a command you typed?
+5. Why can prune commands be dangerous?
+
+## Answers and Reasoning
+
+1. `docker run` creates a new container each time. It does not reuse the old one unless you explicitly start an existing container.
+2. `--rm` deletes post-exit state, which removes inspectable evidence such as exit code, logs, mounts, and config.
+3. `exec` runs a process inside an already running container; an exited container has no running process namespace to enter.
+4. `inspect` shows the actual runtime metadata Docker stored, including env, mounts, ports, command, image, and state.
+5. Prune commands delete unused Docker objects; volume prune can delete data you still care about.
 
 ## Related Topics
 

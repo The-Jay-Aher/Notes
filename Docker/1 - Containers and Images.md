@@ -27,6 +27,37 @@ With Docker:
 - CI can build and test the same package that gets deployed.
 - Local development can match the runtime more closely.
 
+## First-Principles Explanation
+
+An application does not run from source code alone. It needs a runtime, libraries, OS files, environment variables, a network path, and a start command. When those pieces are assembled manually on every machine, differences accumulate.
+
+Docker's basic idea is to package the runtime filesystem and startup metadata into an image, then create a container from that image.
+
+Cause: applications failed when machines differed.
+
+Mechanism: package the application runtime as an image and run it through container isolation.
+
+Immediate result: the same artifact can run on a laptop, CI worker, or server.
+
+Long-term impact: deployment becomes image promotion rather than manual server repair.
+
+Next connected topic: image layers and registries.
+
+## Architecture or Conceptual Structure
+
+```mermaid
+flowchart LR
+    DF[Dockerfile] --> Build[docker build]
+    Build --> Image[Image: read-only layers and metadata]
+    Image --> Run[docker run]
+    Run --> Container[Container: process plus runtime config]
+    Container --> Writable[Writable layer]
+    Container --> Net[Network]
+    Container --> Mounts[Volumes / bind mounts]
+```
+
+The image is the packaged template. The container is what happens when Docker combines that template with runtime choices such as command, environment, ports, mounts, user, and limits.
+
 ## Container vs Virtual Machine
 
 | Topic | Container | Virtual Machine |
@@ -143,7 +174,7 @@ Avoid Docker when:
 - Networking adds another layer to debug.
 - Dockerfiles can become slow or insecure if poorly written.
 
-## Hidden Details / Caveats
+## Small Details That Matter Later
 
 - A container is normally one main process, not a full system.
 - Stopping a container stops the process but does not delete the image.
@@ -170,6 +201,22 @@ Avoid Docker when:
 - Volumes persist data outside the container writable layer.
 - Tags identify image versions but are mutable unless pinned by digest.
 
+## Questions to Test Understanding
+
+1. Why did containers become attractive even though VMs already existed?
+2. Why is an image not the same as a container?
+3. Why should container data be treated as ephemeral by default?
+4. Why is `latest` unsafe as a production habit?
+5. Why do registries matter in CI/CD?
+
+## Answers and Reasoning
+
+1. Containers provide process-level isolation and repeatable packaging with less overhead than booting a full guest operating system for every app.
+2. An image is a read-only package. A container is a runtime instance with process state, env, mounts, network, and a writable layer.
+3. Data written only to the container writable layer is tied to that container and may disappear when the container is removed.
+4. `latest` is a mutable tag, not proof of newest or tested content. Production needs explicit versioning or digest discipline.
+5. Registries let CI push built images and let deployment environments pull the same artifact.
+
 ## Related Topics
 
 - [Docker CLI and Container Lifecycle](2%20-%20Docker%20CLI%20and%20Container%20Lifecycle.md)
@@ -178,6 +225,6 @@ Avoid Docker when:
 
 ## Official References
 
-- [Docker overview](https://docs.docker.com/engine/docker-overview/)
+- [Docker overview](https://docs.docker.com/get-started/docker-overview/)
 - [Docker image concepts](https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-an-image/)
 - [Docker container concepts](https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-a-container/)

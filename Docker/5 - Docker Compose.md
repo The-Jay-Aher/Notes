@@ -12,6 +12,36 @@ service = one container type/config
 docker compose up = create and start the stack
 ```
 
+## First-Principles Explanation
+
+Compose exists because real applications rarely run as one container. A web app may need a database, cache, worker, queue, reverse proxy, and local development mounts. Writing and remembering many `docker run` commands becomes fragile.
+
+Cause: multi-container local apps need repeatable wiring.
+
+Mechanism: Compose declares services, networks, volumes, environment, build settings, and dependencies in YAML.
+
+Immediate result: `docker compose up` can recreate the local stack.
+
+Long-term impact: teams can onboard and test locally with fewer hidden setup steps.
+
+Next connected topic: production orchestration, where Kubernetes uses a different desired-state model.
+
+## Compose Model Diagram
+
+```mermaid
+flowchart TB
+    File[compose.yml] --> Project[Compose project]
+    Project --> App[app service container]
+    Project --> DB[db service container]
+    Project --> Net[default project network]
+    Project --> Vol[db-data volume]
+    App --> Net
+    DB --> Net
+    DB --> Vol
+    App -->|db:5432| DB
+    Host[Host browser] -->|localhost:8080| App
+```
+
 ## Basic Compose File
 
 ```yaml
@@ -206,7 +236,7 @@ Your app may still need retry logic because the database process can take time t
 - `depends_on` is not full readiness orchestration.
 - Local host paths can make stacks less portable.
 
-## Hidden Details / Caveats
+## Small Details That Matter Later
 
 - Compose project name prefixes network and volume names.
 - `docker compose down` removes containers and networks, not named volumes by default.
@@ -243,6 +273,22 @@ Your app may still need retry logic because the database process can take time t
 - Named volumes preserve state.
 - `docker compose up -d` starts in background.
 - `docker compose down -v` removes volumes.
+
+## Questions to Test Understanding
+
+1. Why is Compose better than a README full of `docker run` commands?
+2. Why does an app connect to `db`, not `localhost`, for a Compose database?
+3. Why is `depends_on` not a complete readiness solution?
+4. Why should `docker compose config` be used during debugging?
+5. Why is Compose not the same as Kubernetes?
+
+## Answers and Reasoning
+
+1. Compose stores service config, networks, volumes, env, and build behavior in a repeatable file.
+2. `localhost` means the app container itself; Compose service names resolve on the project network.
+3. Startup order does not guarantee that the dependency process is ready to accept requests.
+4. It shows the resolved effective config after interpolation and merging.
+5. Compose runs a local project; Kubernetes is a cluster desired-state platform with controllers, scheduling, Services, probes, and policy.
 
 ## Related Topics
 

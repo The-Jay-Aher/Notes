@@ -14,6 +14,43 @@ Most beginner Docker problems are storage or networking problems:
 - Database data is stored in the wrong place.
 - Published ports are misunderstood.
 
+## First-Principles Explanation
+
+Containers are replaceable processes. Data and traffic must cross the container boundary deliberately.
+
+For storage:
+
+Cause: the container writable layer disappears with container lifecycle.
+
+Mechanism: mount volumes, bind mounts, or tmpfs at specific paths.
+
+Immediate result: important data can live outside the writable layer.
+
+Long-term impact: container replacement becomes safer.
+
+For networking:
+
+Cause: each container has its own network namespace by default.
+
+Mechanism: connect containers to Docker networks and publish selected ports to the host.
+
+Immediate result: services can talk internally while exposing only required host entry points.
+
+Long-term impact: service wiring becomes explicit and debuggable.
+
+## Storage and Network Diagram
+
+```mermaid
+flowchart TB
+    Host[Docker host] --> Bridge[User-defined bridge network]
+    Bridge --> Web[web container]
+    Bridge --> DB[db container]
+    Web -->|db:5432| DB
+    Host -->|localhost:8080| WebPort[Published port 8080 -> web:80]
+    DB --> Vol[Named volume db-data]
+    Web --> Bind[Optional bind mount for source/config]
+```
+
 ## Storage Types
 
 | Type | Meaning | Use |
@@ -153,7 +190,7 @@ This is why Compose service names work as hostnames.
 - Published ports can expose services unexpectedly.
 - Docker networking differs from Kubernetes networking.
 
-## Hidden Details / Caveats
+## Small Details That Matter Later
 
 - Removing a container does not remove named volumes automatically.
 - `docker compose down -v` removes volumes defined by the Compose project.
@@ -188,6 +225,22 @@ This is why Compose service names work as hostnames.
 - Published ports map host ports to container ports.
 - User-defined bridge networks provide container DNS.
 - Container-to-container communication does not require publishing ports to host.
+
+## Questions to Test Understanding
+
+1. Why is the container writable layer a bad place for database data?
+2. Why can a bind mount make image files appear missing?
+3. Why does another container not need a published host port to reach a peer on the same network?
+4. Why can `localhost` be wrong inside a container?
+5. Why is `docker compose down -v` risky?
+
+## Answers and Reasoning
+
+1. The writable layer belongs to the container and is removed with it; databases need durable storage.
+2. A bind mount overlays the target path, hiding files that were present in the image at that path.
+3. Container-to-container traffic on a shared Docker network uses internal networking and service/container ports directly.
+4. Inside a container, `localhost` means that same container, not the host or another container.
+5. It removes Compose project volumes, which may contain database data.
 
 ## Related Topics
 
