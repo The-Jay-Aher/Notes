@@ -1,0 +1,125 @@
+# Book Coverage Report
+
+- Generated notes: 93
+- Missing source chapters: 0
+
+## Books Processed
+
+- Class 9 Democratic Politics-I: 5 chapter notes; source: NCERT mirrored 2021 chapter PDFs.
+- Class 10 Democratic Politics-II: 5 chapter notes; source: NCERT official 2026-27 chapter PDFs.
+- Class 11 Indian Constitution at Work: 10 chapter notes; source: NCERT official 2026-27 chapter PDFs.
+- Class 8 Our Pasts-III: 8 chapter notes; source: NCERT official 2024-25 chapter PDFs.
+- Class 10 India and the Contemporary World-II: 5 chapter notes; source: NCERT official 2026-27 chapter PDFs.
+- Class 6 The Earth: Our Habitat: 8 chapter notes; source: NCERT mirrored 2021 chapter PDFs.
+- Class 7 Our Environment: 7 chapter notes; source: NCERT official 2024-25 chapter PDFs.
+- Class 8 Resources and Development: 5 chapter notes; source: NCERT official 2024-25 chapter PDFs.
+- Class 9 Contemporary India-I: 6 chapter notes; source: NCERT mirrored 2021 chapter PDFs.
+- Class 10 Contemporary India-II: 7 chapter notes; source: NCERT official 2026-27 chapter PDFs.
+- Class 9 Economics: 4 chapter notes; source: NCERT mirrored 2021 chapter PDFs.
+- Class 10 Understanding Economic Development: 5 chapter notes; source: NCERT official 2026-27 chapter PDFs.
+- Class 11 Indian Economic Development: 8 chapter notes; source: NCERT official 2026-27 chapter PDFs.
+- Class 12 Introductory Macroeconomics: 6 chapter notes; source: NCERT official 2026-27 chapter PDFs.
+- Class 12 Biology Ecology Chapters: 4 chapter notes; source: NCERT official 2026-27 and older mirrored chapter PDFs.
+
+## Extraction Issues And Source Caveats
+
+- Class 6 and Class 9 old NCERT direct official paths did not resolve in the current NCERT site checks, so mirrored NCERT PDFs were used for those old books.
+- Current official Class 12 Biology has ecology chapters up to Biodiversity and Conservation; Environmental Issues was generated from a mirrored older NCERT chapter because the requested topic is not present as a separate chapter in the current official source.
+- PDF extraction can lose some formatting, especially tables, maps, cartoons, marginal notes, and diagrams. Notes include diagram/map prompts, but visual material should be revised from the PDF itself.
+- Current examples should be refreshed near the exam from official current-affairs sources; static NCERT notes are not a substitute for current affairs.
+
+## Chapter Notes Generated
+
+- [What is Democracy? Why Democracy?](Polity/Class_9_Democratic_Politics_I/01_What_is_Democracy_Why_Democracy.md) - Class 9 Democratic Politics-I.
+- [Constitutional Design](Polity/Class_9_Democratic_Politics_I/02_Constitutional_Design.md) - Class 9 Democratic Politics-I.
+- [Electoral Politics](Polity/Class_9_Democratic_Politics_I/03_Electoral_Politics.md) - Class 9 Democratic Politics-I.
+- [Working of Institutions](Polity/Class_9_Democratic_Politics_I/04_Working_of_Institutions.md) - Class 9 Democratic Politics-I.
+- [Democratic Rights](Polity/Class_9_Democratic_Politics_I/05_Democratic_Rights.md) - Class 9 Democratic Politics-I.
+- [Power-sharing](Polity/Class_10_Democratic_Politics_II/01_Power_sharing.md) - Class 10 Democratic Politics-II.
+- [Federalism](Polity/Class_10_Democratic_Politics_II/02_Federalism.md) - Class 10 Democratic Politics-II.
+- [Gender, Religion and Caste](Polity/Class_10_Democratic_Politics_II/03_Gender_Religion_and_Caste.md) - Class 10 Democratic Politics-II.
+- [Political Parties](Polity/Class_10_Democratic_Politics_II/04_Political_Parties.md) - Class 10 Democratic Politics-II.
+- [Outcomes of Democracy](Polity/Class_10_Democratic_Politics_II/05_Outcomes_of_Democracy.md) - Class 10 Democratic Politics-II.
+- [Constitution: Why and How?](Polity/Class_11_Indian_Constitution_at_Work/01_Constitution_Why_and_How.md) - Class 11 Indian Constitution at Work.
+- [Rights in the Indian Constitution](Polity/Class_11_Indian_Constitution_at_Work/02_Rights_in_the_Indian_Constitution.md) - Class 11 Indian Constitution at Work.
+- [Election and Representation](Polity/Class_11_Indian_Constitution_at_Work/03_Election_and_Representation.md) - Class 11 Indian Constitution at Work.
+- [Executive](Polity/Class_11_Indian_Constitution_at_Work/04_Executive.md) - Class 11 Indian Constitution at Work.
+- [Legislature](Polity/Class_11_Indian_Constitution_at_Work/05_Legislature.md) - Class 11 Indian Constitution at Work.
+- [Judiciary](Polity/Class_11_Indian_Constitution_at_Work/06_Judiciary.md) - Class 11 Indian Constitution at Work.
+- [Federalism](Polity/Class_11_Indian_Constitution_at_Work/07_Federalism.md) - Class 11 Indian Constitution at Work.
+- [Local Governments](Polity/Class_11_Indian_Constitution_at_Work/08_Local_Governments.md) - Class 11 Indian Constitution at Work.
+- [Constitution as a Living Document](Polity/Class_11_Indian_Constitution_at_Work/09_Constitution_as_a_Living_Document.md) - Class 11 Indian Constitution at Work.
+- [The Philosophy of the Constitution](Polity/Class_11_Indian_Constitution_at_Work/10_The_Philosophy_of_the_Constitution.md) - Class 11 Indian Constitution at Work.
+- [How, When and Where](History/Class_8_Our_Pasts_III/01_How_When_and_Where.md) - Class 8 Our Pasts-III.
+- [From Trade to Territory](History/Class_8_Our_Pasts_III/02_From_Trade_to_Territory.md) - Class 8 Our Pasts-III.
+- [Ruling the Countryside](History/Class_8_Our_Pasts_III/03_Ruling_the_Countryside.md) - Class 8 Our Pasts-III.
+- [Tribals, Dikus and the Vision of a Golden Age](History/Class_8_Our_Pasts_III/04_Tribals_Dikus_and_the_Vision_of_a_Golden_Age.md) - Class 8 Our Pasts-III.
+- [When People Revolt: 1857 and After](History/Class_8_Our_Pasts_III/05_When_People_Revolt_1857_and_After.md) - Class 8 Our Pasts-III.
+- [Civilising the Native, Educating the Nation](History/Class_8_Our_Pasts_III/06_Civilising_the_Native_Educating_the_Nation.md) - Class 8 Our Pasts-III.
+- [Women, Caste and Reform](History/Class_8_Our_Pasts_III/07_Women_Caste_and_Reform.md) - Class 8 Our Pasts-III.
+- [The Making of the National Movement: 1870s-1947](History/Class_8_Our_Pasts_III/08_The_Making_of_the_National_Movement_1870s_1947.md) - Class 8 Our Pasts-III.
+- [The Rise of Nationalism in Europe](History/Class_10_India_and_the_Contemporary_World_II/01_The_Rise_of_Nationalism_in_Europe.md) - Class 10 India and the Contemporary World-II.
+- [Nationalism in India](History/Class_10_India_and_the_Contemporary_World_II/02_Nationalism_in_India.md) - Class 10 India and the Contemporary World-II.
+- [The Making of a Global World](History/Class_10_India_and_the_Contemporary_World_II/03_The_Making_of_a_Global_World.md) - Class 10 India and the Contemporary World-II.
+- [The Age of Industrialisation](History/Class_10_India_and_the_Contemporary_World_II/04_The_Age_of_Industrialisation.md) - Class 10 India and the Contemporary World-II.
+- [Print Culture and the Modern World](History/Class_10_India_and_the_Contemporary_World_II/05_Print_Culture_and_the_Modern_World.md) - Class 10 India and the Contemporary World-II.
+- [The Earth in the Solar System](Geography/Class_6_The_Earth_Our_Habitat/01_The_Earth_in_the_Solar_System.md) - Class 6 The Earth: Our Habitat.
+- [Globe: Latitudes and Longitudes](Geography/Class_6_The_Earth_Our_Habitat/02_Globe_Latitudes_and_Longitudes.md) - Class 6 The Earth: Our Habitat.
+- [Motions of the Earth](Geography/Class_6_The_Earth_Our_Habitat/03_Motions_of_the_Earth.md) - Class 6 The Earth: Our Habitat.
+- [Maps](Geography/Class_6_The_Earth_Our_Habitat/04_Maps.md) - Class 6 The Earth: Our Habitat.
+- [Major Domains of the Earth](Geography/Class_6_The_Earth_Our_Habitat/05_Major_Domains_of_the_Earth.md) - Class 6 The Earth: Our Habitat.
+- [Major Landforms of the Earth](Geography/Class_6_The_Earth_Our_Habitat/06_Major_Landforms_of_the_Earth.md) - Class 6 The Earth: Our Habitat.
+- [Our Country - India](Geography/Class_6_The_Earth_Our_Habitat/07_Our_Country_India.md) - Class 6 The Earth: Our Habitat.
+- [India: Climate, Vegetation and Wildlife](Geography/Class_6_The_Earth_Our_Habitat/08_India_Climate_Vegetation_and_Wildlife.md) - Class 6 The Earth: Our Habitat.
+- [Environment](Geography/Class_7_Our_Environment/01_Environment.md) - Class 7 Our Environment.
+- [Inside Our Earth](Geography/Class_7_Our_Environment/02_Inside_Our_Earth.md) - Class 7 Our Environment.
+- [Our Changing Earth](Geography/Class_7_Our_Environment/03_Our_Changing_Earth.md) - Class 7 Our Environment.
+- [Air](Geography/Class_7_Our_Environment/04_Air.md) - Class 7 Our Environment.
+- [Water](Geography/Class_7_Our_Environment/05_Water.md) - Class 7 Our Environment.
+- [Human Environment Interactions: The Tropical and the Subtropical Region](Geography/Class_7_Our_Environment/06_Human_Environment_Interactions_The_Tropical_and_the_Subtropical_Region.md) - Class 7 Our Environment.
+- [Life in the Deserts](Geography/Class_7_Our_Environment/07_Life_in_the_Deserts.md) - Class 7 Our Environment.
+- [Resources](Geography/Class_8_Resources_and_Development/01_Resources.md) - Class 8 Resources and Development.
+- [Land, Soil, Water, Natural Vegetation and Wildlife Resources](Geography/Class_8_Resources_and_Development/02_Land_Soil_Water_Natural_Vegetation_and_Wildlife_Resources.md) - Class 8 Resources and Development.
+- [Agriculture](Geography/Class_8_Resources_and_Development/03_Agriculture.md) - Class 8 Resources and Development.
+- [Industries](Geography/Class_8_Resources_and_Development/04_Industries.md) - Class 8 Resources and Development.
+- [Human Resources](Geography/Class_8_Resources_and_Development/05_Human_Resources.md) - Class 8 Resources and Development.
+- [India - Size and Location](Geography/Class_9_Contemporary_India_I/01_India_Size_and_Location.md) - Class 9 Contemporary India-I.
+- [Physical Features of India](Geography/Class_9_Contemporary_India_I/02_Physical_Features_of_India.md) - Class 9 Contemporary India-I.
+- [Drainage](Geography/Class_9_Contemporary_India_I/03_Drainage.md) - Class 9 Contemporary India-I.
+- [Climate](Geography/Class_9_Contemporary_India_I/04_Climate.md) - Class 9 Contemporary India-I.
+- [Natural Vegetation and Wildlife](Geography/Class_9_Contemporary_India_I/05_Natural_Vegetation_and_Wildlife.md) - Class 9 Contemporary India-I.
+- [Population](Geography/Class_9_Contemporary_India_I/06_Population.md) - Class 9 Contemporary India-I.
+- [Resources and Development](Geography/Class_10_Contemporary_India_II/01_Resources_and_Development.md) - Class 10 Contemporary India-II.
+- [Forest and Wildlife Resources](Geography/Class_10_Contemporary_India_II/02_Forest_and_Wildlife_Resources.md) - Class 10 Contemporary India-II.
+- [Water Resources](Geography/Class_10_Contemporary_India_II/03_Water_Resources.md) - Class 10 Contemporary India-II.
+- [Agriculture](Geography/Class_10_Contemporary_India_II/04_Agriculture.md) - Class 10 Contemporary India-II.
+- [Minerals and Energy Resources](Geography/Class_10_Contemporary_India_II/05_Minerals_and_Energy_Resources.md) - Class 10 Contemporary India-II.
+- [Manufacturing Industries](Geography/Class_10_Contemporary_India_II/06_Manufacturing_Industries.md) - Class 10 Contemporary India-II.
+- [Lifelines of National Economy](Geography/Class_10_Contemporary_India_II/07_Lifelines_of_National_Economy.md) - Class 10 Contemporary India-II.
+- [The Story of Village Palampur](Economy/Class_9_Economics/01_The_Story_of_Village_Palampur.md) - Class 9 Economics.
+- [People as Resource](Economy/Class_9_Economics/02_People_as_Resource.md) - Class 9 Economics.
+- [Poverty as a Challenge](Economy/Class_9_Economics/03_Poverty_as_a_Challenge.md) - Class 9 Economics.
+- [Food Security in India](Economy/Class_9_Economics/04_Food_Security_in_India.md) - Class 9 Economics.
+- [Development](Economy/Class_10_Understanding_Economic_Development/01_Development.md) - Class 10 Understanding Economic Development.
+- [Sectors of the Indian Economy](Economy/Class_10_Understanding_Economic_Development/02_Sectors_of_the_Indian_Economy.md) - Class 10 Understanding Economic Development.
+- [Money and Credit](Economy/Class_10_Understanding_Economic_Development/03_Money_and_Credit.md) - Class 10 Understanding Economic Development.
+- [Globalisation and the Indian Economy](Economy/Class_10_Understanding_Economic_Development/04_Globalisation_and_the_Indian_Economy.md) - Class 10 Understanding Economic Development.
+- [Consumer Rights](Economy/Class_10_Understanding_Economic_Development/05_Consumer_Rights.md) - Class 10 Understanding Economic Development.
+- [Indian Economy on the Eve of Independence](Economy/Class_11_Indian_Economic_Development/01_Indian_Economy_on_the_Eve_of_Independence.md) - Class 11 Indian Economic Development.
+- [Indian Economy 1950-1990](Economy/Class_11_Indian_Economic_Development/02_Indian_Economy_1950_1990.md) - Class 11 Indian Economic Development.
+- [Liberalisation, Privatisation and Globalisation: An Appraisal](Economy/Class_11_Indian_Economic_Development/03_Liberalisation_Privatisation_and_Globalisation_An_Appraisal.md) - Class 11 Indian Economic Development.
+- [Human Capital Formation in India](Economy/Class_11_Indian_Economic_Development/04_Human_Capital_Formation_in_India.md) - Class 11 Indian Economic Development.
+- [Rural Development](Economy/Class_11_Indian_Economic_Development/05_Rural_Development.md) - Class 11 Indian Economic Development.
+- [Employment: Growth, Informalisation and Other Issues](Economy/Class_11_Indian_Economic_Development/06_Employment_Growth_Informalisation_and_Other_Issues.md) - Class 11 Indian Economic Development.
+- [Environment and Sustainable Development](Economy/Class_11_Indian_Economic_Development/07_Environment_and_Sustainable_Development.md) - Class 11 Indian Economic Development.
+- [Comparative Development Experiences of India and Its Neighbours](Economy/Class_11_Indian_Economic_Development/08_Comparative_Development_Experiences_of_India_and_Its_Neighbours.md) - Class 11 Indian Economic Development.
+- [Introduction](Economy/Class_12_Introductory_Macroeconomics/01_Introduction.md) - Class 12 Introductory Macroeconomics.
+- [National Income Accounting](Economy/Class_12_Introductory_Macroeconomics/02_National_Income_Accounting.md) - Class 12 Introductory Macroeconomics.
+- [Money and Banking](Economy/Class_12_Introductory_Macroeconomics/03_Money_and_Banking.md) - Class 12 Introductory Macroeconomics.
+- [Determination of Income and Employment](Economy/Class_12_Introductory_Macroeconomics/04_Determination_of_Income_and_Employment.md) - Class 12 Introductory Macroeconomics.
+- [Government Budget and the Economy](Economy/Class_12_Introductory_Macroeconomics/05_Government_Budget_and_the_Economy.md) - Class 12 Introductory Macroeconomics.
+- [Open Economy Macroeconomics](Economy/Class_12_Introductory_Macroeconomics/06_Open_Economy_Macroeconomics.md) - Class 12 Introductory Macroeconomics.
+- [Organisms and Populations](Environment/Class_12_Biology_Ecology_Chapters/01_Organisms_and_Populations.md) - Class 12 Biology Ecology Chapters.
+- [Ecosystem](Environment/Class_12_Biology_Ecology_Chapters/02_Ecosystem.md) - Class 12 Biology Ecology Chapters.
+- [Biodiversity and Conservation](Environment/Class_12_Biology_Ecology_Chapters/03_Biodiversity_and_Conservation.md) - Class 12 Biology Ecology Chapters.
+- [Environmental Issues](Environment/Class_12_Biology_Ecology_Chapters/04_Environmental_Issues.md) - Class 12 Biology Ecology Chapters.
