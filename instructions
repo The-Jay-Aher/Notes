@@ -1,166 +1,376 @@
-You are working inside a folder that contains my personal documentation/notes.
-
-Your job is to review, improve, restructure, and expand the documentation so it becomes clean, complete, easy to understand quickly, and useful for revision or future reference.
-
-Follow these instructions carefully:
-
-1. First, inspect the entire folder
-   - Read the folder structure.
-   - Identify all note/documentation files.
-   - Understand the subject/topic of each file.
-   - Detect duplicate, incomplete, badly ordered, unclear, or poorly formatted notes.
-   - Do not modify anything before you understand the structure.
-
-2. Improve the current notes
-   For every existing note:
-   - Format it properly using clean Markdown.
-   - Fix spelling, grammar, headings, spacing, and ordering.
-   - Reorganize messy sections into a logical flow.
-   - Add missing explanations where the note is too brief or unclear.
-   - Add context before advanced concepts so the note is easier to understand.
-   - Keep the original meaning, but make it clearer and more complete.
-   - Remove unnecessary repetition.
-   - If two sections say the same thing, merge them cleanly.
-   - If a topic is in the wrong file, move or reference it appropriately.
-
-3. Add missing information
-   When a note is incomplete, expand it with useful details:
-   - What the concept/tool/command/service is.
-   - Why it is used.
-   - How it works.
-   - When to use it.
-   - When not to use it.
-   - Benefits.
-   - Drawbacks or flaws.
-   - Hidden details, caveats, edge cases, and common mistakes.
-   - Real-world use cases.
-   - Practical examples.
-   - Troubleshooting tips where relevant.
-   - Interview-relevant points if the topic is technical.
-
-   Important:
-   - Do not invent fake facts.
-   - If you are unsure about something, add a small “Needs verification” note instead of pretending.
-   - Prefer accurate, practical explanations over vague textbook-style writing.
-
-4. Create fast-understanding notes
-   Each major note should be easy to scan quickly. Use this structure where appropriate:
-
-   # Topic Name
-
-   ## Quick Summary
-   A short explanation of the topic in simple words.
-
-   ## Why It Matters
-   Explain why this topic is useful in real work.
-
-   ## Core Concepts
-   Break down the important concepts clearly.
-
-   ## How It Works
-   Explain the actual working flow or mechanism.
-
-   ## Important Commands / Syntax
-   Include commands, configuration examples, or syntax if relevant.
-
-   ## Examples
-   Add practical examples that make the concept easier to understand.
-
-   ## Benefits
-   List the main advantages.
-
-   ## Drawbacks / Limitations
-   Explain the flaws, trade-offs, and things people usually ignore.
-
-   ## Hidden Details / Caveats
-   Add deeper details, gotchas, edge cases, and practical warnings.
-
-   ## Common Mistakes
-   Explain mistakes beginners commonly make and how to avoid them.
-
-   ## Best Practices
-   Give practical advice for using this correctly.
-
-   ## Troubleshooting
-   Add common problems and fixes if relevant.
-
-   ## Interview Notes
-   Add concise interview-focused points if this is a technical topic.
-
-   ## Related Topics
-   Link or mention related notes in the folder.
-
-5. Improve folder organization
-   - If the folder structure is messy, suggest and apply a better structure.
-   - Group related topics together.
-   - Rename files only when it improves clarity.
-   - Use consistent file names.
-   - Avoid overly long file names.
-   - Create index files where useful.
-
-6. Create or update an index
-   Create or update a main README.md or INDEX.md file that includes:
-   - A clear overview of the documentation folder.
-   - A list of topics/files.
-   - Short descriptions of each topic.
-   - Suggested learning order.
-   - Links to the relevant notes.
-   - Any missing topics that still need to be written.
-
-7. Add new notes when needed
-   If an important topic is missing but clearly belongs in this documentation set:
-   - Create a new note for it.
-   - Follow the same clean structure.
-   - Link it from the main index.
-   - Make sure it matches the style of the other notes.
-
-8. Make notes useful for quick revision
-   For important topics, add:
-   - Key points.
-   - Memory hooks.
-   - Simple explanations.
-   - Diagrams in text form if useful.
-   - Comparison tables where appropriate.
-   - “Before interview, remember this” sections where useful.
-
-9. Keep the writing style
-   The notes should be:
-   - Clear.
-   - Practical.
-   - Beginner-friendly but not shallow.
-   - Easy to scan.
-   - Technically accurate.
-   - Structured.
-   - Not overly verbose.
-   - Not filled with useless theory.
-
-10. Markdown quality rules
-   - Use proper heading hierarchy.
-   - Use bullet points where they improve readability.
-   - Use tables for comparisons.
-   - Use code blocks for commands and examples.
-   - Use short paragraphs.
-   - Add internal links between related notes.
-   - Keep formatting consistent across all files.
-
-11. Safety and accuracy rules
-   - Do not delete important content.
-   - Do not remove original ideas unless they are duplicated or incorrect.
-   - If something looks wrong, correct it and mention the change briefly.
-   - If something cannot be confidently corrected, mark it as “Needs verification”.
-   - Do not make unsupported claims.
-   - If internet access is available, verify technical details using official documentation where necessary.
-   - If internet access is not available, use existing folder context and reliable general knowledge, but mark uncertain points.
-
-12. Final output after changes
-   After completing the updates, provide:
-   - A summary of what you changed.
-   - Files created.
-   - Files renamed.
-   - Files significantly modified.
-   - Important gaps that still need attention.
-   - Any assumptions made.
-   - Any items marked “Needs verification”.
+You are working inside my local study folder/repository. Your task is to create detailed, crisp UPSC notes from NCERT books stored in the `UPSC` folder.
 
 Goal:
-Transform this documentation folder into a well-structured, practical, detailed, and quick-to-understand knowledge base. Act like an expert technical mentor reviewing my notes and improving them so they are useful for learning, revision, interviews, and real-world reference.
+Create structured, subject-wise UPSC notes from the NCERT books listed below. The notes should be useful for UPSC Prelims and Mains preparation. They must be detailed enough for revision but crisp enough to avoid textbook-style long summaries.
+
+Important:
+- Do not modify, delete, rename, or overwrite the original NCERT source files.
+- Read the NCERT files from the `UPSC` folder.
+- If a listed book is missing, create a `MISSING_FILES.md` report listing the missing book and continue with the available files.
+- Use only reliable information from the NCERT text. Do not hallucinate.
+- Add current examples only if they are already available in local material or if web access is available. If no reliable current example is available, write: `Current example: To be updated from current affairs.`
+- Wherever possible, mention chapter name, page number, or source reference.
+- Create clean Markdown notes.
+- Keep the language simple, exam-oriented, and direct.
+- Do not produce vague summaries. Convert every important concept into UPSC-ready notes.
+- Use bullet points, tables, and headings wherever helpful.
+- Prioritize “Very high” and “High” books for maximum detail.
+
+Books to cover:
+
+| Subject     | NCERTs to read                                   | Priority  |
+| ----------- | ------------------------------------------------ | --------- |
+| Polity      | Class 9 Democratic Politics-I                    | High      |
+| Polity      | Class 10 Democratic Politics-II                  | High      |
+| Polity      | Class 11 Indian Constitution at Work             | Very high |
+| History     | Class 8 Our Pasts-III                            | Very high |
+| History     | Class 10 India and the Contemporary World-II     | High      |
+| Geography   | Class 6 The Earth: Our Habitat                   | Medium    |
+| Geography   | Class 7 Our Environment                          | Medium    |
+| Geography   | Class 8 Resources and Development                | High      |
+| Geography   | Class 9 Contemporary India-I                     | High      |
+| Geography   | Class 10 Contemporary India-II                   | High      |
+| Economy     | Class 9 Economics                                | Medium    |
+| Economy     | Class 10 Understanding Economic Development      | High      |
+| Economy     | Class 11 Indian Economic Development             | High      |
+| Economy     | Class 12 Introductory Macroeconomics             | High      |
+| Environment | Class 12 Biology ecology chapters only           | High      |
+
+Output folder structure:
+
+Create the following structure inside the `UPSC` folder:
+
+UPSC/
+  Notes/
+    00_Master_Index.md
+    00_Book_Coverage_Report.md
+    Polity/
+      00_Polity_Index.md
+      Class_9_Democratic_Politics_I/
+      Class_10_Democratic_Politics_II/
+      Class_11_Indian_Constitution_at_Work/
+    History/
+      00_History_Index.md
+      Class_8_Our_Pasts_III/
+      Class_10_India_and_the_Contemporary_World_II/
+    Geography/
+      00_Geography_Index.md
+      Class_6_The_Earth_Our_Habitat/
+      Class_7_Our_Environment/
+      Class_8_Resources_and_Development/
+      Class_9_Contemporary_India_I/
+      Class_10_Contemporary_India_II/
+    Economy/
+      00_Economy_Index.md
+      Class_9_Economics/
+      Class_10_Understanding_Economic_Development/
+      Class_11_Indian_Economic_Development/
+      Class_12_Introductory_Macroeconomics/
+    Environment/
+      00_Environment_Index.md
+      Class_12_Biology_Ecology_Chapters/
+    Revision/
+      High_Priority_Revision.md
+      Very_High_Priority_Revision.md
+      Prelims_Facts.md
+      Mains_Value_Addition.md
+      Possible_Mains_Questions.md
+      Diagrams_and_Maps_List.md
+    MISSING_FILES.md
+
+File rules:
+- Create one Markdown file per chapter.
+- Use chapter numbering where possible:
+  `01_Chapter_Name.md`
+  `02_Chapter_Name.md`
+- Each chapter note must begin with this metadata block:
+
+# Chapter Title
+
+Subject:
+Book:
+Class:
+Priority:
+Source file:
+Chapter:
+Page range, if available:
+UPSC relevance: Prelims / Mains / Both
+
+Then create the notes in the subject-specific format given below.
+
+General UPSC note-making rules:
+1. Extract all important concepts, definitions, facts, institutions, events, examples, maps, diagrams, causes, effects, criticisms, and keywords.
+2. Highlight terms that are useful for answer writing.
+3. Add “UPSC Angle” wherever useful.
+4. Add “Prelims Pointers” at the end of every chapter.
+5. Add “Mains Pointers” at the end of every chapter.
+6. Add “Possible Questions” at the end of every chapter.
+7. Add “Things to revise repeatedly” at the end of every chapter.
+8. Do not copy large textbook passages. Convert into concise notes.
+9. Use simple language.
+10. Do not skip small factual details that may be relevant for Prelims.
+11. Do not over-expand irrelevant textbook stories unless they are useful for UPSC.
+12. If a topic overlaps with another subject, add a short cross-reference.
+
+Priority-based depth:
+- Very high priority books: extremely detailed notes, include all themes, examples, conceptual explanations, Prelims facts, Mains angles, and possible questions.
+- High priority books: detailed notes with strong exam relevance.
+- Medium priority books: concise but complete foundational notes.
+
+Subject-wise formats:
+
+For Polity, use this structure for every major topic:
+
+## Topic:
+## Meaning:
+## Constitutional link:
+## Important articles/institutions:
+## Current example:
+## Possible Mains question:
+
+Also include where relevant:
+- Key constitutional values
+- Fundamental Rights
+- Directive Principles
+- Federalism
+- Parliament
+- Executive
+- Judiciary
+- Election-related concepts
+- Local government
+- Social justice
+- Democracy and diversity
+- Rights-based issues
+- Governance relevance
+- Important keywords for Mains answers
+
+Example format:
+
+## Topic: Federalism
+## Meaning:
+Division of power between Union and States.
+
+## Constitutional link:
+Union List, State List, Concurrent List.
+
+## Important articles/institutions:
+Mention relevant articles, institutions, commissions, or constitutional bodies if applicable.
+
+## Current example:
+GST Council / Governor disputes / Centre-State relations.
+
+## Possible Mains question:
+Discuss the challenges to Indian federalism.
+
+For History, use this structure for every major event/theme:
+
+## Event:
+## Time period:
+## Causes:
+## Key people:
+## Impact:
+## UPSC angle:
+
+Also include where relevant:
+- Timeline
+- Background
+- Colonial policies
+- Social reform movements
+- National movement links
+- Peasant/tribal movements
+- Economic impact
+- Administrative impact
+- Cultural impact
+- Important personalities
+- Important acts/laws
+- Keywords for answer writing
+- Prelims facts
+- Mains themes
+
+For Economy, use this structure for every major concept:
+
+## Concept:
+## Meaning:
+## Why important:
+## Example:
+## Government/RBI link:
+## Possible question:
+
+Also include where relevant:
+- Definitions
+- Basic economic terms
+- Poverty
+- Food security
+- Development indicators
+- Sectors of economy
+- Money and banking
+- Globalisation
+- Indian economy after independence
+- Planning
+- Liberalisation, privatisation, globalisation
+- Inflation
+- National income
+- Fiscal policy
+- Monetary policy
+- Balance of payments
+- Government schemes only where relevant from source
+- Prelims facts
+- Mains analysis points
+
+For Geography, use this structure for every major topic:
+
+## Topic:
+## Definition:
+## Map location:
+## Causes/features:
+## Impact:
+## Diagram needed?
+
+Also include where relevant:
+- Physical geography concepts
+- Indian geography
+- Resources
+- Agriculture
+- Minerals
+- Industries
+- Climate
+- Drainage
+- Soil
+- Natural vegetation
+- Population
+- Disaster-related relevance
+- Map-based facts
+- Diagrams to practice
+- Important locations
+- Prelims facts
+- Mains answer points
+
+For Environment, use this structure for every major topic:
+
+## Topic:
+## Meaning:
+## Example:
+## Threat:
+## Conservation measure:
+## Current affairs link:
+
+Use only Class 12 Biology ecology-related chapters. Likely relevant chapters include:
+- Organisms and Populations
+- Ecosystem
+- Biodiversity and Conservation
+- Environmental Issues
+
+Also include where relevant:
+- Ecosystem structure
+- Food chain
+- Food web
+- Energy flow
+- Ecological pyramids
+- Productivity
+- Nutrient cycling
+- Population interactions
+- Biodiversity
+- Hotspots
+- Extinction
+- Conservation methods
+- Pollution
+- Climate change
+- Ozone depletion
+- Deforestation
+- Environmental laws or institutions only where relevant
+- Prelims facts
+- Mains points
+
+For every chapter file, add these sections at the end:
+
+## Prelims Pointers
+- List factual, direct, objective points.
+
+## Mains Pointers
+- List analytical points useful for GS answers.
+
+## Keywords for Answer Writing
+- List important terms.
+
+## Possible UPSC Questions
+- Prelims-style question ideas.
+- Mains-style question ideas.
+
+## Revision Summary
+- 10 to 20 crisp points depending on chapter importance.
+
+## Cross-links
+- Mention related subjects or chapters.
+
+Master files to create:
+
+1. `00_Master_Index.md`
+Should contain:
+- Subject-wise links to all notes.
+- Book-wise coverage.
+- Priority order for reading.
+- Suggested UPSC revision order:
+  1. Very high priority
+  2. High priority
+  3. Medium priority
+
+2. `00_Book_Coverage_Report.md`
+Should contain:
+- List of all books found.
+- List of books missing.
+- Chapters processed.
+- Notes generated.
+- Any extraction issues.
+
+3. Subject index files:
+Each subject index should contain:
+- Book list
+- Chapter links
+- Important topics
+- High-yield areas
+- Revision order
+
+4. `Revision/Very_High_Priority_Revision.md`
+Create a condensed revision file from all Very High priority books.
+
+5. `Revision/High_Priority_Revision.md`
+Create a condensed revision file from all High priority books.
+
+6. `Revision/Prelims_Facts.md`
+Collect all factual points useful for Prelims.
+
+7. `Revision/Mains_Value_Addition.md`
+Collect:
+- Examples
+- Keywords
+- Constitutional links
+- Thinker/committee/institution references where available
+- Diagrams
+- Map areas
+- Case-study-style points
+
+8. `Revision/Possible_Mains_Questions.md`
+Create subject-wise Mains questions based on the notes.
+
+9. `Revision/Diagrams_and_Maps_List.md`
+Create a list of diagrams and maps I should practice, especially for Geography and Environment.
+
+Quality checklist:
+Before finishing, check:
+- All available books have been processed.
+- Notes follow the required subject-wise format.
+- Notes are detailed but not bloated.
+- Every chapter has Prelims and Mains sections.
+- There is no hallucinated information.
+- Current examples are marked clearly.
+- Missing files are reported.
+- Markdown links work.
+- File names are clean and readable.
+
+Final response:
+After completing the task, provide a concise summary:
+- Books processed
+- Notes created
+- Missing books, if any
+- Location of output folder
+- Any limitations or extraction issues
