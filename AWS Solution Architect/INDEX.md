@@ -6,6 +6,8 @@ AWS Solutions Architect notes focus on designing secure, resilient, high-perform
 
 These notes are written for beginner-to-SAA progression: first learn the AWS building blocks, then learn how to choose between services based on requirements, tradeoffs, reliability, security, performance, and cost.
 
+Source snapshot: 2026-05-27. The SAA-C03 official guide currently lists four scored domains: secure architectures 30%, resilient architectures 26%, high-performing architectures 24%, and cost-optimized architectures 20%. Recheck the AWS exam guide before booking because AWS services and certification guides change.
+
 ## Learning Order
 
 | Order | Note | Focus |
@@ -37,6 +39,10 @@ These notes are written for beginner-to-SAA progression: first learn the AWS bui
 | 25 | [AWS Security and Encryption: KMS, SSM Parameter Store, Shield and WAF](25%20-%20AWS%20Security%20and%20Encryption%20-%20KMS%2C%20SSM%20Parameter%20Store%2C%20Shield%20and%20WAF.md) | KMS, Parameter Store, Secrets Manager, WAF, Shield, GuardDuty, Inspector, Security Hub. |
 | 26 | [Networking VPC](26%20-%20Networking%20VPC.md) | VPCs, CIDR, subnets, route tables, NAT, endpoints, peering, Transit Gateway, VPN, Direct Connect. |
 | 27 | [Disaster Recovery and Management](27%20-%20Disaster%20Recovery%20%26%20Management.md) | RTO/RPO, backup/restore, pilot light, warm standby, active/active, DR testing. |
+| 28 | [SAA-C03 Alignment Audit and Scenario Playbook](28%20-%20SAA-C03%20Alignment%20Audit%20and%20Scenario%20Playbook.md) | Official domain mapping, scenario method, decision chains, common traps, and source-backed exam alignment. |
+| 29 | [SAA-C03 Practice Questions and Rationales](29%20-%20SAA-C03%20Practice%20Questions%20and%20Rationales.md) | Scenario questions with requirement-driven rationales. |
+| 30 | [SAA-C03 Rapid Revision Cheatsheet and Glossary](30%20-%20SAA-C03%20Rapid%20Revision%20Cheatsheet%20and%20Glossary.md) | Final-pass service clues, patterns, traps, and glossary. |
+| Changelog | [CHANGELOG](CHANGELOG.md) | Upgrade history and verification reminders. |
 
 ## Study Tips
 
@@ -44,10 +50,11 @@ These notes are written for beginner-to-SAA progression: first learn the AWS bui
 - Keep a personal table of "requirement clues" such as shared Linux files -> EFS, ordered queue -> FIFO SQS, full-text search -> OpenSearch, regional DR -> cross-Region replication.
 - For architecture questions, identify the bottleneck or risk first: availability, performance, security, cost, migration effort, or operations.
 - Re-check official docs before exam booking because AWS service features and exam guides change.
+- After the service chapters, read chapters 28-30 to convert service knowledge into SAA-style scenario reasoning.
 
 ## Exam Orientation
 
-Checked against the AWS SAA-C03 official exam guide on 2026-05-18. Re-check before booking because AWS updates exam guides and services over time.
+Checked against the AWS SAA-C03 official exam guide again on 2026-05-27. Re-check before booking because AWS updates exam guides and services over time.
 
 High-level SAA themes:
 
@@ -55,6 +62,13 @@ High-level SAA themes:
 - Resilient architectures.
 - High-performing architectures.
 - Cost-optimized architectures.
+
+Final revision order:
+
+1. Read the service chapters for core concepts.
+2. Read [28 - SAA-C03 Alignment Audit and Scenario Playbook](28%20-%20SAA-C03%20Alignment%20Audit%20and%20Scenario%20Playbook.md).
+3. Practice [29 - SAA-C03 Practice Questions and Rationales](29%20-%20SAA-C03%20Practice%20Questions%20and%20Rationales.md).
+4. Use [30 - SAA-C03 Rapid Revision Cheatsheet and Glossary](30%20-%20SAA-C03%20Rapid%20Revision%20Cheatsheet%20and%20Glossary.md) for the last pass.
 
 ## Official References
 

@@ -10,7 +10,7 @@ If you are new to Kubernetes, start with [0 - Kubernetes Beginner Foundation](0%
 
 ## Current Exam Snapshot
 
-Checked against the Linux Foundation CKA page on 2026-05-18.
+Checked against the Linux Foundation CKA page on 2026-05-27.
 
 | Domain | Weight | Notes In This Folder |
 | --- | ---: | --- |
@@ -21,7 +21,7 @@ Checked against the Linux Foundation CKA page on 2026-05-18.
 | Storage | 10% | [5 - Storage](5%20-%20Storage.md) |
 | Troubleshooting | 30% | [6 - Troubleshooting](6%20-%20Troubleshooting.md) |
 
-Needs verification before booking: the Linux Foundation page listed the CKA exam as based on Kubernetes v1.34 when this note was created, and says the environment aligns with recent Kubernetes minor versions after release. Always re-check the official exam page before scheduling.
+Needs verification before booking: the Linux Foundation page listed the CKA exam as based on Kubernetes v1.34 when this note was refreshed, and says the environment aligns with recent Kubernetes minor versions after release. Always re-check the official exam page before scheduling.
 
 ## Suggested Study Order
 
@@ -33,6 +33,13 @@ Needs verification before booking: the Linux Foundation page listed the CKA exam
 6. Learn PersistentVolumes, PersistentVolumeClaims, StorageClasses, access modes, and reclaim policies.
 7. Practice troubleshooting every day.
 8. Take timed mock labs and review failures carefully.
+
+## Deep Practice And Revision Files
+
+- [7 - Command Labs and Verification Playbook](7%20-%20Command%20Labs%20and%20Verification%20Playbook.md)
+- [10 - Cheatsheet](10%20-%20Cheatsheet.md)
+- [11 - Glossary](11%20-%20Glossary.md)
+- [CHANGELOG](CHANGELOG.md)
 
 ## CKA Command Muscle Memory
 

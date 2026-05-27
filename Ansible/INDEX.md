@@ -14,6 +14,9 @@ Ansible is an automation tool used for configuration management, application dep
 | 4 | [Variables Facts Templates and Handlers](4%20-%20Variables%20Facts%20Templates%20and%20Handlers.md) | Variables, facts, Jinja2 templates, handlers, conditionals, loops. |
 | 5 | [Roles Collections and Reuse](5%20-%20Roles%20Collections%20and%20Reuse.md) | Reusable structure, roles, collections, Galaxy, project layout. |
 | 6 | [Vault Troubleshooting and Best Practices](6%20-%20Vault%20Troubleshooting%20and%20Best%20Practices.md) | Secrets, Ansible Vault, debugging, dry runs, common mistakes. |
+| 7 | [Idempotency Infrastructure Labs and Operational Runbooks](7%20-%20Idempotency%20Infrastructure%20Labs%20and%20Operational%20Runbooks.md) | Deep idempotency, command labs, check/diff, handlers, vault workflow, operational debugging. |
+| 10 | [Cheatsheet](10%20-%20Cheatsheet.md) | Fast command, idempotency, result, and trap revision. |
+| 11 | [Glossary](11%20-%20Glossary.md) | Precise Ansible terminology and common traps. |
 
 ## Mental Model
 
@@ -29,3 +32,6 @@ inventory says where -> playbook says what -> modules do the work -> Ansible rep
 - Playbook guide: <https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_intro.html>
 - Ansible Vault: <https://docs.ansible.com/ansible/latest/vault_guide/index.html>
 
+## Version-Sensitive Note
+
+Source refreshed on 2026-05-27. Current Ansible community documentation notes significant ansible-core 2.19 / Ansible 12 templating changes. Verify playbooks, roles, collections, and porting guides against the exact Ansible version used in the environment.

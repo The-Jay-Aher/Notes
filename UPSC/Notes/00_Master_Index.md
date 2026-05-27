@@ -8,6 +8,7 @@
 
 ## Subject Indexes
 
+- [UPSC CSE 2026 Source Refresh and Answer-Writing Playbook](00_2026_Source_Refresh_And_Answer_Writing_Playbook.md)
 - [Official UPSC CSE Syllabus Layer](Official_Syllabus/00_UPSC_CSE_Syllabus_Index.md)
 - [General Studies Gap Expansion](General_Studies/00_General_Studies_Index.md)
 - [Polity](Polity/00_Polity_Index.md)
@@ -36,6 +37,7 @@
 
 ## Revision Files
 
+- [CHANGELOG.md](CHANGELOG.md)
 - [Revision/Very_High_Priority_Revision.md](Revision/Very_High_Priority_Revision.md)
 - [Revision/High_Priority_Revision.md](Revision/High_Priority_Revision.md)
 - [Revision/Prelims_Facts.md](Revision/Prelims_Facts.md)

@@ -10,7 +10,7 @@ If you are new to Kubernetes application manifests, start with [0 - Kubernetes B
 
 ## Current Exam Snapshot
 
-Checked against the Linux Foundation CKAD page on 2026-05-18.
+Checked against the Linux Foundation CKAD page on 2026-05-27.
 
 | Domain | Weight | Notes In This Folder |
 | --- | ---: | --- |
@@ -21,7 +21,7 @@ Checked against the Linux Foundation CKAD page on 2026-05-18.
 | Application Environment, Configuration and Security | 25% | [5 - Configuration Security Services and Networking](5%20-%20Configuration%20Security%20Services%20and%20Networking.md) |
 | Services and Networking | 20% | [5 - Configuration Security Services and Networking](5%20-%20Configuration%20Security%20Services%20and%20Networking.md) |
 
-Needs verification before booking: the Linux Foundation page listed the CKAD exam as based on Kubernetes v1.35 when this note was created, and says the environment aligns with recent Kubernetes minor versions after release. Always re-check the official exam page before scheduling.
+Needs verification before booking: the Linux Foundation page listed the CKAD exam as based on Kubernetes v1.35 when this note was refreshed, and says the environment aligns with recent Kubernetes minor versions after release. Always re-check the official exam page before scheduling.
 
 ## Suggested Study Order
 
@@ -32,6 +32,13 @@ Needs verification before booking: the Linux Foundation page listed the CKAD exa
 5. Learn resource requests, limits, quotas, ServiceAccounts, SecurityContexts, and capabilities.
 6. Practice rolling updates, rollbacks, Helm, and Kustomize.
 7. Drill logs, events, exec, port-forward, and debugging until they are fast.
+
+## Deep Practice And Revision Files
+
+- [6 - Application Command Labs and Verification Playbook](6%20-%20Application%20Command%20Labs%20and%20Verification%20Playbook.md)
+- [10 - Cheatsheet](10%20-%20Cheatsheet.md)
+- [11 - Glossary](11%20-%20Glossary.md)
+- [CHANGELOG](CHANGELOG.md)
 
 ## CKAD Command Muscle Memory
 
