@@ -2,7 +2,11 @@
   "readableLineLength": true,
   "alwaysUpdateLinks": true,
   "uriCallbacks": true,
-  "defaultViewMode": "preview",
+  "defaultViewMode": "source",
   "trashOption": "local",
-  "promptDelete": true
+  "promptDelete": true,
+  "livePreview": true,
+  "showLineNumber": true,
+  "propertiesInDocument": "visible",
+  "attachmentFolderPath": "./Images"
 }
