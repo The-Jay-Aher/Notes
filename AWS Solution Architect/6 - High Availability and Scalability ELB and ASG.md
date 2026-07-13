@@ -1,34 +1,15 @@
 # 6 - High Availability and Scalability with ELB and ASG
 
-## Why This Chapter Matters
+## Quick Summary
 
-Most real applications do not fail because one command was typed wrongly. They fail because the architecture assumes that one server, one data center, one health check, one scaling metric, or one deployment path will always behave correctly.
+High availability means an application stays usable even when part of the infrastructure fails. Scalability means an application can handle more or less load by changing capacity.
 
-High availability and scalability exist because production traffic is uneven and infrastructure is imperfect:
+In AWS, two core services for EC2-based application design are:
 
-```text
-User demand changes
--> one server becomes too small or one Availability Zone fails
--> users experience slow responses or downtime
--> the architecture needs traffic distribution, health checks, replacement, and capacity adjustment
--> Elastic Load Balancing and Auto Scaling Groups become core EC2 design tools
-```
+- **Elastic Load Balancing (ELB):** Distributes traffic across targets.
+- **Amazon EC2 Auto Scaling Groups (ASG):** Adds, removes, and replaces EC2 instances based on desired capacity, health, and scaling policies.
 
-For the AWS Solutions Architect Associate exam, ELB and ASG are not only "services to memorize". They are the machinery behind many scenario questions:
-
-- "The application must survive an Availability Zone failure."
-- "Users should not connect directly to EC2 instances."
-- "The application should scale out during traffic spikes and scale in afterwards."
-- "Unhealthy instances should stop receiving traffic."
-- "A static IP is required in front of a high-performance TCP service."
-- "Microservices need path-based routing."
-- "Instances need time to drain requests before termination."
-
-If you understand this chapter properly, an EC2 web architecture stops looking like separate AWS icons and starts looking like a self-healing traffic system.
-
-## The Big Picture
-
-A common production pattern is:
+Common pattern:
 
 ```text
 Users -> Route 53 -> Load Balancer -> Auto Scaling Group -> EC2 instances
@@ -167,38 +148,13 @@ Why use managed ELB instead of self-managed HAProxy/Nginx?
 - It scales the load balancer infrastructure.
 - It reduces operational work.
 
-Self-managed load balancers may still be valid for special appliances, custom routing behaviour, or legacy constraints, but then you own patching, scaling, monitoring, security hardening, and HA.
+Self-managed load balancers may still be used for special requirements, but they add patching, scaling, HA, and monitoring responsibility.
 
 ## ELB Types
 
-AWS supports four ELB families.
+AWS supports four load balancer families.
 
-| Load Balancer                   | OSI Layer                   | Protocols / Main Use                                           | New Design Guidance                                                                     |
-| ------------------------------- | --------------------------- | -------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| Application Load Balancer (ALB) | Layer 7                     | HTTP, HTTPS, HTTP/2, WebSocket, gRPC-style HTTP routing        | Use for web apps, APIs, microservices, host/path/header/query routing.                  |
-| Network Load Balancer (NLB)     | Layer 4                     | TCP, UDP, TCP_UDP, TLS, newer protocols where supported by AWS | Use for high-performance transport traffic, static IP, PrivateLink, non-HTTP workloads. |
-| Gateway Load Balancer (GWLB)    | Layer 3/4 appliance pattern | IP packets using GENEVE on port 6081                           | Use for third-party virtual appliances such as firewalls and inspection tools.          |
-| Classic Load Balancer (CLB)     | Legacy                      | HTTP, HTTPS, TCP, SSL                                          | Avoid for new designs unless maintaining legacy architecture.                           |
-
-Historic release clues often seen in courses:
-
-- CLB: older generation.
-- ALB: newer generation for Layer 7 HTTP routing.
-- NLB: newer generation for Layer 4 performance.
-- GWLB: appliance fleet pattern.
-
-Exam rule:
-
-```text
-Path-based routing, host-based routing, WAF on web traffic -> ALB
-TCP/UDP, static IP per AZ, ultra-low latency -> NLB
-Third-party firewall/inspection appliance fleet -> GWLB
-Legacy simple load balancer already exists -> CLB only if migration is not required
-```
-
-## Internal vs Internet-Facing Load Balancers
-
-| Scheme | Meaning | Use |
+| Load Balancer | Layer | Protocols / Use |
 | --- | --- | --- |
 | Application Load Balancer (ALB) | Layer 7 | HTTP, HTTPS, WebSocket, HTTP/2/gRPC scenarios. |
 | Network Load Balancer (NLB) | Layer 4 | TCP, UDP, TLS, very high performance, static IP per AZ. |
