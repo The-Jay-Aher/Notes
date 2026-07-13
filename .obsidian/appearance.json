@@ -1,14 +1,5 @@
 {
   "cssTheme": "Minimal",
   "accentColor": "",
-  "theme": "obsidian",
-  "textFontFamily": "SF Pro Text",
-  "showRibbon": true,
-  "nativeMenus": false,
-  "baseFontSize": 16.5,
-  "interfaceFontFamily": "",
-  "monospaceFontFamily": "SF Mono",
-  "enabledCssSnippets": [
-    "line-height"
-  ]
+  "theme": "obsidian"
 }
