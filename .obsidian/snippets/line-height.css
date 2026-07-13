@@ -1,0 +1,5 @@
+.CodeMirror pre.CodeMirror-line {
+  line-height: 1.6; /* slightly increased line height for edit mode */
+  padding-top: 7px; /* extra vertical breathing room */
+  padding-bottom: 7px; /* extra vertical breathing room */
+}

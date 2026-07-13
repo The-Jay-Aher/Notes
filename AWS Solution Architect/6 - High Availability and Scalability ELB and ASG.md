@@ -18,7 +18,7 @@ For the AWS Solutions Architect Associate exam, ELB and ASG are not only "servic
 
 - "The application must survive an Availability Zone failure."
 - "Users should not connect directly to EC2 instances."
-- "The application should scale out during traffic spikes and scale in afterward."
+- "The application should scale out during traffic spikes and scale in afterwards."
 - "Unhealthy instances should stop receiving traffic."
 - "A static IP is required in front of a high-performance TCP service."
 - "Microservices need path-based routing."
@@ -331,18 +331,18 @@ Why use managed ELB instead of self-managed Nginx or HAProxy?
 - ELB scales the load balancer infrastructure for most workloads.
 - It reduces operational work.
 
-Self-managed load balancers may still be valid for special appliances, custom routing behavior, or legacy constraints, but then you own patching, scaling, monitoring, security hardening, and HA.
+Self-managed load balancers may still be valid for special appliances, custom routing behaviour, or legacy constraints, but then you own patching, scaling, monitoring, security hardening, and HA.
 
 ## ELB Types
 
 AWS supports four ELB families.
 
-| Load Balancer | OSI Layer | Protocols / Main Use | New Design Guidance |
-| --- | --- | --- | --- |
-| Application Load Balancer (ALB) | Layer 7 | HTTP, HTTPS, HTTP/2, WebSocket, gRPC-style HTTP routing | Use for web apps, APIs, microservices, host/path/header/query routing. |
-| Network Load Balancer (NLB) | Layer 4 | TCP, UDP, TCP_UDP, TLS, newer protocols where supported by AWS | Use for high-performance transport traffic, static IP, PrivateLink, non-HTTP workloads. |
-| Gateway Load Balancer (GWLB) | Layer 3/4 appliance pattern | IP packets using GENEVE on port 6081 | Use for third-party virtual appliances such as firewalls and inspection tools. |
-| Classic Load Balancer (CLB) | Legacy | HTTP, HTTPS, TCP, SSL | Avoid for new designs unless maintaining legacy architecture. |
+| Load Balancer                   | OSI Layer                   | Protocols / Main Use                                           | New Design Guidance                                                                     |
+| ------------------------------- | --------------------------- | -------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| Application Load Balancer (ALB) | Layer 7                     | HTTP, HTTPS, HTTP/2, WebSocket, gRPC-style HTTP routing        | Use for web apps, APIs, microservices, host/path/header/query routing.                  |
+| Network Load Balancer (NLB)     | Layer 4                     | TCP, UDP, TCP_UDP, TLS, newer protocols where supported by AWS | Use for high-performance transport traffic, static IP, PrivateLink, non-HTTP workloads. |
+| Gateway Load Balancer (GWLB)    | Layer 3/4 appliance pattern | IP packets using GENEVE on port 6081                           | Use for third-party virtual appliances such as firewalls and inspection tools.          |
+| Classic Load Balancer (CLB)     | Legacy                      | HTTP, HTTPS, TCP, SSL                                          | Avoid for new designs unless maintaining legacy architecture.                           |
 
 Historic release clues often seen in courses:
 

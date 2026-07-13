@@ -2,10 +2,13 @@
   "cssTheme": "Minimal",
   "accentColor": "",
   "theme": "obsidian",
-  "textFontFamily": "Inter",
+  "textFontFamily": "SF Pro Text",
   "showRibbon": true,
   "nativeMenus": false,
   "baseFontSize": 16.5,
   "interfaceFontFamily": "",
-  "monospaceFontFamily": "Cascadia Mono"
+  "monospaceFontFamily": "SF Mono",
+  "enabledCssSnippets": [
+    "line-height"
+  ]
 }
