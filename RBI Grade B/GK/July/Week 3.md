@@ -27,6 +27,7 @@ The Indian Council of Medical Research (ICMR) laid the foundation for a centre f
 - Research focus includes high-altitude populations, tribal health, disaster preparedness, digital health innovation, and healthcare delivery in remote regions.
 - ICMR is India's apex body for formulation, coordination, and promotion of biomedical research (**Director General: Dr Rajiv Bahl**).
 - The event was inaugurated by **Union Health Minister Jagat Prakash Nadda**.
+
 ### Government Mandates TReDS Routing of MSME Invoices by CPSEs
 
 The government directed **all operating Central Public Sector Enterprises (CPSEs)** to route invoices for goods and services procured from MSMEs through **TReDS (Trade Receivables Discounting System)** platforms authorized by **RBI**.
@@ -39,6 +40,7 @@ The government directed **all operating Central Public Sector Enterprises (CPSEs
 About TReDS:
 
 - TReDS is an **RBI-authorized** digital framework (**operational since 2017**) for financing and discounting MSME receivables from corporates, government departments, and PSUs via competitive bidding by financiers.
+
 ### RBI Launches Three Surveys for Monetary Policy Inputs
 
 RBI launched three key household surveys:
@@ -76,3 +78,43 @@ The Government of India approved a Joint Venture (JV) between Dixon Technologies
 - It is positioned to operate as an original equipment manufacturer (OEM).
 - Reported paid-up capital contribution is **Rs 5 crore from each side**.
 - The approval allows Vivo Mobile India to participate under **Press Note 3 (2020)**, which requires prior government approval for investment from countries sharing a land border with India.
+
+## 14/07
+
+### PM SVANidhi Street Food Hub Initiative
+
+Lakhanpur in Jammu and Kashmir has been selected among the first towns for development of a Street Food Hub under the Pradhan Mantri Street Vendor's AtmaNirbhar Nidhi (PM SVANidhi) initiative of the Ministry of Housing and Urban Affairs (MoHUA).
+
+- The initiative aims to develop organized and hygienic street food hubs, promote local cuisine (Dogra cuisine), support tourism, and strengthen street vendor livelihoods.
+- Total funding for the Lakhanpur hub is **Rs 4 crore**.
+- Funding release pattern: **30% - 50% - 20%** in three installments.
+- Urban Local Bodies (ULBs) with a notified street-vending plan are eligible for an additional **Rs 25 lakh** incentive.
+- The broader initiative targets creation of **50 Street Food Hubs** across India.
+
+### DoP and TRAI Signed MoU for India’s Largest Village-Level Telecom Network Survey
+
+The Department of Posts (DoP) and the Telecom Regulatory Authority of India (TRAI) signed a Memorandum of Understanding (MoU) to conduct India’s largest village-level telecom network performance survey.
+
+- The one-year initiative will assess the performance of Airtel, Jio, Vodafone Idea, and BSNL across **5.68 lakh villages** using a TRAI-developed Android application.
+- It is designed to identify connectivity gaps and support evidence-based policymaking for improving rural telecom infrastructure.
+- Around **1.40 lakh Gramin Dak Sevaks (GDSs)** will collect field data during routine postal operations.
+- DoP will conduct field-level surveying; TRAI will provide the app, training, technical support, and monitoring.
+- About TRAI: Established in **1997**, headquartered in **New Delhi**, and currently chaired by **Anil Kumar Lahoti**.
+
+### DBN, GFGNL, and BSNL Sign Addendum for Rs.5,629 Crore BharatNet Rural Broadband Rollout in Gujarat
+
+Digital Bharat Nidhi (DBN), under the Department of Telecommunications (DoT), along with the Government of Gujarat (GoG), Gujarat Fibre Grid Network Limited (GFGNL), and Bharat Sanchar Nigam Limited (BSNL), signed an addendum for implementation of the Amended BharatNet Programme (ABP) in Gujarat worth **Rs 5,629 crore**.
+
+- The addendum aims to strengthen rural broadband connectivity in Gujarat.
+- GFGNL will implement the programme across **14,287 Gram Panchayats (GPs)**.
+- The rollout includes over **5 lakh rural home fibre connections** and demand-based extension to **3,895 villages** to improve last-mile broadband access.
+- About BharatNet: Launched as the National Optical Fibre Network (NOFN) in **2011** and renamed BharatNet in **2015**, it seeks to provide high-speed broadband connectivity to around **2.5 lakh GPs** across India.
+
+### WIPO Report 2026 Reaffirms India as Global Innovation Powerhouse; Intangible Investment Grows 7.9%
+
+The World Intellectual Property Organization (WIPO) and Luiss Business School released the 3rd edition of the **World Intangible Investment Report 2026**, highlighting India as the fastest-growing major economy in intangible assets.
+
+- India’s intangible investment reached **USD 78.2 billion** in 2023 after **7.9% annual growth**, driven by software, R&D, and intellectual property.
+- India’s intangible investment mix includes R&D, software, databases, brands, design, organisational capital, and intellectual property.
+- Share-wise composition: software and databases (**45%**), organisational capital (**21.8%**), R&D (**12.7%**), design (**11%**), and brands (**9.3%**).
+- The **US, Japan, and Germany** were the largest investors in absolute terms, while **Sweden, the US, and France** recorded the highest investment intensity.
