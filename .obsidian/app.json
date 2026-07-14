@@ -1,18 +1,1 @@
-{
-  "readableLineLength": true,
-  "alwaysUpdateLinks": true,
-  "uriCallbacks": true,
-  "defaultViewMode": "preview",
-  "trashOption": "local",
-<<<<<<< HEAD
-  "promptDelete": true,
-  "livePreview": true,
-  "showLineNumber": true,
-  "propertiesInDocument": "visible",
-  "attachmentFolderPath": "./Images",
-  "strictLineBreaks": true
-}
-=======
-  "promptDelete": true
-}
->>>>>>> 934041f (vault backup: 2026-07-13 21:33:18)
+{}
