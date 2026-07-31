@@ -360,33 +360,21 @@ For major decisions, written criteria and deadlines will work better than repeat
 Your wealth potential is reasonably strong because:
 
 - The 2nd lord Mars is strong in its own sign.
-
 - The 2nd lord is placed in the fortunate 9th house.
-
 - The 5th lord Moon is in the 11th house of gains.
-
 - The career lord Jupiter is connected with effort and skills.
-
 - Mercury in the 11th supports commercial and analytical earning.
-
 - Venus has exceptionally high strength.
 
 This supports wealth through:
 
 - Professional expertise
-
 - Technical work
-
 - Communication
-
 - Independent projects
-
 - Networks and referrals
-
 - Higher learning and certifications
-
 - Foreign or remote opportunities
-
 - Strategic investment with proper risk controls
 
 ## Financial risks
@@ -394,15 +382,10 @@ This supports wealth through:
 The chart also shows:
 
 - Strong desire for comfort
-
 - High expenses
-
 - Interest in technology, equipment or property
-
 - Periodic speculative confidence
-
 - Sudden changes in financial priorities
-
 - Income that may improve in steps rather than smoothly
 
 Your earning capacity appears better than your natural tendency to preserve money. Automated saving and risk limits would be valuable.
@@ -418,19 +401,12 @@ For trading specifically, Mars, Mercury and Rahu can support technical analysis 
 Your chart favours careers requiring:
 
 - Technical depth
-
 - Investigation
-
 - Systems thinking
-
 - Crisis resolution
-
 - Communication
-
 - Independent learning
-
 - Continuous improvement
-
 - Working with large or foreign organisations
 
 DevOps, SRE, cloud infrastructure, platform engineering, automation, cybersecurity, technical consulting and incident management fit this pattern well.
@@ -438,15 +414,10 @@ DevOps, SRE, cloud infrastructure, platform engineering, automation, cybersecuri
 ## What may be difficult
 
 - You may become bored after mastering routine work.
-
 - Recognition may arrive later than your actual competence.
-
 - You may dislike office politics.
-
 - You may repeatedly reconsider your career direction.
-
 - You may undervalue communication and visibility.
-
 - Job changes may be driven by dissatisfaction rather than a structured plan.
 
 The chart is more supportive of becoming a **high-value specialist** than remaining indefinitely in a repetitive support role.
@@ -454,17 +425,11 @@ The chart is more supportive of becoming a **high-value specialist** than remain
 A particularly effective job-search strategy for this chart would emphasise:
 
 - Demonstrable projects
-
 - Certifications
-
 - Strong technical documentation
-
 - Referrals
-
 - Direct contact with hiring managers
-
 - Clear incident-resolution stories
-
 - Quantified improvements
 
 ---
@@ -474,29 +439,19 @@ A particularly effective job-search strategy for this chart would emphasise:
 ## Favourable indications
 
 - Exalted Venus gives attraction and warmth.
-
 - Venus in the 1st makes relationships personally important.
-
 - The 7th lord Mercury is in the 11th, suggesting connections through friends, work, professional circles or online communities.
-
 - Libra Navamsa Ascendant reinforces the desire for partnership and balance.
-
 - The Navamsa contains several strong planetary placements, suggesting greater stability with maturity.
 
 ## Possible difficulties
 
 - Idealising the other person
-
 - Confusing attraction with compatibility
-
 - Overanalysing messages and behaviour
-
 - Avoiding direct conversations to preserve harmony
-
 - Becoming disappointed when reality does not match expectations
-
 - Sudden emotional withdrawal after prolonged accommodation
-
 - Difficulty balancing personal peace and professional objectives
 
 This is not a denial-of-marriage combination. It suggests that relationships can be meaningful, but clear communication and boundaries are essential.
@@ -512,17 +467,11 @@ Rahu in the 4th and Ketu in the 10th can connect home changes with career change
 Possible themes include:
 
 - Relocation for employment
-
 - Remote work
-
 - Living away from birthplace
-
 - Upgrading the home or workspace repeatedly
-
 - Property decisions requiring careful verification
-
 - Feeling emotionally unsettled during career transitions
-
 - Attraction to technologically advanced living arrangements
 
 Property can be acquired, but documentation, ownership history, loans and legal status should be checked particularly carefully. Avoid making property decisions primarily because you are emotionally dissatisfied with your current situation.
@@ -534,11 +483,8 @@ Property can be acquired, but documentation, ownership history, loans and legal 
 Your D9 Navamsa has several important strengths:
 
 - Moon in Taurus, its exaltation sign
-
 - Jupiter in Pisces, its own sign
-
 - Saturn in Capricorn, its own sign
-
 - Libra Ascendant
 
 This suggests that although certain D1 placements create uncertainty or delay, your ability to handle responsibility, relationships and long-term commitments can improve considerably with age.
@@ -570,39 +516,24 @@ This is significant because Venus is extremely powerful in your chart.
 ## Potential positives during Rahu–Venus
 
 - Job or professional opportunities through networking
-
 - Foreign, remote or technology-related work
-
 - Improvement in presentation and social visibility
-
 - Relationships becoming important
-
 - Relocation or home improvement
-
 - Financial opportunities
-
 - Creative and entrepreneurial ideas
-
 - Increased comfort and confidence
-
 - Support from influential or socially skilled people
 
 ## Potential problems during Rahu–Venus
 
 - Too many attractive options
-
 - Impulsive spending
-
 - Complicated relationships
-
 - Idealising a job, person or property
-
 - Chasing lifestyle improvements without sufficient planning
-
 - Emotional decisions disguised as logical ones
-
 - Difficulty distinguishing genuine opportunity from excitement
-
 - Distraction from long-term goals
 
 This can be an opportunity-rich period, but Rahu exaggerates what it touches. The best-looking option is not always the best long-term option.
@@ -614,29 +545,19 @@ This can be an opportunity-rich period, but Rahu exaggerates what it touches. Th
 The transit screen classifies several placements as favourable from your natal Moon:
 
 - Mars in the 11th: gains, initiative and achievement
-
 - Venus in the 3rd: communication and personal effort
-
 - Jupiter in the 5th: learning and judgement
-
 - Saturn in the 5th: disciplined development
-
 - Rahu in the 6th: competition and problem-solving
 
 That is broadly constructive for:
 
 - Job searching
-
 - Skill development
-
 - Certifications
-
-- Competitive situations
-
+- Competitive situations 
 - Technical projects
-
 - Networking
-
 - Overcoming obstacles
 
 However, the Vedha column shows that some of these results are obstructed or moderated. Therefore, the period is better described as:

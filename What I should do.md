@@ -1,13 +1,9 @@
 Yes—but first, **an empty house is not automatically weak**, and a low planetary-strength score does not mean that the entire house is damaged. In your chart, the main areas needing conscious development appear to be:
 
-- 3rd house: consistency, communication and initiative
-    
-- 4th house: peace of mind, home stability and emotional security
-    
+- 3rd house: consistency, communication and initiative 
+- 4th house: peace of mind, home stability and emotional security  
 - 10th house: career direction and professional satisfaction
-    
-- 11th house: income, networks and expectations
-    
+- 11th house: income, networks and expectations 
 - 12th house: expenses, sleep, isolation and behind-the-scenes work
     
 
