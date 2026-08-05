@@ -1,0 +1,102 @@
+/* ============================================================
+   typography-polish.css
+   Light-touch readability + heading hierarchy for the Minimal theme.
+   Safe to disable anytime in Settings → Appearance → CSS snippets.
+   ============================================================ */
+
+/* Comfortable reading rhythm in editor + reading view */
+.markdown-preview-view,
+.markdown-source-view.mod-cm6 .cm-content {
+  --p-spacing: 0.9rem;
+  letter-spacing: 0.01em;
+}
+
+/* Clearer heading hierarchy with tasteful spacing */
+.markdown-rendered h1,
+.HyperMD-header-1 {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-top: 0.9em;
+}
+
+.markdown-rendered h2,
+.HyperMD-header-2 {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-top: 0.75em;
+}
+
+.markdown-rendered h3,
+.HyperMD-header-3 {
+  font-weight: 600;
+  margin-top: 0.6em;
+}
+
+/* ---- Writing mode (Live Preview): breathing room around headings ----
+   Heading lines are editor lines, so their spacing comes from line
+   padding, not the reading-view margins above. */
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-header {
+  padding-top: 0.5em;
+  padding-bottom: 0.35em;
+}
+
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-header-1 {
+  padding-top: 0.9em;
+  padding-bottom: 0.5em;
+}
+
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-header-2 {
+  padding-top: 0.8em;
+  padding-bottom: 0.45em;
+}
+
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-header-3 {
+  padding-top: 0.7em;
+  padding-bottom: 0.4em;
+}
+
+/* Softer, more legible body paragraphs */
+.markdown-rendered p,
+.markdown-rendered li {
+  line-height: 1.65;
+}
+
+/* Nicer blockquotes with accent bar */
+.markdown-rendered blockquote {
+  border-left: 3px solid var(--color-accent);
+  background: var(--background-secondary);
+  border-radius: 0 6px 6px 0;
+  padding: 0.4em 1em;
+}
+
+/* Inline code and code blocks: subtle contrast, rounded */
+.markdown-rendered code {
+  border-radius: 5px;
+  padding: 0.12em 0.4em;
+}
+
+.markdown-rendered pre {
+  border-radius: 8px;
+  border: 1px solid var(--background-modifier-border);
+}
+
+/* Tables: cleaner separation and hover */
+.markdown-rendered table {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.markdown-rendered thead th {
+  background: var(--background-secondary);
+  font-weight: 700;
+}
+
+/* Accent-tinted internal links on hover */
+.markdown-rendered a.internal-link:hover {
+  text-decoration-color: var(--color-accent);
+}
+
+/* Slightly rounded active tab + cleaner sidebar items */
+.workspace-tab-header {
+  border-radius: 6px 6px 0 0;
+}

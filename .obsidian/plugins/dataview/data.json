@@ -1,0 +1,9 @@
+{
+  "renderNullAs": "—",
+  "warnOnEmptyResult": true,
+  "refreshInterval": 2500,
+  "enableInlineDataview": true,
+  "enableDataviewJs": false,
+  "enableInlineDataviewJs": false,
+  "prettyRenderInlineFields": true
+}

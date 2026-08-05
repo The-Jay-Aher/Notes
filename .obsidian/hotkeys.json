@@ -1,0 +1,26 @@
+{
+  "omnisearch:show-modal": [
+    {
+      "modifiers": ["Ctrl", "Shift"],
+      "key": "O"
+    }
+  ],
+  "templater-obsidian:create-new-note-from-template": [
+    {
+      "modifiers": ["Ctrl", "Alt"],
+      "key": "N"
+    }
+  ],
+  "obsidian-tasks-plugin:edit-task": [
+    {
+      "modifiers": ["Ctrl", "Shift"],
+      "key": "T"
+    }
+  ],
+  "obsidian-linter:lint-file": [
+    {
+      "modifiers": ["Ctrl", "Alt"],
+      "key": "L"
+    }
+  ]
+}

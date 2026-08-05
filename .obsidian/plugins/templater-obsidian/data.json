@@ -1,0 +1,14 @@
+{
+  "data_version": 2,
+  "command_timeout": 5,
+  "templates_folder": "_System/Templates",
+  "templates_pairs": [],
+  "trigger_on_file_creation_mode": "none",
+  "auto_jump_to_cursor": true,
+  "user_scripts_folder": "",
+  "folder_templates": [],
+  "syntax_highlighting": true,
+  "syntax_highlighting_mobile": false,
+  "enabled_templates_hotkeys": [],
+  "startup_templates": []
+}

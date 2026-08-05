@@ -1,5 +1,11 @@
 {
   "pinned": [
-    "obsidian-git:pull"
+    "omnisearch:show-modal",
+    "quickadd:runQuickAdd",
+    "templater-obsidian:create-new-note-from-template",
+    "obsidian-tasks-plugin:edit-task",
+    "obsidian-linter:lint-file",
+    "obsidian-git:pull",
+    "obsidian-git:commit-push-specified-message"
   ]
 }

@@ -1,5 +1,12 @@
 [
   "obsidian-style-settings",
   "obsidian-minimal-settings",
-  "obsidian-git"
+  "obsidian-git",
+  "dataview",
+  "templater-obsidian",
+  "obsidian-tasks-plugin",
+  "omnisearch",
+  "quickadd",
+  "obsidian-linter",
+  "table-editor-obsidian"
 ]

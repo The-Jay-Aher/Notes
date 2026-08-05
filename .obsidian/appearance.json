@@ -1,5 +1,12 @@
 {
   "cssTheme": "Minimal",
-  "accentColor": "",
-  "theme": "obsidian"
+  "accentColor": "#e0526b",
+  "theme": "system",
+  "textFontFamily": "Inter",
+  "monospaceFontFamily": "Consolas",
+  "baseFontSize": 16,
+  "enabledCssSnippets": [
+    "typography-polish",
+    "study-vault"
+  ]
 }

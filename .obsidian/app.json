@@ -1,1 +1,17 @@
-{}
+{
+  "alwaysUpdateLinks": true,
+  "newLinkFormat": "shortest",
+  "useMarkdownLinks": false,
+  "attachmentFolderPath": "Attachments",
+  "newFileLocation": "current",
+  "readableLineLength": true,
+  "strictLineBreaks": false,
+  "showInlineTitle": true,
+  "showLineNumber": false,
+  "foldHeading": true,
+  "foldIndent": true,
+  "smartIndentList": true,
+  "spellcheck": true,
+  "showUnsupportedFiles": false,
+  "trashOption": "system"
+}

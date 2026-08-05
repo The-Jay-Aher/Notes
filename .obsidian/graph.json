@@ -1,12 +1,29 @@
 {
   "collapse-filter": true,
   "search": "-path:.trash -path:.obsidian",
-  "showTags": false,
+  "showTags": true,
   "showAttachments": false,
   "hideUnresolved": true,
   "showOrphans": false,
   "collapse-color-groups": true,
-  "colorGroups": [],
+  "colorGroups": [
+    {
+      "query": "path:\"AWS\"",
+      "color": { "a": 1, "rgb": 16753920 }
+    },
+    {
+      "query": "path:\"Kubernetes\" OR path:\"Certified Kubernetes\"",
+      "color": { "a": 1, "rgb": 3381759 }
+    },
+    {
+      "query": "path:\"Java\" OR path:\"Python\" OR path:\"C++\" OR path:\"Competitive Programming\"",
+      "color": { "a": 1, "rgb": 3437823 }
+    },
+    {
+      "query": "path:\"UPSC\" OR path:\"MPSC\" OR path:\"RBI\" OR path:\"SEBI\"",
+      "color": { "a": 1, "rgb": 14764671 }
+    }
+  ],
   "collapse-display": true,
   "showArrow": false,
   "textFadeMultiplier": 0,
