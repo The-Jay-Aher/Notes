@@ -23,6 +23,14 @@ This branch separates educational foundations, strategy ideas, research governan
 - [Professional Trading Workbook Methodology](workbooks/professional_trading_workbook_methodology.md)
 - [Professional Trading Workbook Template](workbooks/pro_trading_workbook_template.md)
 
+## Book Notes
+
+- [Book Notes Library and Conventions](book-notes/README.md)
+- [Trading and Exchanges — Larry Harris](book-notes/01-trading-and-exchanges-larry-harris/00-roadmap.md)
+- [Option Volatility & Pricing — Sheldon Natenberg](book-notes/02-option-volatility-and-pricing-sheldon-natenberg/00-roadmap.md)
+- [Volatility Trading — Euan Sinclair](book-notes/03-volatility-trading-euan-sinclair/00-roadmap.md)
+- [Expected Returns — Antti Ilmanen](book-notes/04-expected-returns-antti-ilmanen/00-roadmap.md)
+
 ## Mixed Study Plans
 
 - [AWS SAA and Trading Bot Checklist](study-plans/aws_saa_trading_bot_plan_checklist.md)
