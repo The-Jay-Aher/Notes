@@ -596,3 +596,755 @@ Check:
 - EC2 Auto Scaling groups: <https://docs.aws.amazon.com/autoscaling/ec2/userguide/auto-scaling-groups.html>
 - Auto Scaling health checks: <https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-health-checks.html>
 
+## Further Exploration — Remaining Knowledge Gaps
+
+The following topics deliberately go beyond the scope of this AWS Solutions Architect Associate chapter. Use this as a future research backlog after mastering the high-availability, load-balancing, and Auto Scaling foundations above.
+
+### High Availability and Distributed-Systems Foundations
+
+- Availability, reliability, durability, and resilience.
+- Fault domains and failure isolation.
+- Availability Zone independence assumptions.
+- Regional versus zonal failure models.
+- Control-plane versus data-plane failures.
+- Partial failures in distributed systems.
+- Correlated failures and common-mode failures.
+- Failure detection and false positives.
+- Heartbeats, leases, and timeouts.
+- Recovery time objective (RTO).
+- Recovery point objective (RPO).
+- Service-level indicators (SLIs).
+- Service-level objectives (SLOs).
+- Error budgets.
+- Mean time between failures (MTBF).
+- Mean time to recovery (MTTR).
+- Redundancy models: active-active and active-passive.
+- N+1, N+2, and overprovisioning strategies.
+- Graceful degradation.
+- Load shedding.
+- Backpressure.
+- Bulkheads and fault containment.
+- Circuit breakers.
+- Retry storms and exponential backoff.
+- Jittered retries.
+- Idempotency during retries.
+- Thundering-herd prevention.
+- Queue-based load leveling.
+- Cell-based architecture.
+- Shuffle sharding.
+- Multi-Region active-active architecture.
+- Multi-Region active-passive architecture.
+- Disaster-recovery testing.
+
+### Networking, DNS, and Protocol Internals
+
+- OSI model and TCP/IP model.
+- Layer 4 versus Layer 7 load balancing.
+- TCP three-way handshake.
+- TCP connection state and teardown.
+- TCP retransmission and congestion control.
+- TCP keepalive.
+- UDP behavior and failure semantics.
+- TLS handshake.
+- TLS session resumption.
+- Server Name Indication (SNI).
+- Application-Layer Protocol Negotiation (ALPN).
+- HTTP/1.1 connection reuse.
+- HTTP/2 streams and multiplexing.
+- HTTP/3 and QUIC.
+- WebSocket upgrade and persistent connections.
+- gRPC over HTTP/2.
+- DNS resolution and caching.
+- DNS TTL during failover.
+- Route 53 alias records.
+- Route 53 routing policies.
+- Route 53 health checks.
+- Split-horizon DNS.
+- Public versus private hosted zones.
+- Anycast networking.
+- Static, dynamic, and ephemeral IP addresses.
+- Elastic network interfaces.
+- Security-group statefulness.
+- Network ACL statelessness.
+- Ephemeral client ports.
+- Source network address translation (SNAT).
+- Proxy Protocol versions 1 and 2.
+- `X-Forwarded-For` trust boundaries.
+- `X-Forwarded-Proto` and `X-Forwarded-Port`.
+- Client IP preservation.
+- Connection tracking.
+- Idle timeouts.
+- Path maximum transmission unit discovery.
+- Fragmentation and MTU mismatches.
+
+### Application Load Balancer Deep Dive
+
+- ALB nodes and Availability Zone mappings.
+- ALB listener architecture.
+- Listener rule priority evaluation.
+- Default listener actions.
+- Forward actions.
+- Redirect actions.
+- Fixed-response actions.
+- Host-header routing.
+- Path-pattern routing.
+- HTTP-header routing.
+- HTTP-request-method routing.
+- Query-string routing.
+- Source-IP routing.
+- Weighted target groups.
+- Target-group stickiness.
+- Load-balancer-generated application cookies.
+- Application-generated cookie stickiness.
+- Slow-start mode.
+- Least outstanding requests routing.
+- Round-robin routing.
+- ALB rule transforms.
+- URL rewrite transforms.
+- Host-header rewrite transforms.
+- HTTP header modification.
+- HTTP desync mitigation modes.
+- Invalid-header-field handling.
+- Preserve-host-header behavior.
+- Drop-invalid-header-fields behavior.
+- ALB HTTP/2 configuration.
+- ALB gRPC support.
+- ALB WebSocket support.
+- ALB Lambda targets.
+- ALB IP targets.
+- ALB instance targets.
+- ALB target registration across VPCs.
+- ALB target registration for on-premises IPs.
+- ALB authentication with Amazon Cognito.
+- ALB authentication with OpenID Connect.
+- ALB mutual TLS.
+- Trust stores and certificate revocation lists.
+- ALB TLS security policies.
+- Multiple TLS certificates with SNI.
+- ALB certificate discovery and renewal.
+- ALB access logs.
+- ALB connection logs.
+- ALB request tracing.
+- ALB zonal shift.
+- ALB minimum load-balancer capacity.
+- ALB capacity-unit reservation.
+- ALB resource map.
+- ALB deletion protection.
+- ALB IPv4, dualstack, and IPv6 modes.
+- ALB cross-zone load balancing behavior.
+- ALB DNS failover behavior.
+- ALB fail-open behavior when all targets are unhealthy.
+- ALB quotas and rule-evaluation limits.
+
+### Network Load Balancer Deep Dive
+
+- NLB connection-flow hashing.
+- NLB flow stickiness.
+- NLB static IP addresses per Availability Zone.
+- Elastic IP addresses with internet-facing NLBs.
+- NLB TCP listeners.
+- NLB TLS listeners.
+- NLB UDP listeners.
+- NLB TCP_UDP listeners.
+- NLB TLS termination.
+- NLB TLS pass-through.
+- NLB TLS security policies.
+- NLB mutual TLS pass-through.
+- NLB client IP preservation.
+- NLB Proxy Protocol v2.
+- NLB source-IP affinity for UDP.
+- NLB security groups.
+- NLB target security-group referencing.
+- NLB IP targets.
+- NLB instance targets.
+- ALB as an NLB target.
+- NLB cross-zone load balancing.
+- NLB zonal shift.
+- NLB DNS zonal affinity.
+- NLB zonal DNS names.
+- NLB unhealthy-target connection termination.
+- NLB connection draining.
+- NLB passive and active health checks.
+- NLB fail-open behavior.
+- NLB PrivateLink endpoint services.
+- NLB with AWS Global Accelerator.
+- NLB with hybrid and on-premises targets.
+- NLB access and TLS connection logs.
+- NLB capacity units.
+- NLB capacity reservation.
+- NLB quotas and port-exhaustion limits.
+- NLB IPv6 and dualstack behavior.
+
+### Gateway Load Balancer and Network Appliances
+
+- Gateway Load Balancer architecture.
+- Gateway Load Balancer endpoints.
+- AWS PrivateLink for GWLB.
+- GENEVE encapsulation.
+- Transparent bump-in-the-wire appliances.
+- Centralized inspection VPCs.
+- Distributed inspection architectures.
+- North-south traffic inspection.
+- East-west traffic inspection.
+- Ingress routing.
+- Appliance VPC route-table design.
+- Symmetric routing requirements.
+- Appliance stickiness.
+- Flow hashing and appliance state.
+- Stateful firewall scaling.
+- Intrusion detection systems.
+- Intrusion prevention systems.
+- Deep packet inspection.
+- Secure web gateways.
+- Third-party virtual appliances.
+- Appliance health checks.
+- Appliance Auto Scaling.
+- Multi-AZ appliance failure handling.
+- GWLB cross-zone load balancing.
+- GWLB endpoint service permissions.
+- GWLB observability and flow diagnosis.
+- GWLB quotas and pricing.
+
+### Classic Load Balancer and Migration
+
+- Classic Load Balancer architecture.
+- Classic Load Balancer listeners.
+- Classic Load Balancer health checks.
+- EC2-Classic historical networking model.
+- Classic Load Balancer feature limitations.
+- Classic Load Balancer security policies.
+- Classic Load Balancer stickiness.
+- Classic Load Balancer access logs.
+- Classic Load Balancer migration assessment.
+- Classic Load Balancer to ALB migration.
+- Classic Load Balancer to NLB migration.
+- `aws elbv2` versus legacy `aws elb` APIs.
+
+### Target Groups, Health Checks, and Target Lifecycle
+
+- Target-group protocol and protocol-version selection.
+- Target-group port overrides.
+- Health-check protocol selection.
+- Health-check interval and timeout.
+- Healthy and unhealthy thresholds.
+- Health-check matcher codes.
+- HTTP health endpoint design.
+- gRPC health-check codes.
+- Deep versus shallow health checks.
+- Liveness versus readiness.
+- Dependency-aware health checks.
+- Health-check amplification.
+- Flapping-target prevention.
+- Target registration lifecycle.
+- Initial, healthy, unhealthy, draining, unused, and unavailable states.
+- Deregistration delay.
+- Connection draining.
+- Unhealthy-target connection termination.
+- Target warm-up and slow start.
+- Target-group attributes.
+- Target-group cross-zone overrides.
+- Target-group failover thresholds.
+- Target-group DNS failover thresholds.
+- Target-group routing thresholds.
+- Target Administrative Override states.
+- Multi-port target registration.
+- Target-group sharing boundaries.
+- Target-group quotas.
+- Health-check reason codes.
+- Fail-open versus fail-closed behavior.
+- Health checks for long-starting applications.
+- Health checks during rolling deployments.
+
+### TLS, Identity, and Load-Balancer Security
+
+- AWS Certificate Manager certificate lifecycle.
+- Public and private certificates.
+- ACM certificate validation.
+- Certificate renewal.
+- Certificate rotation without downtime.
+- Multiple certificates and SNI selection.
+- TLS cipher suites.
+- TLS protocol versions.
+- Forward secrecy.
+- FIPS security policies.
+- Front-end versus back-end encryption.
+- End-to-end TLS.
+- TLS re-encryption to targets.
+- Mutual TLS passthrough and verification modes.
+- Client-certificate trust stores.
+- Certificate revocation lists.
+- OIDC authorization code flow.
+- Cognito user-pool authentication.
+- Authentication cookies and session timeout.
+- AWS WAF integration with ALB.
+- Web ACL rule evaluation.
+- Rate-based WAF rules.
+- AWS Shield Standard and Shield Advanced.
+- Distributed denial-of-service protection.
+- Security-group chaining.
+- Prefix lists and source restrictions.
+- Listener-rule security boundaries.
+- Header spoofing and trusted proxy chains.
+- Desync and request-smuggling defenses.
+- Host-header attacks.
+- TLS policy compliance.
+- Access-log protection and retention.
+- Least-privilege IAM for ELB administration.
+- Service-linked roles for Elastic Load Balancing.
+
+### Auto Scaling Group Internals and Lifecycle
+
+- Auto Scaling group control loop.
+- Minimum, desired, and maximum capacity semantics.
+- Desired capacity units.
+- Instance lifecycle states.
+- Pending and `Pending:Wait` states.
+- In-service state.
+- Standby state.
+- Terminating and `Terminating:Wait` states.
+- Detaching and entering standby.
+- Instance attachment and detachment.
+- Replace unhealthy process.
+- AZ rebalancing process.
+- Availability Zone distribution strategies.
+- Balanced best effort behavior.
+- Balanced only behavior.
+- Impaired Availability Zone handling.
+- Auto Scaling group suspended processes.
+- Administrative suspension.
+- Health-check grace period.
+- Default instance warmup.
+- Scaling cooldowns.
+- Lifecycle hooks.
+- Lifecycle-hook heartbeats.
+- Lifecycle-hook timeouts and default results.
+- EventBridge events for lifecycle actions.
+- Lifecycle hooks with SQS and SNS.
+- Lifecycle hooks with Lambda and Systems Manager.
+- Scale-in protection.
+- Custom termination policies.
+- Default termination-policy evaluation.
+- Availability Zone balance during termination.
+- Instance maintenance policies.
+- Maximum and minimum healthy percentages.
+- Instance refresh checkpoints.
+- Instance refresh bake time.
+- Instance refresh skip matching.
+- Instance refresh auto rollback.
+- Instance refresh CloudWatch alarm integration.
+- Instance refresh failure states.
+- Standby capacity and billing.
+- Maximum instance lifetime.
+- Instance refresh after launch-template changes.
+
+### Scaling Policies and Control Behavior
+
+- Target tracking scaling policies.
+- Predefined target-tracking metrics.
+- Custom target-tracking metrics.
+- Metric math for target tracking.
+- Step scaling policies.
+- Simple scaling policies.
+- Scheduled scaling.
+- Predictive scaling.
+- Predictive scaling forecast-only mode.
+- Predictive scaling forecast-and-scale mode.
+- Predictive scaling scheduling buffer.
+- Predictive scaling maximum-capacity behavior.
+- Dynamic and predictive scaling interaction.
+- Multiple scaling-policy arbitration.
+- Scale-out and scale-in asymmetry.
+- High-resolution CloudWatch metrics.
+- One-minute versus five-minute EC2 metrics.
+- CPU utilization as a scaling metric.
+- ALB request count per target.
+- Queue depth per instance.
+- Concurrency-based scaling.
+- Latency-based scaling.
+- Business-metric scaling.
+- Metric proportionality requirements.
+- Metric aggregation dimensions.
+- Missing metric data.
+- CloudWatch alarm evaluation periods.
+- Datapoints to alarm.
+- Alarm state transitions.
+- Warmup effects on aggregated metrics.
+- Cooldown and warmup differences.
+- Scaling oscillation and hysteresis.
+- Scaling overshoot and undershoot.
+- Delayed feedback loops.
+- Long instance-bootstrap times.
+- Capacity buffers and headroom.
+- Scale-to-zero alternatives.
+- Scaling-policy testing and simulation.
+- Scaling activity history analysis.
+
+### Mixed Instances, Spot, and Capacity Procurement
+
+- Mixed instances policies.
+- On-Demand base capacity.
+- On-Demand percentage above base capacity.
+- Instance type overrides.
+- Attribute-based instance type selection.
+- Instance weighting.
+- Desired capacity type: instances, vCPU, and memory.
+- On-Demand allocation strategies.
+- Spot allocation strategies.
+- Price-capacity-optimized allocation.
+- Capacity-optimized allocation.
+- Capacity-optimized-prioritized allocation.
+- Lowest-price allocation risks.
+- Spot capacity pools.
+- Spot interruption notices.
+- EC2 instance rebalance recommendations.
+- Auto Scaling Capacity Rebalancing.
+- Temporary desired-capacity increase during rebalancing.
+- Graceful Spot interruption handling.
+- EC2 Auto Scaling with Capacity Reservations.
+- Capacity Reservation groups.
+- On-Demand Capacity Reservations.
+- Capacity Blocks for ML.
+- Regional EC2 capacity shortages.
+- Instance-type flexibility.
+- Availability Zone flexibility.
+- Diversifying Spot capacity.
+- Base capacity for critical workloads.
+- Cost-versus-interruption tradeoffs.
+- Mixed-instance performance normalization.
+
+### Warm Pools and Fast Scale-Out
+
+- Auto Scaling warm pools.
+- Running warm-pool instances.
+- Stopped warm-pool instances.
+- Hibernated warm-pool instances.
+- Minimum warm-pool size.
+- Maximum prepared capacity.
+- Warm-pool lifecycle hooks.
+- Warm-pool instance reuse on scale-in.
+- Warm-pool cost modelling.
+- EBS charges for stopped warm instances.
+- Hibernation prerequisites.
+- Warm-pool limitations with Spot Instances.
+- Warm-pool limitations with instance weighting.
+- ECS registration with warm pools.
+- Application pre-initialization.
+- AMI baking versus runtime bootstrap.
+- Snapshot-based application startup.
+- Lazy loading during instance warmup.
+
+### Launch Templates, Images, and Bootstrap Engineering
+
+- Launch template versions.
+- Default versus latest launch-template version.
+- Launch template inheritance and overrides.
+- Launch templates with mixed instances policies.
+- AMI lifecycle management.
+- EC2 Image Builder.
+- Golden AMI pipelines.
+- Immutable infrastructure.
+- User-data execution lifecycle.
+- Cloud-init stages and logs.
+- Idempotent bootstrap scripts.
+- Bootstrap failure reporting.
+- Secrets retrieval during bootstrap.
+- IAM instance profiles.
+- Systems Manager Parameter Store integration.
+- Secrets Manager integration.
+- CloudFormation helper scripts.
+- `cfn-init` and `cfn-signal`.
+- Auto Scaling creation policies.
+- Auto Scaling update policies.
+- Bootstrap dependency failure.
+- Package-repository availability.
+- Configuration drift.
+- AMI vulnerability scanning.
+- AMI deprecation and deregistration.
+- EBS snapshot lifecycle.
+- Instance metadata service version 2.
+- Metadata hop limits.
+- User-data secret-exposure risks.
+- EC2 detailed monitoring.
+- Termination protection versus scale-in protection.
+
+### Deployment and Traffic-Shifting Strategies
+
+- In-place deployments.
+- Rolling deployments.
+- Immutable deployments.
+- Blue/green deployments.
+- Canary deployments.
+- Linear traffic shifting.
+- All-at-once deployments.
+- Weighted target-group deployments.
+- DNS-weighted deployments.
+- Separate-ALB blue/green deployments.
+- CodeDeploy with ALB and Auto Scaling.
+- CodeDeploy lifecycle hooks.
+- Deployment health alarms.
+- Automatic rollback.
+- Connection draining during deployments.
+- Long-lived connection migration.
+- WebSocket deployment behavior.
+- Database compatibility during rolling deployments.
+- Backward-compatible API and schema changes.
+- Instance refresh versus CodeDeploy.
+- Instance refresh checkpoint validation.
+- Bake-time selection.
+- Launch-before-terminate replacement.
+- Terminate-before-launch replacement.
+- Capacity surge during deployment.
+- Zero-downtime deployment assumptions.
+- Deployment rollback testing.
+
+### Observability, Logging, and Troubleshooting
+
+- ELB CloudWatch metric namespaces.
+- Request count and new connection count.
+- Active connection count.
+- Target response time.
+- Target connection error count.
+- HTTP 4xx and 5xx attribution.
+- ELB-generated versus target-generated errors.
+- Rejected connection count.
+- Processed bytes.
+- Healthy and unhealthy host counts.
+- Consumed LCU and NLCU metrics.
+- Reserved capacity metrics.
+- ALB access-log schema.
+- NLB access-log schema.
+- ALB connection-log schema.
+- S3 access-log bucket policies.
+- Log delivery delays.
+- Athena queries for ELB logs.
+- CloudWatch Logs ingestion pipelines.
+- OpenTelemetry trace propagation.
+- `X-Amzn-Trace-Id`.
+- AWS X-Ray integration patterns.
+- VPC Flow Logs.
+- Reachability Analyzer.
+- Traffic Mirroring.
+- CloudTrail ELB and Auto Scaling events.
+- EventBridge Auto Scaling events.
+- Auto Scaling activity history.
+- Target health reason codes.
+- HTTP 502 diagnosis.
+- HTTP 503 diagnosis.
+- HTTP 504 diagnosis.
+- TLS handshake failures.
+- Certificate mismatch diagnosis.
+- Intermittent unhealthy-target diagnosis.
+- Cross-zone traffic imbalance.
+- Uneven target utilization.
+- Sticky-session imbalance.
+- Port exhaustion.
+- Connection-reset diagnosis.
+- Idle-timeout mismatch.
+- Scale-out launch failure diagnosis.
+- Insufficient instance capacity errors.
+- EC2 service-quota failures.
+- Bootstrap and cloud-init log analysis.
+- Scaling-policy oscillation diagnosis.
+
+### Infrastructure as Code and Automation
+
+- CloudFormation ELBv2 resources.
+- CloudFormation Auto Scaling resources.
+- CloudFormation launch templates.
+- CloudFormation target groups and listener rules.
+- CloudFormation creation and update policies.
+- CloudFormation rolling-update behavior.
+- AWS CDK load-balancer constructs.
+- AWS CDK Auto Scaling constructs.
+- Terraform `aws_lb` resources.
+- Terraform target-group and listener resources.
+- Terraform Auto Scaling group resources.
+- Terraform lifecycle and replacement behavior.
+- Pulumi load-balancer and Auto Scaling resources.
+- AWS CLI `elbv2` command family.
+- AWS CLI `autoscaling` command family.
+- ELBv2 and Auto Scaling SDK paginators.
+- Waiters for asynchronous resource states.
+- Idempotent deployment automation.
+- Cross-account deployment pipelines.
+- Tagging standards.
+- AWS Config managed rules.
+- Service Control Policies for ELB and Auto Scaling.
+- Policy-as-code validation.
+- Drift detection.
+- Automated quota checks.
+- Automated certificate-expiry checks.
+- Automated target-health validation.
+- Automated scaling-policy tests.
+
+### Quotas, Limits, and Regional Availability
+
+- Load balancers per Region.
+- Target groups per Region.
+- Targets per target group.
+- Listeners per load balancer.
+- Listener rules per ALB.
+- Certificates per load balancer.
+- Trust stores per ALB.
+- Target-group association limits.
+- Security groups per load balancer.
+- NLB targets per Availability Zone.
+- NLB ports per target and source tuple.
+- Load-balancer capacity-unit reservation limits.
+- Gateway Load Balancer quotas.
+- GWLB endpoint quotas.
+- Auto Scaling groups per Region.
+- Launch configurations per Region.
+- Scaling policies per Auto Scaling group.
+- Scheduled actions per Auto Scaling group.
+- Lifecycle hooks per Auto Scaling group.
+- Warm-pool limitations.
+- Instance-refresh limitations.
+- EC2 instance quotas by family.
+- Elastic IP address quotas.
+- ENI and private-IP limits.
+- VPC, subnet, and security-group quotas.
+- CloudWatch alarm and metric quotas.
+- Service Quotas requests and lead times.
+- Feature availability by Region.
+- New-Region feature rollout differences.
+- Availability Zone capacity differences.
+
+### Pricing and Cost Engineering
+
+- ALB hourly pricing.
+- Load Balancer Capacity Units (LCUs).
+- LCU new-connection dimension.
+- LCU active-connection dimension.
+- LCU processed-bytes dimension.
+- LCU rule-evaluation dimension.
+- NLB hourly pricing.
+- Network Load Balancer Capacity Units (NLCUs).
+- NLCU flow, connection, and byte dimensions.
+- GWLB hourly and capacity-unit pricing.
+- Capacity-unit reservation pricing.
+- Cross-zone data-transfer pricing.
+- Inter-AZ data-transfer costs.
+- Public IPv4 address charges.
+- Elastic IP address charges.
+- AWS PrivateLink endpoint-hour and data charges.
+- NAT Gateway costs in load-balanced architectures.
+- AWS WAF request and rule charges.
+- Shield Advanced pricing.
+- ACM public versus Private CA costs.
+- EC2 Auto Scaling service pricing boundary.
+- EC2 On-Demand pricing.
+- Reserved Instances and Savings Plans.
+- Spot Instance savings and interruption cost.
+- Warm-pool compute and storage costs.
+- Detailed monitoring costs.
+- Access-log storage and query costs.
+- CloudWatch custom metric and alarm costs.
+- Cost allocation tags.
+- Cost Explorer analysis for elastic workloads.
+- AWS Pricing Calculator load-balancer modelling.
+- Cost per request.
+- Cost per concurrent connection.
+- Cost-versus-headroom tradeoffs.
+- Cost anomalies caused by scaling loops.
+
+### Performance Engineering and Load Testing
+
+- Workload modelling.
+- Requests per second and transactions per second.
+- Concurrent connections.
+- Connection establishment rate.
+- Throughput and processed bytes.
+- Latency percentiles: p50, p90, p95, p99, and p99.9.
+- Tail latency.
+- Coordinated omission in load tests.
+- Open-loop versus closed-loop load generation.
+- Ramp, spike, soak, and stress tests.
+- Capacity and saturation tests.
+- Failover load tests.
+- Cold-start and warm-start measurements.
+- Connection reuse and pooling.
+- HTTP keep-alive tuning.
+- HTTP/2 multiplexing behavior.
+- TLS handshake cost.
+- Backend connection limits.
+- Target accept-queue saturation.
+- Linux socket backlog.
+- File descriptor limits.
+- Ephemeral-port exhaustion.
+- NAT port exhaustion.
+- Application thread and worker pools.
+- Queue-depth scaling.
+- Little's Law.
+- Load-distribution fairness.
+- Sticky-session skew.
+- Hot-target detection.
+- Cross-zone latency and traffic effects.
+- Slow-start tuning.
+- Deregistration-delay tuning.
+- Health-check tuning.
+- Default-instance-warmup tuning.
+- Scaling reaction time.
+- Scaling stabilization and oscillation.
+- Capacity headroom modelling.
+- Load-test safety controls.
+- Production traffic replay risks.
+
+### Resilience Testing and Chaos Engineering
+
+- EC2 instance termination experiments.
+- Target-process failure experiments.
+- Health-endpoint failure experiments.
+- Availability Zone evacuation tests.
+- AWS Application Recovery Controller zonal shift.
+- Autoshift and practice runs.
+- NLB zonal-shift prerequisites.
+- Multi-AZ capacity verification.
+- Subnet exhaustion experiments.
+- Security-group misconfiguration simulations.
+- Dependency latency injection.
+- Packet-loss and connection-reset injection.
+- DNS failure simulations.
+- TLS certificate-expiry exercises.
+- Failed deployment rollback drills.
+- Auto Scaling launch-failure exercises.
+- Spot interruption exercises.
+- Capacity Rebalancing validation.
+- Warm-pool failure exercises.
+- Scaling-policy runaway simulations.
+- Retry-storm simulations.
+- Load-shedding validation.
+- Circuit-breaker validation.
+- Fail-open risk assessment.
+- AWS Fault Injection Service.
+- Game days.
+- Recovery runbooks.
+- Incident command and escalation.
+- Post-incident review and corrective actions.
+
+### Adjacent AWS Traffic and Compute Services
+
+- Amazon Route 53 routing and health evaluation.
+- Amazon CloudFront origin failover.
+- AWS Global Accelerator.
+- AWS Global Accelerator endpoint groups and traffic dials.
+- Amazon API Gateway throttling and integration scaling.
+- Amazon VPC Lattice.
+- AWS App Mesh lifecycle and alternatives.
+- Amazon ECS Service Auto Scaling.
+- ECS capacity providers.
+- Amazon EKS Cluster Autoscaler.
+- Kubernetes Horizontal Pod Autoscaler.
+- Karpenter.
+- Lambda reserved and provisioned concurrency.
+- AWS App Runner Auto Scaling.
+- Elastic Beanstalk load-balanced environments.
+- AWS Elastic Disaster Recovery.
+- AWS Application Recovery Controller.
+- Route 53 Application Recovery Controller readiness checks.
+- AWS WAF and Shield architectures.
+- Service discovery with AWS Cloud Map.
+- Amazon SQS queue-depth-based scaling.
+- Event-driven scaling patterns.
+- KEDA on Kubernetes.
+- Multi-Region ingress architectures.

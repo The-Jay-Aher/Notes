@@ -1,26 +1,47 @@
 {
   "omnisearch:show-modal": [
     {
-      "modifiers": ["Ctrl", "Shift"],
+      "modifiers": [
+        "Ctrl",
+        "Shift"
+      ],
       "key": "O"
     }
   ],
   "templater-obsidian:create-new-note-from-template": [
     {
-      "modifiers": ["Ctrl", "Alt"],
+      "modifiers": [
+        "Ctrl",
+        "Alt"
+      ],
       "key": "N"
     }
   ],
   "obsidian-tasks-plugin:edit-task": [
     {
-      "modifiers": ["Ctrl", "Shift"],
+      "modifiers": [
+        "Ctrl",
+        "Shift"
+      ],
       "key": "T"
     }
   ],
   "obsidian-linter:lint-file": [
     {
-      "modifiers": ["Ctrl", "Alt"],
+      "modifiers": [
+        "Ctrl",
+        "Alt"
+      ],
       "key": "L"
+    }
+  ],
+  "command-palette:open": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "P"
     }
   ]
 }
