@@ -1,5 +1,17 @@
 # Obsidian Setup Changelog
 
+## 2026-11-18: Obsidian setup improvements
+
+### Improved
+
+- Added `.gitattributes`: text is stored and checked out as LF on every device, so the phone (LF) and Windows git (`core.autocrlf=true`, CRLF) no longer show phantom changes on the same note. Plugin and theme code is marked `-text` and stays byte-for-byte as released. Three files stored with CRLF were renormalized with no content change, and on-disk copies on the PC were rewritten as LF.
+- Linter: enabled seven whitespace-only rules (trailing spaces with two-space line breaks kept, consecutive blank lines, final newline, space after list markers, blank lines around code fences, tables and headings), so `Ctrl+Alt+L` does something useful. Lint-on-save and lint-on-change remain off.
+- Rewrote `_System/Obsidian Setup Guide.md` to match the real setup. It now covers Git sync between the PC and the phone, rules that keep the phone's in-app Git working, all 11 plugins (Minimal Theme Settings, Style Settings and Typewriter Scroll were missing), all five hotkeys (it said four), the Linter rules, first launch on a new device, the learning workflow (Learning Tracker and `/teach`, `/quiz`, `/revise`), and new troubleshooting entries for phone pull crashes and phantom line-ending changes.
+
+### Replaced
+
+- The guide's old advice to use Obsidian Sync for live sync and Git for history no longer described this vault, which uses Git on both devices. It is now an explicit "never run two transports at once" rule, with notes on what to switch off if Obsidian Sync or Syncthing is ever adopted.
+
 ## 2026-11-18: Learning-first AGENTS.md and agent skills
 
 ### Changed
