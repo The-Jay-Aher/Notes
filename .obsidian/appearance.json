@@ -8,5 +8,6 @@
   "enabledCssSnippets": [
     "typography-polish",
     "study-vault"
-  ]
+  ],
+  "showRibbon": true
 }
