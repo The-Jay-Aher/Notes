@@ -19,6 +19,7 @@ tags:
 - **Programming:** [[notes/programming/java/INDEX|Java]] · [[notes/programming/python/INDEX|Python]] · [[notes/programming/cpp/INDEX|C++]] · [[notes/programming/competitive-programming/INDEX|Competitive Programming]]
 - **Competitive exams:** [[notes/competitive-exams/upsc/Notes/00_Master_Index|UPSC]] · [[notes/competitive-exams/mpsc/INDEX|MPSC]] · [[notes/competitive-exams/rbi-assistant/INDEX|RBI Assistant]] · [[notes/competitive-exams/rbi-grade-b/INDEX|RBI Grade B]] · [[notes/competitive-exams/sebi-grade-a/INDEX|SEBI Grade A]]
 - **Other study areas:** [[notes/shared-foundations/INDEX|Shared Foundations]] · [[notes/finance-trading/INDEX|Finance and Trading]]
+- **Revision:** [[notes/revision/Learning Tracker|Learning Tracker]] (review queue and session log)
 - **Personal:** [[personal/INDEX|Personal Notes]]
 
 ## Open Tasks

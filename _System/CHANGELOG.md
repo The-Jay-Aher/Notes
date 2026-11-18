@@ -1,5 +1,26 @@
 # Obsidian Setup Changelog
 
+## 2026-11-18: Learning-first AGENTS.md and agent skills
+
+### Changed
+
+- Rewrote `AGENTS.md` from about 1,100 lines down to a short core. It now makes learning the primary goal and routes each request to a mode (teach, quiz, revise, write notes) and to a subject skill. It keeps the teacher voice, the causal-chain rule and the non-negotiables (upgrade rather than duplicate, accuracy, "Small Details That Matter Later", changelog, privacy).
+
+### Moved, with nothing deleted
+
+- Moved the detailed note-writing procedure (workflow, upgrade rules, chapter structure, small-details rule, source rules, required files, command and diagram rules, exam-notes requirements, quality bar) into `.claude/skills/deep-notes/SKILL.md`.
+- Moved each subject's coverage checklist, word for word, into subject skills: `subject-kubernetes`, `subject-aws`, `subject-devops-tools`, `subject-programming` and `subject-indian-exams`. Each one also gained a short "teaching and quizzing" section for its subject.
+
+### Added
+
+- Learning skills: `teach` (diagnose, teach in chunks, check, explain-back, apply, log), `quiz` (retrieval practice and mock tests with honest grading) and `revise` (Leitner-box spaced review).
+- `notes/revision/Learning Tracker.md`: learner profile, review queue and session log, shared by the learning skills.
+- `deep-notes` now asks for chapter answers to go in collapsed `> [!question]-` callouts, so the questions work for self-testing.
+
+### Git hygiene
+
+- `*.pdf` is now gitignored. A commit of about 56 MB of book PDFs crashed Obsidian Git on mobile, so it was rewritten without the PDFs. The PDFs remain on disk in `notes/finance-trading/book-notes/`.
+
 ## 2026-08-08 — Subject-based repository reorganization
 
 ### Rearranged

@@ -24,7 +24,8 @@ Notes/
 │   ├── programming/
 │   ├── competitive-exams/
 │   ├── shared-foundations/
-│   └── finance-trading/
+│   ├── finance-trading/
+│   └── revision/          # Learning Tracker
 ├── personal/
 ├── _System/
 │   ├── Templates/
@@ -33,10 +34,24 @@ Notes/
 │   ├── Repository/
 │   └── Scripts/
 ├── Attachments/
+├── .claude/skills/        # agent skills: teach, quiz, revise, deep-notes, subject-*
 ├── README.md
 ├── AGENTS.md
 └── LICENSE
 ```
+
+## Studying With Claude
+
+`AGENTS.md` makes learning the default. These skills do the work:
+
+| Command | What happens |
+| --- | --- |
+| `/teach <topic>` | An interactive lesson from your notes: it finds what you already know, teaches one idea at a time, asks you questions, has you explain it back, and logs your weak spots. |
+| `/quiz <topic>` | Retrieval practice or a mock test, with honest grading and links to the note section to re-read. |
+| `/revise` | Spaced review of whatever is due in the [Learning Tracker](notes/revision/Learning%20Tracker.md). |
+| `/deep-notes <topic>` | Create or upgrade notes to the full chapter standard. |
+
+Subject skills (`subject-kubernetes`, `subject-aws`, `subject-devops-tools`, `subject-programming`, `subject-indian-exams`) load on their own when a topic needs them.
 
 The root is intentionally quiet. Subject content belongs under `notes/`; private or non-study material belongs under `personal/`; vault machinery belongs under `_System/`; shared media remains in `Attachments/` because Obsidian is configured to use that location.
 
