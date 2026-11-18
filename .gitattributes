@@ -1,0 +1,28 @@
+# Line endings: store and check out text with LF on every device.
+# Obsidian writes LF on Windows, Android and iOS alike. Without this rule,
+# Windows git (core.autocrlf=true) checks files out as CRLF while the phone
+# uses LF, so the same note shows phantom changes and can conflict.
+* text=auto eol=lf
+
+# Third-party plugin and theme code: keep byte-for-byte as released.
+.obsidian/plugins/*/main.js    -text
+.obsidian/plugins/*/styles.css -text
+.obsidian/themes/**            -text
+
+# Binary files: never convert or text-diff.
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.webp  binary
+*.svg   text
+*.pdf   binary
+*.zip   binary
+*.ttf   binary
+*.otf   binary
+*.woff  binary
+*.woff2 binary
+*.mp3   binary
+*.mp4   binary
+*.m4a   binary
+*.webm  binary
