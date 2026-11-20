@@ -9,7 +9,7 @@ This is the main catalogue for subject notes. Each category owns a distinct kind
 | [Competitive exams](competitive-exams/INDEX.md) | Exam-specific syllabi, static subjects, current affairs, strategies, and revision | UPSC, MPSC, RBI Assistant, RBI Grade B, SEBI Grade A |
 | [Shared foundations](shared-foundations/INDEX.md) | Concepts reused across several technical tracks | Networking, Linux/Bash, Markdown |
 | [Finance and trading](finance-trading/INDEX.md) | Market education, research methods, strategy notes, and risk governance | Fundamental analysis, positional trading, probabilistic trading, workbooks |
-| [Revision](revision/Learning%20Tracker.md) | Your learning record across all subjects | Learning Tracker: review queue, weak spots, session log |
+| [Revision](revision/Learning%20Tracker.md) | Your learning record across all subjects | Learning Tracker: review queue, weak spots, session log; [Learning Plan](revision/Learning%20Plan.md): current phases and schedule |
 
 ## Placement Test
 

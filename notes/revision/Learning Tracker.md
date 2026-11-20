@@ -12,11 +12,11 @@ This is the memory of your learning sessions. The `teach`, `quiz` and `revise` s
 
 ## Learner Profile
 
-- **Current focus:** _not set yet. Tell Claude what you are studying now._
-- **Goals and deadlines:** _for example "CKA exam on YYYY-MM-DD"._
-- **Preferred session length:** _for example 30 minutes._
-- **Known strengths:**
-- **Known weak areas:**
+- **Current focus:** Phase 0 of the [Learning Plan](Learning%20Plan.md): placement quiz on networking and Linux, then networking and the AWS SAA from 2026-11-23.
+- **Goals and deadlines:** proposed on 2026-11-18, not yet confirmed: AWS SAA by mid-January 2027, CKA by mid-March 2027, capstone platform project by the end of April 2027.
+- **Preferred session length:** assumed 60 to 75 minutes on weekdays and a 3-hour Saturday lab block; confirm.
+- **Known strengths:** from the resume, not yet tested in a session: CI/CD with GitHub Actions and Jenkins, Docker and ECS, CloudFormation, Ansible, Git and SCM migration, Bash, PowerShell and Python scripting.
+- **Known weak areas:** self-reported in the vault, not yet tested: networking fundamentals. No project experience yet with Kubernetes, Terraform, or Prometheus with Grafana and Loki. Algorithms practice not started.
 
 ## Review Queue
 

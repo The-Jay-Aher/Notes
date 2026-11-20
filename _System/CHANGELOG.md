@@ -1,5 +1,17 @@
 # Obsidian Setup Changelog
 
+## 2026-11-18: Personal learning plan
+
+### Added
+
+- `notes/revision/Learning Plan.md`: a phased plan from November 2026 to April 2027, built from the owner's resume, mentor notes, to-do list and the vault's coverage. Phase 0 placement quiz, Phase 1 networking and AWS SAA, Phase 2 Kubernetes and CKA, Phase 3 a capstone platform project, plus a running interview-readiness track. It states its assumptions and lists the exam facts to verify. Because the repository is public, it carries no contact details, employer or client names, or resume metrics.
+
+### Changed
+
+- Filled the Learner Profile in `notes/revision/Learning Tracker.md` with the proposed focus, goals, session length, strengths and weak areas, each marked as proposed or untested.
+- Linked the plan from the Revision row of `notes/INDEX.md`.
+- The plan supersedes the schedule and daily Terraform cadence of `notes/finance-trading/study-plans/aws_saa_trading_bot_plan_checklist_v2.md`; that checklist is kept as a task list and for its trading safety gate.
+
 ## 2026-11-18: Obsidian setup improvements
 
 ### Improved

@@ -13,5 +13,6 @@
   "smartIndentList": true,
   "spellcheck": true,
   "showUnsupportedFiles": false,
-  "trashOption": "system"
+  "trashOption": "system",
+  "promptDelete": false
 }
