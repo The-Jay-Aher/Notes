@@ -1,5 +1,8 @@
 # 1 - Fundamentals of Networking
 
+> [!tip] New to this, or finding it dense?
+> Start with [0 - Networking in Plain Language](0%20-%20Networking%20in%20Plain%20Language.md). It explains CIDR, routing, connection errors and the DNS, TCP, TLS, HTTP order with everyday analogies and no assumed jargon, then links back here.
+
 ## Quick Summary
 
 Computer networking is the practice of connecting devices so they can exchange data. Every cloud platform, Kubernetes cluster, CI/CD system, website, database, VPN, and monitoring system depends on networking.
@@ -136,7 +139,7 @@ Example:
 Laptop A -> Switch -> Laptop B
 ```
 
-If both laptops are in the same subnet, traffic can stay inside the LAN without going through a router.
+If both laptops are in the same subnet, traffic can stay inside the LAN without going through a router. 
 
 ## Routing
 
@@ -279,6 +282,22 @@ Client -> SYN -> Server
 Client <- SYN-ACK <- Server
 Client -> ACK -> Server
 ```
+
+### What a connection attempt can return
+
+The client's first packet is a SYN. Exactly three things can happen next, and each one tells you how far the packet got:
+
+| What comes back | What it means | What the client reports |
+| --- | --- | --- |
+| SYN-ACK | Something is listening on that IP and port. | Connected |
+| RST (reset) | The packet reached the destination host, and its kernel found no socket listening on that port, or a host firewall rule actively rejected it. | `Connection refused` |
+| Nothing | The SYN or its reply was silently dropped somewhere: a firewall, a security group, a network ACL, a missing route or return route, or a host that is down. | `Connection timed out` |
+
+Who sends the RST matters. It comes from the destination host (or from a proxy or load balancer standing in front of it). AWS security groups and network ACLs never send a reset or an error; they drop disallowed packets silently. So on AWS:
+
+- `Connection refused` clears the whole network path. The problem is on the host: is the app running, and is it listening on the right address and port (`ss -tlnp`)? An app listening only on `127.0.0.1` refuses connections from other machines.
+- `Connection timed out` points at the path: security groups, NACLs in both directions (they are stateless, so the reply to the client's ephemeral port must be allowed too), route tables, or a host that isn't there. VPC Flow Logs record `REJECT` entries when a security group or NACL dropped the traffic.
+- `No route to host` usually means the local machine or a router reported the destination unreachable, for example because ARP got no answer on the local subnet.
 
 If a TCP connection fails, check:
 
@@ -459,8 +478,10 @@ curl says "connection timed out"
 - Cloud provider networking has abstractions that hide physical details.
 - Kubernetes adds another networking layer with pods, Services, kube-proxy or eBPF, CNI, and ingress.
 
-## Hidden Details / Caveats
+## Small Details That Matter Later
 
+- **Errors tell you how far a request got.** An HTTPS request runs DNS, then TCP, then TLS, then HTTP, and each step travels inside the one before it (TLS messages are carried over the TCP connection). `Could not resolve host` failed at DNS. `Connection refused` or `timed out` failed at TCP, so DNS worked. A certificate error failed at TLS, so DNS and TCP worked and the server is reachable. Any HTTP status code, even 503, means all four steps worked and the server or load balancer chose that answer. `curl -v` prints each step, so the last line before an error names the step that died.
+- **Cloud firewalls drop silently.** AWS security groups and network ACLs never send a rejection, so they produce timeouts, never `Connection refused`.
 - DNS success does not prove the service is reachable.
 - Ping failure does not always mean the host is down; ICMP may be blocked.
 - Connection refused means the host responded, but nothing accepted the port.

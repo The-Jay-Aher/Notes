@@ -1,5 +1,29 @@
 # Obsidian Setup Changelog
 
+## 2026-11-23: Ansible added to the learning plan
+
+### Added
+
+- `notes/revision/Learning Plan.md`: an Ansible Saturday lab thread for Weeks 1 to 7 (about one hour after two hours of Terraform). It works through the vault's Ansible chapters 1 to 7 week by week, ties each lab to that week's Linux or networking topic, and moves from local targets to an EC2 instance built by the Terraform thread. It has its own exit criteria. Ansible pauses for the SAA exam weeks and returns in Week 14, where a playbook prepares nodes for kubeadm.
+- An RHCE row in "Deliberately not now", and an Ansible version check in "Points to verify".
+
+### Changed
+
+- "Where you stand": Ansible moved out of the "Strong" row into its own row ("Working knowledge"), because the owner is taking the KodeKloud course.
+- Weekly rhythm: the Saturday row now shows the Terraform and Ansible split.
+
+## 2026-11-23: Placement quiz applied to the learning plan
+
+### Changed
+
+- `notes/revision/Learning Plan.md`: recorded the placement result (2.25 / 8; networking 1.0 / 4, Linux 1.25 / 4). Phase 1 grew from eight weeks to nine: networking now spans three weeks, and a Linux block (permissions, processes and signals, systemd and journald, ports, exit codes) runs alongside it in Weeks 1 and 2. Every later week and date moved by one week; the capstone now ends on 2 May 2027. Added Linux exit criteria to Phase 1.
+- `notes/revision/Learning Tracker.md`: added eight Review Queue items in box 1, the session log entry with the misconceptions found, and an updated Learner Profile.
+
+### Gaps found, not yet fixed
+
+- `notes/devops-cloud/aws-solutions-architect-associate/26 - Networking VPC.md` says AWS reserves "some" subnet addresses without naming the five, and doesn't say that security groups and NACLs drop packets silently (so they cause timeouts, never "connection refused").
+- The vault has no Linux notes beyond `notes/shared-foundations/linux/Bash.md`: nothing on permissions, processes and signals, systemd and journald, sockets and ports, or disk usage.
+
 ## 2026-11-18: Personal learning plan
 
 ### Added

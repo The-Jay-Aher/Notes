@@ -1,5 +1,12 @@
 # AWS Solution Architect Changelog
 
+## 2026-11-23
+
+### Fixed
+
+- [26 - Networking VPC](26%20-%20Networking%20VPC.md): the note said AWS reserves "some" addresses per subnet. It now names all five with an example, gives the usable counts for `/24` and `/28`, and links to the CIDR method in the shared networking notes.
+- [26 - Networking VPC](26%20-%20Networking%20VPC.md): added how a security group or NACL block looks from the client. Both drop silently, so the client sees a timeout and never a refusal, and that includes NACLs that block only the return traffic. Also added VPC Flow Logs `REJECT` records as the way to confirm it. A learner had reasoned that NACL blocks can't cause timeouts.
+
 ## 2026-08-17
 
 ### Upgraded

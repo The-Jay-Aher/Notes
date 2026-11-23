@@ -18,6 +18,10 @@ Ansible is an automation tool used for configuration management, application dep
 | 10 | [Cheatsheet](10%20-%20Cheatsheet.md) | Fast command, idempotency, result, and trap revision. |
 | 11 | [Glossary](11%20-%20Glossary.md) | Precise Ansible terminology and common traps. |
 
+## Course Notes
+
+- [KodeCloud Ansible Course](KodeCloud%20Ansible%20Course.md): notes taken while following the KodeKloud course, covering config files, config precedence and YAML basics so far.
+
 ## Mental Model
 
 ```text

@@ -8,8 +8,10 @@ Networking fundamentals explain how devices communicate, how IP addressing works
 
 | Order | Note | Focus |
 | --- | --- | --- |
+| 0 | [Networking in Plain Language](0%20-%20Networking%20in%20Plain%20Language.md) | Start here. CIDR block sizes, routing and longest prefix match, refused versus timed out, and the DNS, TCP, TLS, HTTP order, in plain words with analogies and self-check questions. |
 | 1 | [Fundamentals of Networking](1%20-%20Fundamentals%20of%20Networking.md) | OSI/TCP-IP models, switching, routing, DNS, DHCP, NAT, firewalls, ports, TCP/UDP, HTTP, troubleshooting. |
-| 2 | [Internet Protocol (IP)](2%20-%20Internet%20Protocol%20%28IP%29.md) | IPv4, IPv6, CIDR, private/public IPs, routing, ARP, ICMP, NAT, cloud and Kubernetes IP concepts. |
+| 2 | [Internet Protocol (IP)](2%20-%20Internet%20Protocol%20%28IP%29.md) | Why addresses come in blocks, CIDR by hand (size, range, membership), splitting and aggregation, routing and longest prefix match, ARP, ICMP, NAT, VPC address planning, Kubernetes IP ranges. |
+| Log | [CHANGELOG](CHANGELOG.md) | Upgrade history and points to verify. |
 
 ## Revision Path
 

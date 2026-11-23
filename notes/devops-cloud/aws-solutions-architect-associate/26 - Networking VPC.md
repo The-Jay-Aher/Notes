@@ -45,7 +45,7 @@ Example:
 Beginner tips:
 - VPC CIDR ranges should not overlap with networks you need to connect to.
 - Plan enough IP addresses for growth.
-- Each subnet loses some IP addresses reserved by AWS.
+- Each subnet loses five IP addresses reserved by AWS: the first four and the last. In `10.0.1.0/24` they are `10.0.1.0` (network address), `10.0.1.1` (VPC router), `10.0.1.2` (Amazon DNS), `10.0.1.3` (reserved for future use) and `10.0.1.255` (broadcast, reserved even though VPCs don't support broadcast). A `/24` therefore has 251 usable addresses and a `/28`, the smallest allowed subnet, has 11. How to work out any block's range by hand is in [Internet Protocol (IP)](../../shared-foundations/networking/2%20-%20Internet%20Protocol%20%28IP%29.md).
 
 ## Subnets
 A subnet exists in one Availability Zone.
@@ -137,6 +137,8 @@ Use NACLs for:
 - Explicit deny at subnet boundary.
 
 Most workload-level access control should be done with security groups.
+
+How a block looks from the client: security groups and NACLs both drop disallowed packets silently. They never send a rejection, so a blocked connection shows up as `Connection timed out`, never `Connection refused`. A refusal means the packet got through every security group and NACL and reached the instance, where nothing was listening on that port. When a NACL blocks only the return traffic (for example, outbound rules that don't allow the client's ephemeral ports, 1024 to 65535), the request arrives and the reply dies, which also looks like a timeout. VPC Flow Logs show `REJECT` records for packets that a security group or NACL dropped.
 
 ## VPC Endpoints
 VPC endpoints allow private connectivity to AWS services without using the public internet.

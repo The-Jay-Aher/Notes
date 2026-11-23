@@ -2,7 +2,7 @@
   "cssTheme": "Minimal",
   "accentColor": "#e0526b",
   "theme": "system",
-  "textFontFamily": "Inter",
+  "textFontFamily": "Cascadia Mono,Inter",
   "monospaceFontFamily": "Consolas",
   "baseFontSize": 16,
   "enabledCssSnippets": [
