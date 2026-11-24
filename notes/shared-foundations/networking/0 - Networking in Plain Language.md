@@ -24,21 +24,21 @@ updated: 2026-11-23
 
 Read this table once. You don't need to memorize it, because every word is explained again where it is used.
 
-| Word | Plain meaning | Everyday picture |
-| --- | --- | --- |
-| **Packet** | A small piece of data sent over a network, with a "to" address and a "from" address written on it. Big data is cut into many packets. | A letter in an envelope |
-| **IP address** | The address of a machine on a network, such as `10.0.6.17`. | The postal address of a building |
-| **Port** | A number from 0 to 65535 that says which program on the machine should get the packet. A web server usually waits on port 443, and SSH on port 22. | The flat number inside the building |
-| **Listening** | A program has told the operating system: "give me anything that arrives on port 443". | Someone is at home in flat 443, waiting for visitors |
-| **Router** | A device that passes packets from one network to another. | A post office that sorts letters and sends them closer to their destination |
-| **Gateway** (default gateway) | The router your machine hands a packet to when the destination is not on its own network. | Your building's mail room: anything going outside the building goes there |
-| **Route table** | A list of rules saying "for addresses in this range, send the packet that way". | The sorting chart on the post office wall |
-| **Bit** | One binary digit, 0 or 1. | A light switch: off or on |
-| **Octet** | 8 bits together. Each of the four numbers in `10.0.6.17` is one octet, and each can be 0 to 255. | One "chunk" of the address |
-| **Subnet** | A range of IP addresses that sit together on one network segment. | One street, with its houses |
-| **CIDR block** | A way to write a range of addresses, such as `10.0.4.0/22`. You will learn to read it in Part 1. | "All houses on this street" |
-| **Firewall** | Something that allows or blocks packets based on rules. In AWS, the main firewalls are **security groups** and **network ACLs (NACLs)**. | A security guard at the gate |
-| **Protocol** | An agreed set of rules for how two sides talk. TCP, TLS, HTTP and DNS are protocols. | The etiquette of a phone call: say hello, talk, say goodbye |
+| Word                          | Plain meaning                                                                                                                                      | Everyday picture                                                            |
+| ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| **Packet**                    | A small piece of data sent over a network, with a "to" address and a "from" address written on it. Big data is cut into many packets.              | A letter in an envelope                                                     |
+| **IP address**                | The address of a machine on a network, such as `10.0.6.17`.                                                                                        | The postal address of a building                                            |
+| **Port**                      | A number from 0 to 65535 that says which program on the machine should get the packet. A web server usually waits on port 443, and SSH on port 22. | The flat number inside the building                                         |
+| **Listening**                 | A program has told the operating system: "give me anything that arrives on port 443".                                                              | Someone is at home in flat 443, waiting for visitors                        |
+| **Router**                    | A device that passes packets from one network to another.                                                                                          | A post office that sorts letters and sends them closer to their destination |
+| **Gateway** (default gateway) | The router your machine hands a packet to when the destination is not on its own network.                                                          | Your building's mail room: anything going outside the building goes there   |
+| **Route table**               | A list of rules saying "for addresses in this range, send the packet that way".                                                                    | The sorting chart on the post office wall                                   |
+| **Bit**                       | One binary digit, 0 or 1.                                                                                                                          | A light switch: off or on                                                   |
+| **Octet**                     | 8 bits together. Each of the four numbers in `10.0.6.17` is one octet, and each can be 0 to 255.                                                   | One "chunk" of the address                                                  |
+| **Subnet**                    | A range of IP addresses that sit together on one network segment.                                                                                  | One street, with its houses                                                 |
+| **CIDR block**                | A way to write a range of addresses, such as `10.0.4.0/22`. You will learn to read it in Part 1.                                                   | "All houses on this street"                                                 |
+| **Firewall**                  | Something that allows or blocks packets based on rules. In AWS, the main firewalls are **security groups** and **network ACLs (NACLs)**.           | A security guard at the gate                                                |
+| **Protocol**                  | An agreed set of rules for how two sides talk. TCP, TLS, HTTP and DNS are protocols.                                                               | The etiquette of a phone call: say hello, talk, say goodbye                 |
 
 ---
 
